@@ -10,7 +10,7 @@
 // 1.2. Display category of recipe.
 
 
-// 1.3. Display list of added ingredients with quantity and measure, and option 'delete'.
+// 1.3. Display list of added ingredients with quantity and unit, and option 'delete'.
 
 
 // 1.4. Display list of added needed thing with option 'delete'.
