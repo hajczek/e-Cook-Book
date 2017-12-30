@@ -10,7 +10,7 @@
 - categories of recipies,
 - ingredients,
 - categories of ingredients,
-- needed things to make recpipies.
+- list of needed things to make recpipies.
 
 ### The functionality of 'e-CookBooK':
 
@@ -87,17 +87,14 @@ Link to mokup model: https://app.moqups.com/i.hajczewska@gmail.com/JJSFaUOmtj/vi
 ### Useful additions:
 
 - for HTML5 - Grid system or Bootstrap - but is not necessary,
-- for JavaScript - jQuery, jQuery uploadprogress for upload images - http://www.nixbox.com/demos/jquery-uploadprogress.php.
+- for JavaScript - jQuery, jQuery uploadprogress for upload images - http://www.nixbox.com/demos/jquery-uploadprogress.php or some similar addition.
 
 ### Rules regarding the names of html elements:
 
 - use description what this element is or what is doing,
 - use camelCase.
 
-For example: 'titleOfRecipe', 'buttonDeleteImage', 'inputAddIngredientToList'.
-
-If name is too long, you can shorten it, for example: 'inptAddIngrToList'.
-Remamber that name must be understood.
+For example: 'titleOfRecipe', 'deleteImageButton', 'addIngredientToListInput'.
 
 
 
