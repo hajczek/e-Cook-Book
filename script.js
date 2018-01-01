@@ -13,7 +13,7 @@
 // 1.3. Display list of added ingredients with quantity and unit, and option 'delete'.
 
 
-// 1.4. Display list of added needed thing with option 'delete'.
+// 1.4. Display list of added needed things with option 'delete'.
 
 
 // 1.5. Display added image.
