@@ -2,7 +2,7 @@
 
 ## Description
 
-'E-Cook Book' can will be install on local or online server.
+'e-Cook-Book' can will be install on local or online server.
 
 ### The elements of 'e-Cook-Book':
 
