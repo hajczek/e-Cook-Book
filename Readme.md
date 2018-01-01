@@ -1,10 +1,10 @@
-# 'e-CookBooK' - project
+# 'e-Cook-Book' - project
 
 ## Description
 
 'E-Cook Book' can will be install on local or online server.
 
-### The elements of 'e-CookBooK':
+### The elements of 'e-Cook-Book':
 
 - recipies,
 - categories of recipies,
@@ -12,7 +12,7 @@
 - categories of ingredients,
 - list of needed things to make recpipies.
 
-### The functionality of 'e-CookBooK':
+### The functionality of 'e-Cook-Book':
 
 #### FOR RECIPIES:
 
@@ -42,7 +42,7 @@
 
 #### FOR INGREDIENTS: 
 
-- add new ingredient to choose category of ingredients,
+- add new ingredient to choosen category of ingredients,
 - delete ingredient from category of ingredients,
 - add ingredient to recipe with quantity and measure,
 - change ingredinet quantity for recipe when the persons quantity changes,
@@ -95,7 +95,3 @@ Link to mokup model: https://app.moqups.com/i.hajczewska@gmail.com/JJSFaUOmtj/vi
 - use camelCase.
 
 For example: 'titleOfRecipe', 'deleteImageButton', 'addIngredientToListInput'.
-
-
-
-
