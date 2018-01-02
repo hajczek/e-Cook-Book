@@ -1,6 +1,6 @@
 # LICENSE FOR 'e-Cook-Book'
 
-The MIT License - See [license.md](license.md)
+## The MIT License
 
 Copyright (c) 2015 e-Cook-Book
 
