@@ -74,7 +74,5 @@ Students of Google Challenge Scholarship: Front-End Web Dev
 
 ### LICENSE
 
-The MIT License - See [license.md](license.md)
-
-
+The MIT License - See [license.md](e-Cook-Book/license.md)
 
