@@ -10,6 +10,7 @@ Link to mokup model: https://app.moqups.com/i.hajczewska@gmail.com/JJSFaUOmtj/vi
 **HTML elements:**
 
 - code HTML5 for view 'Add recipe',
+- code HTML5 for view 'List of ingredients',
 - code HTML5 for view 'List of recipies',
 - code HTML5 for view 'Recipe'.
 
