@@ -1,4 +1,4 @@
-# WORK PLAN FOR 'e-COOK-BBOK'
+# WORK PLAN FOR 'e-COOK-BOOK'
 
 *We have 5 weeks to make this project!*
 
