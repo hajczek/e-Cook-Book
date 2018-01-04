@@ -5,7 +5,7 @@
 This is our all plan:
 
 - first 2 days for make a team for this project - *IT'S DONE*,
-- next 2 days everybody from our team can make changes on model for this project - you can dawnload the models from Github  repository and done your amendments - *WE ARE NOW AT THIS MOMSNT*,
+- next 2 days everybody from our team can make changes on model for this project - you can dawnload the models from Github  repository and done your amendments - *WE ARE NOW AT THIS MOMENT*,
 - 5th day - team accepted the last version of model,
 - from 6th to 8th day - people who reported to make a graphic project make a graphic project,
 - 9th day - contest: which graphic project is the best,
