@@ -5,9 +5,9 @@
 This is our all plan:
 
 - first 2 days for make a team for this project - *IT'S DONE*,
-- next 2 days everybody from our team can make changes on model for this project - you can dawnload the models from Github  repository and done your amendments - *WE ARE NOW AT THIS MOMENT*,
-- 5th day - team accepted the last version of model,
-- from 6th to 8th day - people who reported to make a graphic project make a graphic project,
+- next 2 days everybody from our team can make changes on model for this project - you can dawnload the models from Github  repository and done your amendments - *IT'S DONE*,
+- 5th day - team accepted the last version of model - *WE ARE WAITING FOR VOICES*,
+- from 6th to 8th day - people who reported to make a graphic project make a graphic project -*WE ARE NOW AT THIS MOMENT*,
 - 9th day - contest: which graphic project is the best,
 - from 6th to 10th day: people who reported to make a HTML5 code - make a HTML5 code,
 - from 11th to 15th day: people who reported to make a CSS3 code - make a CSS3 code,
