@@ -24,7 +24,7 @@
 6. lech2 
 7. enas_eng2007kv3
 8. paulaccardosoutgm 
-9. chris_zin - CSS
+9. chris_zin
 10. irina.seppanen 
 11. evigiannakou
 12. dijack
