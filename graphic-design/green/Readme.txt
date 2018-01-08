@@ -1,4 +1,4 @@
-# Pink Template GRAPHIC PROJECT
+# Green Template GRAPHIC PROJECT
 
 ## Content
 
@@ -27,3 +27,8 @@ color: #A6D38B;
 secondary link color:
 
 color : #4679BD;
+
+input:
+
+color: #F06377;
+border: 0.5px #E4DCCE;
