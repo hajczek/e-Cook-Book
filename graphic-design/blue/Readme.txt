@@ -32,3 +32,5 @@ input:
 
 color: #F06377;
 border: 0.5px #E4DCCE;
+
+
