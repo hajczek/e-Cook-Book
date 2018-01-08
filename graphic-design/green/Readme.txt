@@ -1,4 +1,4 @@
-# Pink Template GRAPHIC PROJECT
+# Green Template GRAPHIC PROJECT
 
 ## Content
 
