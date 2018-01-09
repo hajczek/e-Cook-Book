@@ -27,3 +27,10 @@ color: #74BAE7;
 secondary link color:
 
 color : #F635FC;
+
+input:
+
+color: #F06377;
+border: 0.5px #E4DCCE;
+
+

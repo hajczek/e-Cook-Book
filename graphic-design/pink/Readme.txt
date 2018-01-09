@@ -23,3 +23,9 @@ background-color: #FDF9EE;
 secondary link color:
 
 color : #F47920;
+
+input:
+
+color: #F06377;
+border: 0.5px #E4DCCE;
+
