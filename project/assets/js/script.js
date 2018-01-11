@@ -5,9 +5,14 @@
 
 
 // 1.1. Display list of added ingredients with quantity and unit, and option 'delete'.
-
+$("#List-of-ingredients").on("click","button",function () {
+	$(this).parent().remove();
+});
 
 // 1.2. Display list of added needed things with option 'delete'.
+$("#list-of-needed-things").on("click","button",function () {
+	$(this).parent().remove();
+});
 
 
 
