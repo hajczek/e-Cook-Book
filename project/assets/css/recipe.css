@@ -1,7 +1,10 @@
 body {
   margin: 0;
   background-color: #FDF9EE;
+  font-family: Calibri, sans-serif;
+  width: 100%;
 }
+
 #top-bg {
   width: 1920px;
   position: relative;
@@ -13,4 +16,51 @@ body {
   position: absolute;
   top: 10px;
   left: 860px;
+}
+
+.content {
+  background-color: white;
+  width: 1147px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  font-size: 1.1em;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+#home {
+  float: left;
+  width: 38px;
+}
+
+#categories {
+  width: 200px;
+  margin-left: 20px;
+  float: left;
+}
+
+#slogan {
+  margin-right: 200px;
+  float: right;
+  color: #C22127;
+}
+
+.hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #fff, #C22127, #fff);
+  background-image: -moz-linear-gradient(left, #fff, #C22127, #fff);
+  background-image: -ms-linear-gradient(left, #fff, #C22127, #fff);
+  background-image: -o-linear-gradient(left, #fff, #C22127, #fff);
 }
