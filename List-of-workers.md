@@ -3,16 +3,17 @@
 ## JS/JSON GROUP
 
 1. violipopovaemaea 
-2. maevanap.contact
-3. amierzwinska
-4. Baacioana 
-5. ewamal
-6. ioanazzz
-7. Scruffy
-8. piotrkulpa1982
-9. sergio_kagiema 
-10. kekoessam.ketvsp
-11. dmpire2
+2. amierzwinska
+3. Baacioana 
+4. ewamal
+5. ioanazzz
+6. Scruffy
+7. piotrkulpa1982
+8. sergio_kagiema 
+9. kekoessam.ketvsp
+10. dmpire2
+11. emanuel.mares
+12. A.Borneck
 
 ## HTML/CSS GROUP
 
@@ -28,6 +29,7 @@
 10. irina.seppanen 
 11. evigiannakou
 12. dijack
+13. joaomgfonsecad_upx
 
 ## GRAPHICS DESIGNERS GROUP
 
@@ -36,6 +38,5 @@
 
 ## RESERVED GROUP
 
-1. joaomgfonsecad_upx
-2. malajustine
+1. malajustine
 
