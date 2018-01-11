@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-color: #FDF9EE;
+}
+#top-bg {
+  width: 1920px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 860px;
+}
