@@ -5,28 +5,30 @@ body {
   width: 100%;
 }
 
-#top-bg {
-  width: 1920px;
-  position: relative;
-  top: 0;
-  left: 0;
+.header {
+  overflow: hidden;
 }
 
 #logo {
   position: absolute;
   top: 10px;
-  left: 860px;
+  left: 43%;
+  width: 12%;
+  z-index: +1;
 }
 
 .content {
   background-color: white;
-  width: 1147px;
+  width: 70.4%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -30px;
+  position: relative;
+  z-index: 0;
 }
 
 nav {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 nav > ul {
@@ -57,10 +59,7 @@ a:link {
 }
 
 .hr {
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, #fff, #C22127, #fff);
-  background-image: -moz-linear-gradient(left, #fff, #C22127, #fff);
-  background-image: -ms-linear-gradient(left, #fff, #C22127, #fff);
-  background-image: -o-linear-gradient(left, #fff, #C22127, #fff);
+  width: 100%;
+  margin-left: 3%;
+  margin-bottom: 50px;
 }
