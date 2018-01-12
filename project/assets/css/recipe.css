@@ -9,7 +9,7 @@ body {
   overflow: hidden;
 }
 
-#logo {
+.logo {
   position: absolute;
   top: 10px;
   left: 43%;
@@ -41,18 +41,18 @@ a:link {
   color: black;
 }
 
-#home {
+.home {
   float: left;
   width: 38px;
 }
 
-#categories {
+.categories {
   width: 200px;
   margin-left: 20px;
   float: left;
 }
 
-#slogan {
+.slogan {
   margin-right: 200px;
   float: right;
   color: #C22127;
