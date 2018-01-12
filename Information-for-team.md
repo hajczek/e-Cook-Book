@@ -1,11 +1,11 @@
 # INFORMATION FOR TEAM
 
-* IF YOU WILL SEE CHANGING IN PROJECT FILES TODAY - PULL THE PROJECT FROM REPOSITORY *
+## IF YOU WILL SEE CHANGING IN PROJECT FILES TODAY - PULL THE PROJECT FROM REPOSITORY
 
 
-## Implemented changes in project 
+### Implemented changes in project 
 
-### 12.08.2018
+#### 12.08.2018
 
 - index.html:
 	- added type "file" to input for choose image,
