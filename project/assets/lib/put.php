@@ -14,7 +14,7 @@ $ingrCatName = $_POST["ingrCatName"];
 $catName = $_POST["catName"];
 
 $db = new SQLite3("recipes.db");
-if ($table == "recipes"){
+if ($table == "recipe"){
 	if ($action == "insert"){
 		$insert = "INSERT INTO recipe ('title', 'ingredients', 'recipe', 'category', 'time', 'portions', 'img', 'things') VALUES('$title','$ingredients', '$recipe','$category','$timeMaking','$noPortions', '$recipeImage', '$thingsNeeded')";
 		$db->exec($insert);
