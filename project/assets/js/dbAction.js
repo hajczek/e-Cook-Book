@@ -2,11 +2,11 @@ var dbAction = (function(){ // naem of the module
 	var recipe,category,ingr,getFile,putFile;  // vars to use in methods and export
 	
 	var execDB = function(action, rid, table, obj) { // method for insert, update and delete data from DB;
-		var string = obj+"&action="+action+"&rid="+rid+"&table="+table;
+		var str = obj+"&action="+action+"&rid="+rid+"&table="+table;
 		$.ajax({
 			method: "POST",
 			url: putFile,
-			data: string
+			data: str
 		}) 
 		.done(function( msg ) {
 			console.log( "Data Saved: " + msg );
@@ -23,7 +23,7 @@ var dbAction = (function(){ // naem of the module
 			url: getFile,
 			data: {table:table},
 			success: function(d){
-				if(table === "recipes"){
+				if(table === "recipe"){
 					dbAction.recipeArray  = JSON.parse(d);
 				}else if(table === "category") {
 					dbAction.categoryArray  = JSON.parse(d);
@@ -36,7 +36,7 @@ var dbAction = (function(){ // naem of the module
 	var init= function(file1,file2){ // initialize the link to the php files that querie the DB;
 		putFile = file1;
 		getFile = file2;
-		dbAction.getFromDB("recipes");
+		dbAction.getFromDB("recipe");
 		dbAction.getFromDB("category");
 		dbAction.getFromDB("ingredients");
 	};
