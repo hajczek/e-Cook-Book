@@ -20,4 +20,9 @@
 	
 - script.js:
 	- added new functions
+	
+- lib - folder added to folder 'project/assets' with files:
+	- get.php
+	- put.php
+	- recipes.db
 		
