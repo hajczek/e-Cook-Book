@@ -6,6 +6,7 @@
 		<title>Recipe-e-Cook-Book</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/recipe.css" media="screen">
 		<link rel="stylesheet" href="assets/css/style.css" media="screen">
 		<link rel="stylesheet" href="assets/css/print.css" media="print">
 		<script src="assets/js/script.js"></script>
@@ -18,21 +19,25 @@
 
 	<body>
 		<!-- logo + background image -->
-		<header>
-		  <img src="" alt="logo">
+		<header class="header">
+			<div>
+				<img id="top-bg" src="assets/img/top-bg-whole.png" alt="background">
+			</div>
+			<img id="logo" src="assets/img/logo.png" alt="logo">
 		</header>
-		
-		<section>
-			
+
+		<section class="content">
+
 		  <!-- navigation + slogan -->
 		  <nav>
-		    <ul>
-		      <li><a href="#">home</a></li>
-		      <li><a href="#">categories of recipes</a></li>
+		    <ul class="nav-ul">
+		      <li id="home"><a href="#">home</a></li>
+		      <li id="categories"><a href="#">categories of recipes</a></li>
 		    </ul>
-		    <p>subtext will be here - slogan</p>
+		    <p id="slogan">subtext will be here - slogan</p>
+				<img class="hr" src="assets/img/hr.png" alt="horizontal rule">
 		  </nav>
-			
+
 		  <!-- photo + ingredients description part -->
 		  <div>
 		    <div>
@@ -45,10 +50,10 @@
 			<div>
 			  <h3>List of chosen ingredients:</h3>
 			  <ol>
-			    <li>First ingredient <span>1 spoon</span></li>
+			    <li>First ingredient <span><span>1</span> spoon</span></li>
 			    <!-- span in ol for bold elements -->
-			    <li>Second ingredient <span>1 kilo</span></li>
-			    <li>Third ingredient <span>2 glasess</span></li>
+			    <li>Second ingredient <span><span>1</span> kilo</span></li>
+			    <li>Third ingredient <span><span>2</span> glasess</span></li>
 			  </ol>
 			</div>
 			<div>
@@ -63,7 +68,7 @@
 			  <p>Time to make: 01:00:00 hrs</p>
 			</div>
 			<div>
-			  <p>For how many people: 4</p>
+			  <p>For how many people: <button type="button" name="button"><span>4</span></button></p>
 			</div>
 		      </div>
 		    </div>
