@@ -14,7 +14,7 @@ $ingrCatName = $_POST["ingrCatName"];
 $catName = $_POST["catName"];
 
 $db = new SQLite3("recipes.db");
-if ($table == "recipes"){
+if ($table == "recipe"){
 	if ($action == "insert"){
 		$insert = "INSERT INTO recipe ('title', 'ingredients', 'recipe', 'category', 'time', 'portions', 'img', 'things') VALUES('$title','$ingredients', '$recipe','$category','$timeMaking','$noPortions', '$recipeImage', '$thingsNeeded')";
 		$db->exec($insert);
@@ -27,7 +27,7 @@ if ($table == "recipes"){
 	};
 }else if($table == "ingredients"){
 	if ($action == "insert"){
-		$insert = "INSERT INTO ingredients ('title') VALUES('$ingrCatName')";
+		$insert = "INSERT INTO ingredients ('name') VALUES('$ingrCatName')";
 		$db->exec($insert);
 	}else if($action == "delete"){
 		$delete = "DELETE FROM ingredients WHERE id='$rid'";
@@ -38,7 +38,7 @@ if ($table == "recipes"){
 	};
 }else if($table == "category"){
 	if ($action == "insert"){
-		$insert = "INSERT INTO category ('title') VALUES('$catName')";
+		$insert = "INSERT INTO category ('name') VALUES('$catName')";
 		$db->exec($insert);
 	}else if($action == "delete"){
 		$delete = "DELETE FROM category WHERE id='$rid'";
