@@ -1,7 +1,7 @@
 <?php
 $table = $_POST['table'];
 $db = new SQLite3('recipes.db');
-if($table == "recipes"){
+if($table == "recipe"){
     $sql = "SELECT * FROM recipe";
     $result = $db->query($sql);
     $arr = array();
