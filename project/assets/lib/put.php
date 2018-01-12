@@ -15,38 +15,38 @@ $catName = $_POST["catName"];
 
 $db = new SQLite3("recipes.db");
 if ($table == "recipes"){
-if ($action == "insert"){
-$insert = "INSERT INTO recipe ('title', 'ingredients', 'recipe', 'category', 'time', 'portions', 'img', 'things') VALUES('$title','$ingredients', '$recipe','$category','$timeMaking','$noPortions', '$recipeImage', '$thingsNeeded')";
-$db->exec($insert);
-}else if($action == "delete"){
-$delete = "DELETE FROM recipe WHERE id='$rid'";
-$db->exec($delete);
-}else if($action == "update"){
-$update = "UPDATE recipe SET 'title'='$title', 'ingredients'='$ingredients', 'recipe'='$recipe', 'category'='$category', 'time'='$timeMaking', 'portions'='$noPortions', 'img'='$recipeImage', 'things'='$thingsNeede' WHERE id='$rid'";
-$db->exec($update);
-};
+	if ($action == "insert"){
+		$insert = "INSERT INTO recipe ('title', 'ingredients', 'recipe', 'category', 'time', 'portions', 'img', 'things') VALUES('$title','$ingredients', '$recipe','$category','$timeMaking','$noPortions', '$recipeImage', '$thingsNeeded')";
+		$db->exec($insert);
+	}else if($action == "delete"){
+		$delete = "DELETE FROM recipe WHERE id='$rid'";
+		$db->exec($delete);
+	}else if($action == "update"){
+		$update = "UPDATE recipe SET 'title'='$title', 'ingredients'='$ingredients', 'recipe'='$recipe', 'category'='$category', 'time'='$timeMaking', 'portions'='$noPortions', 'img'='$recipeImage', 'things'='$thingsNeede' WHERE id='$rid'";
+		$db->exec($update);
+	};
 }else if($table == "ingredients"){
-if ($action == "insert"){
-$insert = "INSERT INTO ingredients ('title') VALUES('$ingrCatName')";
-$db->exec($insert);
-}else if($action == "delete"){
-$delete = "DELETE FROM ingredients WHERE id='$rid'";
-$db->exec($delete);
-}else if($action == "update"){
-$update = "UPDATE ingredients SET 'name'=$ingrCatName";
-$db->exec($update);
-};
+	if ($action == "insert"){
+		$insert = "INSERT INTO ingredients ('title') VALUES('$ingrCatName')";
+		$db->exec($insert);
+	}else if($action == "delete"){
+		$delete = "DELETE FROM ingredients WHERE id='$rid'";
+		$db->exec($delete);
+	}else if($action == "update"){
+		$update = "UPDATE ingredients SET 'name'=$ingrCatName";
+		$db->exec($update);
+	};
 }else if($table == "category"){
-if ($action == "insert"){
-$insert = "INSERT INTO category ('title') VALUES('$catName')";
-$db->exec($insert);
-}else if($action == "delete"){
-$delete = "DELETE FROM category WHERE id='$rid'";
-$db->exec($delete);
-}else if($action == "update"){
-$update = "UPDATE category SET 'name'=$catName";
-$db->exec($update);
-};
+	if ($action == "insert"){
+		$insert = "INSERT INTO category ('title') VALUES('$catName')";
+		$db->exec($insert);
+	}else if($action == "delete"){
+		$delete = "DELETE FROM category WHERE id='$rid'";
+		$db->exec($delete);
+	}else if($action == "update"){
+		$update = "UPDATE category SET 'name'=$catName";
+		$db->exec($update);
+	};
 };
 $db->close();
 
