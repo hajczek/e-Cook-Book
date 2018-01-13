@@ -25,10 +25,7 @@ $(document).ready(function(){
 
 // 2.1. Display added image to recipe.
 
-// ready listener. Put here event listeners and other code that needs DOM to be loaded before executing.
-$(document).ready(function() {
-    $("input[type='file']").on("change", readURL); //event listener for a file upload
-});
+$("input[type='file']").on("change", readURL); //event listener for a file upload
 
 //display the selected file by changing the src of the img element to the specified file
 function readURL() {
