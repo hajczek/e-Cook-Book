@@ -14,3 +14,4 @@
 	
 - script.js:
 	- adds servings/ingredients converter functionality
+	- added image preview and .ready listener and comments
