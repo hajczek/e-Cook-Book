@@ -12,3 +12,6 @@
 	- few correction in both html and css file,
 	- fixed issue in class's
 	
+- script.js:
+	- adds servings/ingredients converter functionality
+	- added image preview and .ready listener and comments
