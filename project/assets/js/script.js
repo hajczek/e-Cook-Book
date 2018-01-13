@@ -42,7 +42,7 @@ function readURL() {
 
             tempImg.onload = function(e) {
                 const aspectRatio = tempImg.width / tempImg.height; // in order to maintain aspect ratio
-                const newWidth = 100; // width of the displayed image
+                const newWidth = 150; // width of the displayed image
                 const newHeight = newWidth / aspectRatio;
                 $("#uploadedImg").attr("src", source);
                 $("#uploadedImg").css({
