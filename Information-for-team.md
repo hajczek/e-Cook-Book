@@ -5,7 +5,7 @@
 
 ### Implemented changes in project 
 
-#### 13.08.2018
+#### 13.01.2018
 
 - index.html, recipe.html, style.css, recipe.css:
 
