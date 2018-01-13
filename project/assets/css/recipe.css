@@ -9,7 +9,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 186px;
-  background: transparent url('https://hajczek.github.io/e-Cook-Book/project/assets/img/pink/top-bg.jpg') top left repeat-x;
+  background: transparent url(https://hajczek.github.io/e-Cook-Book/project/assets/img/pink/top-bg.jpg) top left repeat-x;
 }
 
 .logo {
