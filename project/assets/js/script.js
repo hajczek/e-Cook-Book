@@ -35,11 +35,13 @@ function readURL() {
         const reader = new FileReader();
         reader.readAsDataURL(this.files[0]);    
 
+        //when reader has uploaded file, add it to img src
         reader.onload = function(e) {
             const tempImg = new Image();
             const source = e.target.result;
             tempImg.src = source;
 
+            //created a temporary Image object in order to extract image's height and width, to maintain aspect ratio
             tempImg.onload = function(e) {
                 const aspectRatio = tempImg.width / tempImg.height; // in order to maintain aspect ratio
                 const newWidth = 150; // width of the displayed image
