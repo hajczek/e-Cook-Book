@@ -1,5 +1,9 @@
 // Needed functionalities for 'e-Cook-Book'
 
+// ready listener. Put here event listeners and other code that needs DOM to be loaded before executing.
+$(document).ready(function() {
+    $("input[type='file']").on("change", readURL); //event listener for a file upload
+});
 
 // 1.0. Make a recipe.
 
@@ -22,6 +26,35 @@
 
 
 // 2.1. Display added image to recipe.
+
+//display the selected file by changing the src of the img element to the specified file
+function readURL() {
+    $("#uploadedImg").attr("src", "");
+
+    if (this.files && this.files[0]) {
+        const reader = new FileReader();
+        reader.readAsDataURL(this.files[0]);    
+
+        reader.onload = function(e) {
+            const tempImg = new Image();
+            const source = e.target.result;
+            tempImg.src = source;
+
+            tempImg.onload = function(e) {
+                const aspectRatio = tempImg.width / tempImg.height; // in order to maintain aspect ratio
+                const newWidth = 100; // width of the displayed image
+                const newHeight = newWidth / aspectRatio;
+                $("#uploadedImg").attr("src", source);
+                $("#uploadedImg").css({
+                    "width" : newWidth + "px",
+                    "height" : newHeight + "px",
+                    "max-height" : newWidth +"px",
+                });
+
+            }
+        }
+    }
+}
 
 
 // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
