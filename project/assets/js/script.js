@@ -25,6 +25,39 @@ $(document).ready(function(){
 
 // 2.1. Display added image to recipe.
 
+$("#inputImg").on("change", readURL); //event listener for a file upload
+
+//display the selected file by changing the src of the img element to the specified file
+function readURL() {
+    $("#uploadedImg").attr("src", "");
+
+    if (this.files && this.files[0]) {
+        const reader = new FileReader();
+        reader.readAsDataURL(this.files[0]);    
+
+        //when reader has uploaded file, add it to img src
+        reader.onload = function(e) {
+            const tempImg = new Image(); //create a temporary Image object to extract image's height and width
+            const source = e.target.result;
+            tempImg.src = source;
+
+            //after temporary Image created, update src, height and width of the preview - keeping aspect ratio
+            tempImg.onload = function(e) {
+                const aspectRatio = tempImg.width / tempImg.height; // in order to maintain aspect ratio
+                const newWidth = 150; // width of the displayed image
+                const newHeight = newWidth / aspectRatio;
+                $("#uploadedImg").attr("src", source);
+                $("#uploadedImg").css({
+                    "width" : newWidth + "px",
+                    "height" : newHeight + "px",
+                    "max-height" : newWidth +"px",
+                });
+
+            }
+        }
+    }
+}
+
 
 // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
 // Added for RECIPE.html view, doesn't update database
