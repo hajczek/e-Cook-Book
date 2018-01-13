@@ -27,28 +27,47 @@ $(document).ready(function(){
 
 
 // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
+// Added for RECIPE.html view, doesn't update database
 
-// RECIPE view
-const $servings = $('#servings');
-const $servingsBtn = $('#servings-btn');
-$servingsBtn.on('click', openServingsForm);
-const $servingsDiv = $("#servings-div");
-function openServingsForm(){
-  $servings.html('<input type="number" name="quantity" id="servings-input">');
+const recalculateIngredients = (function(){
+
+// get DOM elements
+const $servingsBtn = $("#servings-btn");
+const $servingsSpan = $("#servings-span");
+const $ingredientsList = Array(...$("#ingredients-list li span > span"));
+
+// get & store quantity of ingredients needed for single serving
+const servingsMultiplicators = $ingredientsList.map((el) => {
+	return Number(el.innerText) / Number($servingsBtn[0].innerText);
+});
+
+//event listeners for button & input
+$servingsSpan.on("input", "#servings-input", updateIngredients);
+$servingsSpan.on("keyup", "#servings-input", reinstateBtn);
+$servingsSpan.on("click", "#servings-btn", openServingsForm);
+
+// open input field for adding number of servings changes
+ function openServingsForm(){
+	const $servingsInputValue = Number($servingsBtn[0].innerText);
+	$servingsSpan.html(`<input type="number" name="quantity" id="servings-input" min="1" value="${$servingsInputValue}">`);
 }
 
-$servingsDiv.on("change", "#servings-input", updateIngredients);
-
+// recalculate original ingredient quantities & display on page
 function updateIngredients(){
-	const $ingredientQties = Array(...$(".ingredient-qty"));
-	$ingredientQties.map(function(el){
-		let quantity = Number(el.innerText);
-		quantity *= $("#servings-input").val();
-		el.innerText = quantity;
+	let servingsNumber = Number($("#servings-input").val());
+
+	$ingredientsList.map(function(el, index){
+		let quantity = servingsNumber * servingsMultiplicators[index];
+		el.innerText = String(quantity);
 	});
-
-
 }
+// close input form & display button when enter pressed
+function reinstateBtn(e){
+	if(e.which == 13){
+		$servingsSpan.html(`<button id="servings-btn" type="button" name="button"><span>${$("#servings-input").val()}</span></button>`);
+	}
+}
+})();
 
 
 
