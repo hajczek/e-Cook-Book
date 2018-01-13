@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 // 2.1. Display added image to recipe.
 
-$("input[type='file']").on("change", readURL); //event listener for a file upload
+$("#inputImg").on("change", readURL); //event listener for a file upload
 
 //display the selected file by changing the src of the img element to the specified file
 function readURL() {
