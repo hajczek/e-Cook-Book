@@ -8,5 +8,5 @@
 #### 14.01.2018
 
 
-- script.js:
+- script.js, index.html:
 	- update
