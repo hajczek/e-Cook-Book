@@ -151,6 +151,30 @@ function reinstateBtn(e){
 
 // 6.1. See recipe.
 
+let tester = $("#see-recipe").click(function(){
+    
+titleRecipe = $("#title-recipe").val();     // 1.0 Add title to recipe
+
+let recipesCategory = $("#recips-category :selected").val();       // add category of recipes
+
+let ingredientsList = $("#List-of-ingredients").text();         // list of ingredients
+
+let neededThings = $("#list-of-needed-things").text();           // list of needed things
+
+let recipeDescription = $("#description-of-recipe").val();            // description of recipe
+
+let imageUpload = $("#uploadedImg").attr("src");         // uploaded Image
+
+let timeToMake = $("#time-to-make").val();          // time to make a recipe
+
+let howMany = $("#how-many-person").val();          // for how many person
+
+alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDescription + timeToMake + howMany);
+
+
+});
+
+
 
 // 6.2. Save recipe.
 
