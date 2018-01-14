@@ -39,11 +39,11 @@
 
 			<!-- Add title to recipe (label, input) -->
 			<label for="">Add title to recipe</label>
-			<input type="text" name="" value="">
+			<input type="text" name="" value="" id="title-recipe">
 
 			<!-- Choos category of recipes to recipe (label, select) -->
 			<label for="">Choose category of recipes for recipe</label>
-			<select class="" name="">
+			<select class="" name="" id="recips-category">
 				<option value="">First category of recipes</option>
 			</select>
 
@@ -52,7 +52,7 @@
 
 			<!-- List of added ingredients with quantity, unit and option 'delete' (ul, button) -->
 			<ol id="List-of-ingredients">
-				<li>First ingredient <span>1</span> spoon<button type="button" name="button" >Delete</button></li>
+				<li>First ingredient <span>1</span> spoon<button type="button" name="button">Delete</button></li>
 				<li>Second ingredient <span>1</span> kilo<button type="button" name="button">Delete</button></li>
 			</ol>
 
@@ -68,7 +68,7 @@
 			<h3>Recipe</h3>
 
 			<!-- File for description of recipe (textarea) -->
-			<textarea name="name" rows="15" cols="60"></textarea>
+			<textarea name="name" id="description-of-recipe" rows="15" cols="60"></textarea>
 
 			<!-- Additional elements: (h3) -->
 			<h3>Additional elements</h3>
@@ -83,14 +83,15 @@
 
 			<!-- Add time needed to make a recipe (label, input) -->
 			<label for="">Add time to make</label>
-			<input type="text" name="" value="00:00">
+			<input type="text" name="" id="time-to-make" value="00:00">
 
 			<!-- For how many person (label, input) -->
 			<label for="">No. of portions</label>
-			<input type="text" name="" value="">
+			<input type="text" name="" id="how-many-person" value="">
 
 			<!-- See recipe (button) -->
-			<button type="button" name="button">See recipe</button>
+			<button type="button" name="button" id="see-recipe">See recipe</button>
+			
 
 			<!-- Save recipe (button) -->
 			<button type="button" name="button">Save recipe</button>
@@ -324,3 +325,4 @@
 	</body>
 
 </html>
+
