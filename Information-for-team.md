@@ -5,8 +5,8 @@
 
 ### Implemented changes in project 
 
-#### 13.01.2018
+#### 14.01.2018
 
 
-- recipe.css:
-	- changed styles definition for body, header and logo
+- script.js:
+	- update
