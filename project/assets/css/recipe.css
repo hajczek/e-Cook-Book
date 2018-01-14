@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #FDF9EE url(https://hajczek.github.io/e-Cook-Book/project/assets/img/pink/top-bg.jpg) top left repeat-x;
+  background: #FDF9EE url(../img/pink/top-bg.jpg) top left repeat-x;
   font-family: Calibri, sans-serif;
   width: 100%;
 }
