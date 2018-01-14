@@ -7,17 +7,6 @@
 
 #### 13.01.2018
 
-- index.html, recipe.html, style.css, recipe.css:
 
-	- few correction in both html and css file
-	- fixed issue in class's
-	
-- script.js:
-	- adds servings/ingredients converter functionality
-	- added image preview and .ready listener and comments
-	
-- style.css:
-	- delete
-	
 - recipe.css:
-	- changed styles definition for class 'header' 
+	- changed styles definition for body, header and logo
