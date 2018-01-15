@@ -102,7 +102,18 @@ function reinstateBtn(e){
 }
 })();
 
-
+// DropDown menu for Recipes, Ingredients and Needed things
+(function(){
+  $('#recipesDrop').on('click',function(){
+    $('#recipesDropForm').slideToggle();
+  });
+  $('#ingredientsDrop').on('click',function(){
+    $('#ingredientsDropForm').slideToggle();
+  });
+  $('#thingsDrop').on('click',function(){
+    $('#thingsDropForm').slideToggle();
+  });
+})();
 
 // 3.0.  Create categories of recipes.
 
