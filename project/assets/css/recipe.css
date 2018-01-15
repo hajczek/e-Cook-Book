@@ -64,3 +64,15 @@ a:link {
   margin-left: 3%;
   margin-bottom: 50px;
 }
+
+#recipesDropForm{
+  display:none;
+}
+
+#ingredientsDropForm{
+  display:none;  
+}
+
+#thingsDropForm{
+  display:none;  
+}
