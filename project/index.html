@@ -227,7 +227,7 @@
 					<button type="button" name="button">Add</button>
 
 					<!-- List of category of ingredients with options: 'See list' and 'Delete' (ul, button, button) -->
-					<ol>
+					<ol id="categories">
 						<li>First Category of Ingredients
 							<button type="button" name="button">See list</button>
 							<button type="button" name="button">Delete</button>
@@ -335,12 +335,12 @@
 						<div>
 							<h2>List of needed things</h2>
 							<form>
-								<ul>
+								<ul id="needed-things">
 									<li><input type="checkbox"><label>First thing </label></li>
 									<li><input type="checkbox"><label>Second thing </label></li>
 									<li><input type="checkbox"><label>Third thing </label></li>
 								</ul>
-								<button type="button">Add choosen things to recipe</button>
+								<button type="button" id="add-needed-things">Add choosen things to recipe</button>
 								<button type="button">Delete choosen things from needed things list</button>
 								<button type="button">Close list</button>
 								<!-- Close popup window (button) -->
