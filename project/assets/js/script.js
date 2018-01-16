@@ -139,7 +139,20 @@ function reinstateBtn(e){
 
 
 // 4.2. Add new ingredient to choosen category of ingredients.
-
+(function () {
+	function addIngredents () { 
+		for (var n=0;n < $("#categories li div ul li input:checked").length;n++){
+    			let name = $("#categories ul li input:checked:eq("+n+") ~ label")
+    			let quantity = $("#categories ul li input:checked:eq("+n+") ~ input[name = quantity]")
+    			let unit = $("#categories ul li input:checked:eq("+n+") ~ input[name = unit]")	
+    			let element = name.text()+" <span>"+quantity.val()+"</span> "+unit.val()+"<button type=\"button\" name=\"button\">Delete</button>"
+    			$("#List-of-ingredients").append("<li>"+element+"</li>")
+		}
+		$("#categories ul li input").prop("checked",false)
+	}
+	
+ 	$("#categories li div").on("click","button:eq(0)",addIngredents)	
+})();
 
 // 4.3. Display list of ingredients (button 'See list') from choosen category (in popup).
 
@@ -150,7 +163,18 @@ function reinstateBtn(e){
 
 
 // 5.1. Add thing to list of needed things.
-
+(function(){
+	function addNeeded() {
+		for (var n=0;n < $("#needed-things li input:checked").length;n++){  
+			let name = $("#needed-things li input:checked:eq("+n+") ~ label")
+			let element = name.text()+" <button type=\"button\" name=\"button\">Delete</button>"
+			$("#list-of-needed-things").append("<li>"+element+"</li>")
+   		}
+		$("#needed-things li input").prop("checked",false)
+	}
+	
+	$("#add-needed-things").on("click",addNeeded)
+})();
 
 // 5.2. Display list of needed things (button 'See list') (in popup).
 
