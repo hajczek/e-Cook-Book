@@ -196,17 +196,17 @@ alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDes
 // 7.0. Switch styles
 	
 (function (){$("#css-red").click(function() {
-	$("link[rel=stylesheet]").attr({href : "recipe.css"});
+	$("link[rel=stylesheet]").attr({href : "assets/css/recipe.css"});
 	});
 })();
 
 (function (){$("#css-blue").click(function() {
-	$("link[rel=stylesheet]").attr({href : "recipe-blue.css"});
+	$("link[rel=stylesheet]").attr({href : "assets/css/recipe-blue.css"});
 	});
 })();
 
 (function (){$("#css-green").click(function() {
-	$("link[rel=stylesheet]").attr({href : "recipe-green.css"});
+	$("link[rel=stylesheet]").attr({href : "assets/css/recipe-green.css"});
 	});
 })();
 
