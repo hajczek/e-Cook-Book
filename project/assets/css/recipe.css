@@ -76,3 +76,39 @@ a:link {
 #thingsDropForm{
   display:none;  
 }
+
+
+/* Style for switch css file */
+
+.styleSwitch{
+	display: block;
+	float: right;
+	background-color: #fff;
+}
+			
+.styleSwitch a:link, 
+.styleSwitch a:visited{
+	display: block;
+	float: left;
+	width: 50px;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.styleSwitch a:hover{
+	text-decoration: underline;
+}
+
+#css-pink{
+	background-color: #F06377;				
+}
+
+#css-blue{
+	background-color: #74BAE7;
+}
+
+#css-green{
+	background-color: #A6D38B;
+}
