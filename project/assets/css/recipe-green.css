@@ -15,7 +15,11 @@ body {
 .logo {
   position: relative;
   z-index: +1;
-  background:
+  background: transparent url(../img/green/logo.png) top center no-repeat;
+  width: 215px;
+  height: 197px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content {
@@ -78,7 +82,7 @@ a:link {
 }
 
 
-/* Style for switch css file */
+/* Style for switch css files */
 
 .styleSwitch{
 	display: block;
