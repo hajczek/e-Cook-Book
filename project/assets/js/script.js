@@ -196,7 +196,7 @@ alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDes
 // 7.0. Switch styles
 	
 (function (){
-  $("#css-red").click(function() {
+  $("#css-pink").click(function() {
     $("link[rel=stylesheet]").attr({href : "assets/css/recipe.css"});
   });
   $("#css-blue").click(function() {
