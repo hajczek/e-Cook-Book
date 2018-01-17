@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background: #FDF9EE url(../img/green/top-bg.jpg) top left repeat-x;
-  font-family: Calibri, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   width: 100%;
 }
 
@@ -18,16 +18,15 @@ body {
   background: transparent url(../img/green/logo.png) top center no-repeat;
   width: 215px;
   height: 197px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.content {
+.container {
   background-color: white;
-  width: 70.4%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -30px;
+  width: auto;
+  margin: -30px auto;
   position: relative;
   z-index: 0;
 }
@@ -36,9 +35,10 @@ nav {
   font-size: 1.2em;
 }
 
-nav > ul {
+.navigation li {
   list-style-type: none;
-  display: inline-block;
+	display: inline-block;
+	padding-right: 30px;
 }
 
 a:link {
@@ -46,27 +46,17 @@ a:link {
   color: black;
 }
 
-.home {
-  float: left;
-  width: 38px;
-}
-
-.categories {
-  width: 200px;
-  margin-left: 20px;
-  float: left;
-}
 
 .slogan {
-  margin-right: 200px;
-  float: right;
-  color: #C22127;
+  width: 50%;
+  text-align: center;
+  color: #83C458;
 }
 
-.hr {
-  width: 100%;
-  margin-left: 3%;
-  margin-bottom: 50px;
+hr {
+  width: auto;
+  border: 1px dashed #83C458;
+  opacity: 0.2;
 }
 
 #recipesDropForm{
@@ -74,11 +64,11 @@ a:link {
 }
 
 #ingredientsDropForm{
-  display:none;  
+  display:none;
 }
 
 #thingsDropForm{
-  display:none;  
+  display:none;
 }
 
 
@@ -89,8 +79,8 @@ a:link {
 	float: right;
 	background-color: #fff;
 }
-			
-.styleSwitch a:link, 
+
+.styleSwitch a:link,
 .styleSwitch a:visited{
 	display: block;
 	float: left;
@@ -106,7 +96,7 @@ a:link {
 }
 
 #css-pink{
-	background-color: #F06377;				
+	background-color: #F06377;
 }
 
 #css-blue{
@@ -115,4 +105,105 @@ a:link {
 
 #css-green{
 	background-color: #A6D38B;
+}
+
+/* ******************* Recipe ******************* */
+
+.dish {
+  margin: 15px auto 10px auto;
+}
+
+/* Title, category and ingredients*/
+.title-cook-book {
+  color: #83C458;
+
+  padding-top: 5px;
+}
+
+.category {
+  font-style: italic;
+  color: black;
+  font-weight: 500;
+}
+
+.category-name {
+  color: #83C458;
+}
+
+.list-name {
+  font-weight: 500;
+}
+
+.list {
+  font-size: 90%;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+/* Icons */
+.list-ing::before {
+  display: inline-block;
+  content: url("../img/pink/ingredients-icon.jpg");
+  margin: 0 6px 0 0;
+}
+
+.list-things::before {
+  display: inline-block;
+  content: url("../img/pink/other-icon.jpg");
+  margin: 0 6px 0 0;
+}
+
+.time::before {
+  display: inline-block;
+  content: url("../img/pink/time-icon.jpg");
+  margin: 0 6px 0 0;
+}
+
+.people::before {
+  display: inline-block;
+  content: url("../img/pink/servings-icon.jpg");
+  margin: 0 6px 0 0;
+}
+
+.recipe::before {
+  display: inline-block;
+  content: url("../img/pink/recipe-icon.jpg");
+  margin: 0 6px 0 0;
+}
+
+/* Recipe */
+.recipe-description {
+  font-size: 95%;
+  line-height:130%;
+}
+
+/* ******************* Buttons ******************* */
+.buttons {
+	text-align: center;
+}
+
+.button-recipe {
+  background-color: #A6D38B;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin:2em 1em 2em;
+  max-width: 160px;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 50%;
+  background: darken($red, 1.5%);
+  font-weight: 100;
+  }
+
+.button-recipe:hover {
+  background: rgba($red, 0);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
