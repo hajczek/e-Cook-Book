@@ -13,82 +13,84 @@
 	<body>
 		<!-- logo + background image -->
 		<header>
-		  <div class="logo"></div>
+		  	<div class="logo"></div>
 		</header>
 
 		<section class ="container">
 
 		  <!-- navigation + slogan -->
 		  <nav class="row">
-		    <ul class ="navigation col-lg-7">
-		      <li class="navbar-nav home"><a href="#">home</a></li>
-		      <li class="navbar-nav categories"><a href="#">categories of recipes</a></li>
-		    </ul>
-		    <p class="col-lg-5 slogan">subtext will be here - slogan</p>
+		    	<ul class ="navigation col-lg-7">
+		      		<li class="navbar-nav home"><a href="#">home</a></li>
+		      		<li class="navbar-nav categories"><a href="#">categories of recipes</a></li>
+		    	</ul>
+	            	<div class="styleSwitch">
+		      		<a id="css-pink" href="#red">Pink</a>
+		     		<a id="css-blue" href="#blue">Blue</a>
+		      		<a id="css-green" href="#green">Green</a>
+		   	</div>
+		    	<p class="col-lg-5 slogan">subtext will be here - slogan</p>
 		  </nav>
-			<hr></hr>
+		  <hr><hr>
 		  <!-- photo + ingredients description part -->
-
 		  <div>
 		    <div class="row">
 		    	<div class="col-sm-6">
 		    		<img src="http://via.placeholder.com/350x150" class="dish" alt="dish picture">
 		    	</div>
 		    	<div class="col-sm-6">
-		      <div clas ="row"><h2 class="title-cook-book">Creamy Ham and Cheese Quiche</h2></div>
-		      <div class="row"><h3 class="col category-name"><span class="category">Category:</span> Breakfast</h3></div>
+		        <div clas ="row"><h2 class="title-cook-book">Creamy Ham and Cheese Quiche</h2></div>
+		        <div class="row"><h3 class="col category-name"><span class="category">Category:</span> Breakfast</h3></div>
 		    	<div class = "row">
 		    		<div  class="col">
 		    		<h5 class="list-name list-ing">List of chosen ingredients:</h5>
 		    		<ol class="list">
-							<!-- span in ol for bold elements -->
-		    			<li>First ingredient <span>1 spoon</span></li>
-					    <li>Second ingredient <span>1 kilo</span></li>
-					    <li>Third ingredient <span>2 glasess</span></li>
-				  	</ol>
-
+				  	<!-- span in ol for bold elements -->
+		    		  	<li>First ingredient <span><span>1</span> spoon</span></li>
+			          	<li>Second ingredient <span><span>1</span> kilo</span></li>
+			          	<li>Third ingredient <span><span>2</span> glasess</span></li>
+				</ol>
 				</div>
 				<div class="col">
 					<h5 class="list-name list-things">List of needed things:</h5>
 					<ol class="list">
 						<li>First thing</li>
-					    <li>Second thing</li>
-					    <li>Third thing</li>
+					    	<li>Second thing</li>
+					    	<li>Third thing</li>
 			  		</ol>
-			  		</div>
-			  	</div>
-			  		<div class="row">
-			  		<div class="col">
-				  	<p class="font-bold time">Time to make: 01:00:00 hrs</p>
-				    </div>
-				    <div class="col">
-                  <p class="font-bold people">For how many people: 4</p>
-				    </div>
-			  	</div>
 			  	</div>
 			  </div>
-			<!-- Horizontal Rule -->
-			<hr></hr>
-		  <!-- recipe description -->
-		  <div class="row main">
-		  	<div class="col-lg-12">
-		  	<h3 class="recipe font-bold">Recipe:</h3>
-		    <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-		      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		  	</div>
-		  </div>
-      <!-- Horizontal rule above the buttons -->
-      <hr></hr>
-		  <!-- buttons -->
-		  <div class="row">
+			  <div class="row">
+			  	<div class="col">
+				  	<p class="font-bold time">Time to make: 01:00:00 hrs</p>
+				</div>
+				<div class="col">
+				  	<p>No of serves: <span id="servings-span">
+				  	<button id="servings-btn" type="button" name="button"><span>4</span></button></span></p>
+			  	</div>
+			</div>
+		</div>
+		<!-- Horizontal Rule -->
+		<hr><hr>
+		<!-- recipe description -->
+		<div class="row main">
+		<div class="col-lg-12">
+			<h3 class="recipe font-bold">Recipe:</h3>
+		    	<p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		</div>
+      	  	<!-- Horizontal rule above the buttons -->
+      	  	<hr><hr>
+		<!-- buttons -->
+		<div class="row">
 		  	<div class="buttons col-lg-12">
-		    <button class="button-recipe" type="button">Print to .pdf</button>
-		    <button class="button-recipe" type="button">Edit recipe</button>
-		    <button class="button-recipe" type="button">Delete recipe</button>
-		  </div>
-		  </div>
-
-		  </div>
-		</section>
-	</body>
+		    		<button class="button-recipe" type="button">Print to .pdf</button>
+		    		<button class="button-recipe" type="button">Edit recipe</button>
+		    		<button class="button-recipe" type="button">Delete recipe</button>
+		  	</div>
+		</div>
+	</div>
+</div>
+</section>
+</body>
 </html>
