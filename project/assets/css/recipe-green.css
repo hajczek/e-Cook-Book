@@ -82,7 +82,6 @@ hr {
 .styleSwitch a:link,
 .styleSwitch a:visited{
 	display: block;
-	float: left;
 	width: 70px;
 	padding: 5px;
 	text-align: center;
