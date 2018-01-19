@@ -217,7 +217,29 @@ alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDes
 // 6.3. Edit recipe - on view 'Recipe'.
 	
 	
-// 7.0. Switch styles
+// 6.4. Print recipe
+	
+(function() {	
+	/**
+	* @description Print page
+	* @param {}
+	* @param {}
+	* @returns {} Opened panel to print page
+	*/
+	function printProject(){
+		$('#input_print').click(function(){
+			window.print();
+		});
+	};
+		
+	let printInput = $('#input_print');
+	
+	// TODO: open panel to print
+	printInput.on('click', function(){printProject();});
+})();	
+	
+	
+// TODO: switch files with style css
 	
 (function (){
   $("#css-pink").click(function() {
