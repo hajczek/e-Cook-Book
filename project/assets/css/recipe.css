@@ -15,15 +15,20 @@ header {
 }
 
 .logo {
-  margin-top: -180px;
-  position: absolute;
+  /* margin-top: -180px; */
+  position: relative;
   z-index: +2;
   background: transparent url(../img/pink/logo.png) top center no-repeat;
   width: 215px;
   height: 197px;
-  top: 5%;
-  right: 40%;
-  left: 40%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row{
+  margin-right: 0 !important;
+  margin-left:0 !important;
 }
 
 .dish {
@@ -42,23 +47,17 @@ header {
 .container {
   background-color: white;
   width: auto;
-  margin: -30px auto;
+  margin: -35px auto;
   z-index: +3;
   padding-left: 5%;
   padding-right: 5%;
   margin-bottom: 5%;
-  position: absolute;
-  top: 29%;
-  right: 10%;
-  left: 10%;
+  position: relative;
+  z-index: 0;
 
 }
 .recipe-items{
   padding-top: 1%;
-
-.row{
-	margin-right: 0 !important;
-	margin-left:0 !important;
 }
 
 nav {
@@ -66,14 +65,14 @@ nav {
 }
 
 .navigation{
-	position: relative;
-	top: 15px;
+  position: relative;
+  top: 15px;
 }
 
 .navigation li {
   list-style-type: none;
-	display: inline-block;
-	padding-right: 30px;
+  display: inline-block;
+  padding-right: 30px;
   padding-top: 5%;
 }
 
@@ -108,42 +107,42 @@ hr {
 /* *********************** Switch for css files ************************** */
 
 .styleSwitch{
-	display: block;
-	float: right;
-	background-color: #fff;
+  display: block;
+  float: right;
+  background-color: #fff;
 }
 
 .styleSwitch a:link,
 .styleSwitch a:visited{
-	display: block;
-	width: 70px;
-	padding: 5px;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
+  display: block;
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
 }
 
 .styleSwitch a:hover{
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 #css-pink{
-	background-color: #F06377;
+  background-color: #F06377;
 }
 
 #css-blue{
-	background-color: #74BAE7;
+  background-color: #74BAE7;
 }
 
 #css-green{
-	background-color: #A6D38B;
+  background-color: #A6D38B;
 }
 
 /* ******************* Recipe ******************* */
 /* Image */
 
-  #picture{
-	background: transparent url(../img/picture.jpg) top center no-repeat;
+ #picture{
+   background: transparent url(../img/picture.jpg) top center no-repeat;
 }
 
 .img-box {
@@ -151,10 +150,6 @@ hr {
   height: auto;
   border-right: 1px dashed #C22127;
   opacity: 0.2;
-}
-
-.dish {
-  margin: 15px auto 10px auto;
 }
 
 .title-cook-book {
