@@ -62,15 +62,15 @@ function readURL() {
 // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
 // Added for RECIPE.html view, doesn't update database
 
-const recalculateIngredients = (function(){
+var recalculateIngredients = (function(){
 
 // get DOM elements
-const $servingsBtn = $("#servings-btn");
-const $servingsSpan = $("#servings-span");
-const $ingredientsList = Array(...$("#ingredients-list li span > span"));
+var $servingsBtn = $("#servings-btn");
+var $servingsSpan = $("#servings-span");
+var $ingredientsList = Array(...$("#ingredients-list li span > span"));
 
 // get & store quantity of ingredients needed for single serving
-const servingsMultiplicators = $ingredientsList.map((el) => {
+var servingsMultiplicators = $ingredientsList.map(function(el){
 	return Number(el.innerText) / Number($servingsBtn[0].innerText);
 });
 
@@ -81,23 +81,23 @@ $servingsSpan.on("click", "#servings-btn", openServingsForm);
 
 // open input field for adding number of servings changes
  function openServingsForm(){
-	const $servingsInputValue = Number($servingsBtn[0].innerText);
-	$servingsSpan.html(`<input type="number" name="quantity" id="servings-input" min="1" value="${$servingsInputValue}">`);
+	var $servingsInputValue = Number($servingsBtn[0].innerText);
+	$servingsSpan.html('<input type="number" name="quantity" id="servings-input" min="1" value="'+$servingsInputValue+'">');
 }
 
 // recalculate original ingredient quantities & display on page
 function updateIngredients(){
-	let servingsNumber = Number($("#servings-input").val());
+	var servingsNumber = Number($("#servings-input").val());
 
 	$ingredientsList.map(function(el, index){
-		let quantity = servingsNumber * servingsMultiplicators[index];
+		var quantity = servingsNumber * servingsMultiplicators[index];
 		el.innerText = String(quantity);
 	});
 }
 // close input form & display button when enter pressed
 function reinstateBtn(e){
 	if(e.which == 13){
-		$servingsSpan.html(`<button id="servings-btn" type="button" name="button"><span>${$("#servings-input").val()}</span></button>`);
+		$servingsSpan.html('<button id="servings-btn" type="button" name="button"><span>'+$("#servings-input").val()+'</span></button>');
 	}
 }
 })();
@@ -125,8 +125,16 @@ function reinstateBtn(e){
 
 
 // 3.3. Display list of recipes from choosen category of recipes - button 'See recipes' (in popup).
+// display popup
+$('#show-recipes-btn').on('click', function(){
+	$('.recipes-popup').css('display', 'block');
+});
 
-
+//close popup
+$('#close-recipes-popup-btn').on('click', function(){
+	$('.recipes-popup').css('display', 'none');
+	location.hash = "#recipes-categories";
+});
 // 3.4. Delete category of recipes from list of categories of recipes.
 
 
@@ -155,7 +163,16 @@ function reinstateBtn(e){
 })();
 
 // 4.3. Display list of ingredients (button 'See list') from choosen category (in popup).
+// display popup
+$('#show-ingredients-popup-btn').on('click', function(){
+	$('.ingredients-popup').css('display', 'block');
+});
 
+//close popup
+$('#close-ingredients-popup-btn').on('click', function(){
+	$('.ingredients-popup').css('display', 'none');
+	location.hash = "#ingredients-categories";
+});
 
 
 
@@ -177,7 +194,16 @@ function reinstateBtn(e){
 })();
 
 // 5.2. Display list of needed things (button 'See list') (in popup).
+// display popup
+$('#show-needed-popup-btn').on('click', function(){
+	$('.needed-popup').css('display', 'block');
+});
 
+//close popup
+$('#close-needed-popup-btn').on('click', function(){
+	$('.needed-popup').css('display', 'none');
+	location.hash = "#needed-categories";
+});
 
 
 
