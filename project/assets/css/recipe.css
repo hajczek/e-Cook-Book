@@ -26,7 +26,17 @@ header {
   right: 40%;
   left: 40%;
 }
-
+.dish {
+  margin: 15px auto 10px auto;
+}
+.borders{
+    border: 1px solid transparent;
+    padding: 5px;
+    -webkit-border-image: url(../img/pink/hr.png) 50 round; /* Safari 3.1-5 */
+    -o-border-image: url(../img/pink/hr.png) 50 round; /* Opera 11-12.1 */
+    border-image: url(../img/pink/hr.png) 50 round;
+    margin-bottom: 10px;
+  }
 .container {
   background-color: white;
   width: auto;
@@ -43,13 +53,6 @@ header {
 }
 .recipe-items{
   padding-top: 1%;
-}
-.recipe-borders{
-  border-top: 0.5px dashed #C22127;
-  border-bottom: .5px dashed #C22127;
-  height: 100%;
-  padding-top: 1%;
-
 }
 
 nav {
@@ -68,24 +71,6 @@ a:link {
   color: black;
 }
 
-
-.slogan {
-  width: 50%;
-  text-align: center;
-  color: #C12227;
-}
-
-.recipe-things
-{
-  border-left: 0.5px dashed #C22127 ;
-  height: auto;
-}
-
-hr {
-  width: auto;
-  border: 1px dashed #C22127 ;
-  opacity: 0.7;
-}
 
 #recipesDropForm{
   display:none;
@@ -238,7 +223,7 @@ hr {
 .info{
   text-align: center;
   position: absolute;
-  top: 128%;
+  top: 125%;
   left: 40%;
   margin-bottom: 2%;
   font-size: .50%;
