@@ -6,7 +6,7 @@
 		<title>Add recipe e-Cook-Book</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/add-recipe.css" media="screen">
+		<link rel="stylesheet" href="assets/css/recipe.css" media="screen">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 		<script
 		   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -20,11 +20,15 @@
 
 		<!-- logo + background image -->
 		<header class="header">
-			
+			<div class="logo"></div>			 
+			<div class="styleSwitch">
+				<a id="css-pink" href="#pink">Pink</a>
+				<a id="css-blue" href="#blue">Blue</a>
+				<a id="css-green" href="#green">Green</a>
+			</div>			
 		</header>
 
-		<section class="content container">
-			<div class="logo"></div>
+		<section class="content container">			
 			
 		   <!-- navigation + slogan -->
 		  <nav class="row">
@@ -32,20 +36,7 @@
 		      <li class="home"><a href="#">home</a></li>
 		      <li class="categories"><a href="#">categories of recipes</a></li>
 		    </ul>
-		     
-			<div class="styleSwitch">
-				<a id="css-pink" href="#pink">Pink</a>
-				<a id="css-blue" href="#blue">Blue</a>
-				<a id="css-green" href="#green">Green</a>
-			</div>
-			  
-			<p class="slogan">subtext will be here - slogan</p>
-			<img class="hr" src="assets/img/pink/hr.png" alt="horizontal rule">
 		  </nav>
-
-		  <div>
-		  	
-		  </div>
 
 		  <form>
 
@@ -125,87 +116,37 @@
 				<!-- List of category of recipes with options: 'See recipes' and 'Delete' (ul, button, button) -->
 				<ol>
 					<li><a href="#">First Category</a>
-						<button type="button" name="button">See recipes</button>
+					
+						<button id="show-recipes-btn" type="button" name="button">See recipes</button>
 						<button type="button" name="button">Delete</button>
 						<!-- List-of-recipes-part-of-code -->
 						<!-- First category of recipes -->
 						<!-- This code will be open in popup when button 'See recipes' will be clicked-->
-						<h2>List of Recipes - First Category</h2>
-						<form name="FirstCategoryOfRecipes">
-						<!-- Display list of recipes with options: 'Delete from list' and 'See recipe' -->
-						<ul>
-							<li>
-								<input type="checkbox"><label>First recipe </label>
-								<button name="" type="button">See Recipe</button>
-							</li>
-							<li>
-								<input type="checkbox"><label>Second recipe </label>
-								<button name="" type="button">See Recipe</button>
-							</li>
-							<li>
-								<input type="checkbox"><label>Third recipe</label>
-								<button name="" type="button">See Recipe</button>
-							</li>
-						</ul>
-						</form>
-					<button type="button" name="button">Delete chosen recipes from this list</button>
-					<button type="button" name="button">Close list</button>
-					</li>		
-					<li><a href="#">Second Category</a>
-						<button type="button" name="button">See recipes</button>
-						<button name="button">Delete</button>
-						<!-- List-of-recipes-part-of-code -->
-						<!-- First category of recipes -->
-						<!-- This code will be open in popup when button 'See recipes' will be clicked-->
-						<h2>List of Recipes - Second Category</h2>
-						<form name="SecondCategoryOfRecipes">
-							<!-- Display list of recipes with options: 'Delete from list' and 'See recipe' -->
-							<ul>
-								<li>
-									<input type="checkbox"><label>First recipe </label>
-									<button name="" type="button">See Recipe</button>
-								</li>
-								<li>
-									<input type="checkbox"><label>Second recipe </label>
-									<button name="" type="button">See Recipe</button>
-								</li>
-								<li>
-									<input type="checkbox"><label>Third recipe</label>
-									<button name="" type="button">See Recipe</button>
-								</li>
-							</ul>
-						</form>
-						<button type="button" name="button">Delete chosen recipes from this list</button>
-						<button type="button" name="button">Close list</button>
-					</li>
-					<li><a href="#">Third Category</a>
-						<button type="button" name="button">See recipes</button>
-						<button name="button">Delete</button>
-						<!-- List-of-recipes-part-of-code -->
-						<!-- First category of recipes -->
-						<!-- This code will be open in popup when button 'See recipes' will be clicked-->
-						<h2>List of Recipes - Third Category</h2>
-						<form name="ThirdCategoryOfRecipes">
-							<!-- Display list of recipes with options: 'Delete from list' and 'See recipe' -->
-							<ul>
-								<li>
-									<input type="checkbox"><label>First recipe </label>
-									<button name="" type="button">See Recipe</button>
-								</li>
-								<li>
-									<input type="checkbox"><label>Second recipe </label>
-									<button name="" type="button">See Recipe</button>
-								</li>
-								<li>
-									<input type="checkbox"><label>Third recipe</label>
-									<button name="" type="button">See Recipe</button>
-								</li>
-							</ul>
-						</form>
-						<button type="button" name="button">Delete chosen recipes from this list</button>
-						<button type="button" name="button">Close list</button>
-						<!-- Close popup window (button) -->
-						<button name="" type="">Close List</button>
+						<div class='recipes-popup'>
+							<div class='recipes-popup-content'>
+								<h2>First Category of recipes</h2>
+								<form name="FirstCategoryOfRecipes">
+								<!-- Display list of recipes with options: 'Delete from list' and 'See recipe' -->
+									<ul>
+										<li>
+											<input type="checkbox"><label>First recipe </label>
+											<button name="" type="button">See Recipe</button>
+										</li>
+										<li>
+											<input type="checkbox"><label>Second recipe </label>
+											<button name="" type="button">See Recipe</button>
+										</li>
+										<li>
+											<input type="checkbox"><label>Third recipe</label>
+											<button name="" type="button">See Recipe</button>
+										</li>
+									</ul>
+								</form>
+								<button type="button" name="button">Delete chosen recipes from this list</button>
+								<!-- Close popup window (button) -->
+								<button name="" type="">Close List</button>
+							</div>
+						</div>
 					</li>
 				</ol>
 				</form>
@@ -234,97 +175,38 @@
 
 					<!-- List of category of ingredients with options: 'See list' and 'Delete' (ul, button, button) -->
 					<ol id="categories">
-						<li>First Category of Ingredients
-							<button type="button" name="button">See list</button>
+						<li><a href="#">First Category of ingredients</a>
+							<button id='show-ingredients-popup-btn' type="button" name="button">See list</button>
 							<button type="button" name="button">Delete</button>
 							<!-- This part of code will be open in popup window when button 'See list' will be clicked -->
 							<!-- List-of-ingredients-part-of-code -->
-							<div>
-								<h2>Category 1 - list of ingredients</h2>
-								<form>
-									<p>Qty</p><p>Unit</p>
-									<ul>
-										<li>
-											<input type="checkbox"><label>First ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-										<li><input type="checkbox"><label>Second ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-										<li><input type="checkbox"><label>Third ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-									</ul>
-									<button type="button">Add choosen ingredients to recipe</button>
-									<button type="button">Delete choosen ingredients from list</button>
-									<button type="button">Close list</button>	
-								</form>
-							</div>
-						<!-- End of List-of-ingredients-part-of-code -->
-						</li>
-						<li>Second Category
-							<button type="button" name="button">See list</button>
-							<button type="button" name="button">Delete</button>
-							<!-- This part of code will be open in popup window when button 'See list' will be clicked -->
-							<!-- List-of-ingredients-part-of-code -->
-							<div>
-								<h2>Category 2 - list of ingredients</h2>
-								<form>
-									<p>Qty</p><p>Unit</p>
-									<ul>
-										<li>
-											<input type="checkbox"><label>First ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-										<li>
-											<input type="checkbox"><label>Second ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-										<li>
-											<input type="checkbox"><label>Third ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-									</ul>
-									<button type="button">Add choosen ingredients to recipe</button>
-									<button type="button">Delete choosen ingredients from list</button>
-									<button type="button">Close list</button>	
-								</form>
-							</div>			
-							<!-- End of List-of-ingredients-part-of-code -->
-						</li>
-						<li>Third Category
-							<button type="button" name="button">See list</button>
-							<button type="button" name="button">Delete</button>
-							<!-- This part of code will be open in popup window when button 'See list' will be clicked -->
-							<!-- List-of-ingredients-part-of-code -->
-							<div>
-								<h2>Category 3 - list of ingredients</h2>
-								<form>
-									<p>Qty</p><p>Unit</p>
-									<ul>
-										<li>
-											<input type="checkbox"><label>First ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-										<li>
-											<input type="checkbox"><label>Second ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-										<li>
-											<input type="checkbox"><label>Third ingredient </label>
-											<input type="" name="quantity"><input type="text" name="unit">
-										</li>
-									</ul>
-									<button type="button">Add choosen ingredients to recipe</button>
-									<button type="button">Delete choosen ingredients from list</button>
-									<button type="button">Close list</button>		
-								</form>
+							<div class='ingredients-popup'>
+								<div class='ingredients-popup-content'>
+									<h2>List of Recipes - First Category</h2>
+									<form name="FirstCategoryOfRecipes">
+										<p>Qty</p><p>Unit</p>
+										<ul>
+											<li>
+												<input type="checkbox"><label>First ingredient </label>
+												<input type="" name="quantity"><input type="text" name="unit">
+											</li>
+											<li><input type="checkbox"><label>Second ingredient </label>
+												<input type="" name="quantity"><input type="text" name="unit">
+											</li>
+											<li><input type="checkbox"><label>Third ingredient </label>
+												<input type="" name="quantity"><input type="text" name="unit">
+											</li>
+										</ul>
+										<button type="button">Add choosen ingredients to recipe</button>
+										<button type="button">Delete choosen ingredients from list</button>
+										<!-- Close popup window (button) -->
+										<button name="" type="">Close List</button>	
+									</form>
+								</div>
 							</div>
 							<!-- End of List-of-ingredients-part-of-code -->
-							<!-- Close popup window (button) -->
-							<button name="" type="">Close List</button>
-						</li>
-					</ol>
+							</li>
+						</ol>
 					</form>
 				</div>
 				<!-- Needed things: (h3) -->
@@ -336,26 +218,27 @@
 						<label for="">Add things to list</label>
 						<input type="text" name="" value=""> 
 						<button type="button" name="button">Add</button> 
-						<button type="button" name="button">See list</button>
+						<button id='show-needed-popup-btn' type="button" name="button">See list</button>
 						<!-- This part of code will be open in popup window when button 'See list' will be clicked -->
-						<div>
-							<h2>List of needed things</h2>
-							<form>
-								<ul id="needed-things">
-									<li><input type="checkbox"><label>First thing </label></li>
-									<li><input type="checkbox"><label>Second thing </label></li>
-									<li><input type="checkbox"><label>Third thing </label></li>
-								</ul>
-								<button type="button" id="add-needed-things">Add choosen things to recipe</button>
-								<button type="button">Delete choosen things from needed things list</button>
-								<button type="button">Close list</button>
-								<!-- Close popup window (button) -->
-								<button name="" type="">Close List</button>
-							</form>
+						<div class='needed-popup'>
+							<div class='needed-popup-content'>
+								<h2>List of needed things</h2>
+								<form>
+									<ul id="needed-things">
+										<li><input type="checkbox"><label>First thing </label></li>
+										<li><input type="checkbox"><label>Second thing </label></li>
+										<li><input type="checkbox"><label>Third thing </label></li>
+									</ul>
+									<button type="button" id="add-needed-things">Add choosen things to recipe</button>
+									<button type="button">Delete choosen things from needed things list</button>
+									<!-- Close popup window (button) -->
+									<button name="" type="">Close List</button>
+								</form>
+							</div>
 						</div>
 					</form>
 				</div>
 		</section>
+		<p class="info">Project made with the help of community of Udacity fewd-challange</p>
 	</body>
 </html>
-
