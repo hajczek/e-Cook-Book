@@ -19,6 +19,7 @@
 	<body>
 		<!-- logo + background image -->
 		<header>
+			 <div class="logo"></div>
 			 <div class="styleSwitch">
 		     		<a id="css-pink" href="#red">Pink</a>
 			        <a id="css-blue" href="#blue">Blue</a>
@@ -27,10 +28,9 @@
 		</header>
 
 		<section class="container">
-		<div class="logo"></div>
 		  <!-- navigation + slogan -->
 		  <nav class="row">
-		   	 <ul class ="navigation col-lg-7">
+		   	 <ul class="navigation col-lg-7">
 		      		<li class="navbar-nav home"><a href="#">Add new recipe</a></li>
 		      		<li class="navbar-nav categories"><a href="#">Categories of recipes</a></li>
 			  </ul>
@@ -39,9 +39,7 @@
 		  <!-- photo + ingredients description part -->
 
 		  <div>
-
-		  	<!-- <hr> -->
-		   
+	  	   
 		    <div class="row borders">
 		    	<div class="col-lg-5" id="picture">
 		    		<img src="#" class="dish" alt="">
@@ -51,7 +49,7 @@
 		        <div class="row"><h2 class="col title-cook-book">Creamy Ham and Cheese Quiche</h2></div>
 
 		        <div class="row"><h3 class="col category-name"><span class="category">Category:</span> Breakfast</h3></div>
-		    	<div class = "row">
+		    	<div class="row">
 		    		<div  class="col">
 		    		<h5 class="list-name list-ing">List of ingredients:</h5>
 		    		<ol class="list" id="ingredients-list">
@@ -69,17 +67,17 @@
 					    <li>Third thing</li>
 			  		</ol>
 			  	</div>
+			  </div>
+			  <div class="row">
+			  	<div class="col">
+				  	<p class="font-bold time">Time to make: 01:00:00 hrs</p>
+				    </div>
+				    <div class="col">
+				  	<p class="people font-bold">No of serves: <span id="servings-span">
+				  	<button id="servings-btn" type="button" name="button"><span>4</span></button></span></p>
 			  	</div>
-			  	<div class="row">
-			  		<div class="col">
-				  		<p class="font-bold time">Time to make: 01:00:00 hrs</p>
-				    	</div>
-				    	<div class="col">
-				  		<p class="people font-bold">No of serves: <span id="servings-span">
-				  		<button id="servings-btn" type="button" name="button"><span>4</span></button></span></p>
-			  		</div>
-			  	</div>
-			</div>
+			  </div>
+		</div>
 		</div>
 			
 		  	<!-- recipe description -->
@@ -93,7 +91,7 @@
 		  	<!-- buttons -->
 
         		<div class="row borders">
-				<div class="buttons">
+				<div class="buttons col-lg-12">
 					<button class="button-recipe" type="button" id="input_print">Print recipe</button>
 					<button class="button-recipe" type="button">Edit recipe</button>
 					<button class="button-recipe" type="button">Delete recipe</button>
