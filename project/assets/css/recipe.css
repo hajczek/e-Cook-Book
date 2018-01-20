@@ -84,7 +84,7 @@ nav {
 }
 
 .navigation li a:hover{
-	color: #f16276;
+  color: #f16276;
 }
 
 hr {
@@ -178,9 +178,6 @@ hr {
   list-style-position: inside;
 }
 
-
-}
-
 .font-bold {
   font-weight: 600;
 }
@@ -259,5 +256,6 @@ hr {
 .info{
   display: block;
   width: 100%;
-  text-align: center;	
+  text-align: center;
+  margin-top: 70px;
 }
