@@ -39,15 +39,25 @@ nav {
   font-size: 1.2em;
 }
 
-.navigation li {
-  list-style-type: none;
-	display: inline-block;
-	padding-right: 30px;
+.navigation{
+	position: relative;
+	top: 15px;
 }
 
-a:link {
+.navigation li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.navigation li a:link,
+.navigation li a:visited{
   text-decoration: none;
   color: black;
+}
+
+.navigation li a:hover{
+	color: #f16276;
 }
 
 hr {
@@ -104,7 +114,8 @@ hr {
 
 /* ******************* Recipe ******************* */
 /* Image */
-.picture{
+
+#picture{
 	background: transparent url(../img/picture.jpg) top center no-repeat;
 }
 
@@ -198,16 +209,17 @@ hr {
   font-size:16px;
   font-weight: 400;
   line-height: 45px;
-  margin:2em 1em 2em;
-  max-width: 160px;
+  margin: 2em 1em 2em;
+  width: 160px;
   text-decoration: none;
   vertical-align: middle;
-  width: 50%;
+  text-shadow: 2px 2px 2px #464242;
   /* background: darken($red, 1.5%); */
   }
 
 .button-recipe:hover {
   background-color: #f7b1bb;
-  color: #f6425b; 
+  color: #464242;
+  text-shadow: 2px 2px 2px #fff;
   /* background: rgba($red, 0); */
 }
