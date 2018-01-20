@@ -22,10 +22,15 @@ header {
   margin-right: auto;
 }
 
+.row{
+	margin-right: 0 !important;
+	margin-left:0 !important;
+}
+
 .container {
   background-color: white;
   width: auto;
-  margin: -30px auto;
+  margin: -35px auto;
   position: relative;
   z-index: 0;
 }
@@ -63,7 +68,6 @@ hr {
   display:none;
 }
 
-
 /* Style for switch css files */
 
 .styleSwitch{
@@ -100,6 +104,10 @@ hr {
 
 /* ******************* Recipe ******************* */
 /* Image */
+.picture{
+	background: transparent url(../img/picture.jpg) top center no-repeat;
+}
+
 .img-box {
   width: 40%;
   height: auto;
@@ -195,11 +203,11 @@ hr {
   text-decoration: none;
   vertical-align: middle;
   width: 50%;
-  background: darken($red, 1.5%);
-  font-weight: 100;
+  /* background: darken($red, 1.5%); */
   }
 
 .button-recipe:hover {
-  background: rgba($red, 0);
-  font-weight: 600;
+  background-color: #f7b1bb;
+  color: #f6425b; 
+  /* background: rgba($red, 0); */
 }
