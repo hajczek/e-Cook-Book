@@ -45,15 +45,9 @@ a:link {
   color: black;
 }
 
-.slogan {
-  width: 50%;
-  text-align: center;
-  color: #2B83B5;
-}
-
 hr {
   width: auto;
-  border: 1px dashed #2B83B5 ;
+  border: 1px dashed #2B83B5;
   opacity: 0.2;
 }
 
@@ -106,6 +100,13 @@ hr {
 
 /* ******************* Recipe ******************* */
 /* Image */
+
+.img-box {
+  width: 40%;
+  height: auto;
+  border-right: 1px dashed #2B83B5;
+  opacity: 0.2;
+}
 
 .dish {
   margin: 15px auto 10px auto;

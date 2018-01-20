@@ -46,16 +46,9 @@ a:link {
   color: black;
 }
 
-
-.slogan {
-  width: 50%;
-  text-align: center;
-  color: #C12227;
-}
-
 hr {
   width: auto;
-  border: 1px dashed #C22127 ;
+  border: 1px dashed #C22127;
   opacity: 0.2;
 }
 
