@@ -45,13 +45,6 @@ a:link {
   color: black;
 }
 
-
-.slogan {
-  width: 50%;
-  text-align: center;
-  color: #83C458;
-}
-
 hr {
   width: auto;
   border: 1px dashed #83C458;
@@ -107,6 +100,14 @@ hr {
 
 /* ******************* Recipe ******************* */
 
+/* Image */
+.img-box {
+  width: 40%;
+  height: auto;
+  border-right: 1px dashed #83C458;
+  opacity: 0.2;
+}
+
 .dish {
   margin: 15px auto 10px auto;
 }
@@ -114,7 +115,6 @@ hr {
 /* Title, category and ingredients*/
 .title-cook-book {
   color: #83C458;
-
   padding-top: 5px;
 }
 
@@ -144,31 +144,31 @@ hr {
 /* Icons */
 .list-ing::before {
   display: inline-block;
-  content: url("../img/pink/ingredients-icon.jpg");
+  content: url("../img/green/ingredients-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .list-things::before {
   display: inline-block;
-  content: url("../img/pink/other-icon.jpg");
+  content: url("../img/green/other-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .time::before {
   display: inline-block;
-  content: url("../img/pink/time-icon.jpg");
+  content: url("../img/green/time-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .people::before {
   display: inline-block;
-  content: url("../img/pink/servings-icon.jpg");
+  content: url("../img/green/servings-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .recipe::before {
   display: inline-block;
-  content: url("../img/pink/recipe-icon.jpg");
+  content: url("../img/green/recipe-icon.jpg");
   margin: 0 6px 0 0;
 }
 

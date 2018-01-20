@@ -145,31 +145,31 @@ hr {
 /* Icons */
 .list-ing::before {
   display: inline-block;
-  content: url("../img/pink/ingredients-icon.jpg");
+  content: url("../img/blue/ingredients-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .list-things::before {
   display: inline-block;
-  content: url("../img/pink/other-icon.jpg");
+  content: url("../img/blue/other-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .time::before {
   display: inline-block;
-  content: url("../img/pink/time-icon.jpg");
+  content: url("../img/blue/time-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .people::before {
   display: inline-block;
-  content: url("../img/pink/servings-icon.jpg");
+  content: url("../img/blue/servings-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .recipe::before {
   display: inline-block;
-  content: url("../img/pink/recipe-icon.jpg");
+  content: url("../img/blue/recipe-icon.jpg");
   margin: 0 6px 0 0;
 }
 
