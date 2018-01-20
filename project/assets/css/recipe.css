@@ -202,5 +202,4 @@ hr {
 .button-recipe:hover {
   background: rgba($red, 0);
   font-weight: 600;
-  letter-spacing: 1px;
 }
