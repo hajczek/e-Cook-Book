@@ -10,7 +10,7 @@ header {
   height: 195px;
   text-align: center;
   z-index: +1;
-  position: fixed;
+ /* position: fixed; */
 
 }
 
