@@ -243,13 +243,13 @@ alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDes
 	
 (function (){
   $("#css-pink").click(function() {
-    $("link[rel=stylesheet]").attr({href : "assets/css/recipe.css"});
+    $("link[media=screen]").attr({href : "assets/css/recipe.css"});
   });
   $("#css-blue").click(function() {
-    $("link[rel=stylesheet]").attr({href : "assets/css/recipe-blue.css"});
+    $("link[media=screen]").attr({href : "assets/css/recipe-blue.css"});
   });
   $("#css-green").click(function() {
-    $("link[rel=stylesheet]").attr({href : "assets/css/recipe-green.css"});
+    $("link[media=screen]").attr({href : "assets/css/recipe-green.css"});
   });
 })();
 

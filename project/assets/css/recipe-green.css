@@ -22,10 +22,15 @@ body {
   margin-right: auto;
 }
 
+.row{
+	margin-right: 0 !important;
+	margin-left:0 !important;
+}
+
 .container {
   background-color: white;
   width: auto;
-  margin: -30px auto;
+  margin: -35px auto;
   position: relative;
   z-index: 0;
 }
@@ -34,22 +39,25 @@ nav {
   font-size: 1.2em;
 }
 
+.navigation{
+	position: relative;
+	top: 15px;
+}
+
 .navigation li {
   list-style-type: none;
 	display: inline-block;
 	padding-right: 30px;
 }
 
-a:link {
+.navigation li a:link,
+.navigation li a:visited{
   text-decoration: none;
   color: black;
 }
 
-
-.slogan {
-  width: 50%;
-  text-align: center;
-  color: #83C458;
+.navigation li a:hover{
+	color: #8fad82;
 }
 
 hr {
@@ -107,6 +115,19 @@ hr {
 
 /* ******************* Recipe ******************* */
 
+/* Image */
+
+#picture{
+	background: transparent url(../img/picture.jpg) top center no-repeat;
+}
+
+.img-box {
+  width: 40%;
+  height: auto;
+  border-right: 1px dashed #83C458;
+  opacity: 0.2;
+}
+
 .dish {
   margin: 15px auto 10px auto;
 }
@@ -114,7 +135,6 @@ hr {
 /* Title, category and ingredients*/
 .title-cook-book {
   color: #83C458;
-
   padding-top: 5px;
 }
 
@@ -144,31 +164,31 @@ hr {
 /* Icons */
 .list-ing::before {
   display: inline-block;
-  content: url("../img/pink/ingredients-icon.jpg");
+  content: url("../img/green/ingredients-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .list-things::before {
   display: inline-block;
-  content: url("../img/pink/other-icon.jpg");
+  content: url("../img/green/other-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .time::before {
   display: inline-block;
-  content: url("../img/pink/time-icon.jpg");
+  content: url("../img/green/time-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .people::before {
   display: inline-block;
-  content: url("../img/pink/servings-icon.jpg");
+  content: url("../img/green/servings-icon.jpg");
   margin: 0 6px 0 0;
 }
 
 .recipe::before {
   display: inline-block;
-  content: url("../img/pink/recipe-icon.jpg");
+  content: url("../img/green/recipe-icon.jpg");
   margin: 0 6px 0 0;
 }
 
@@ -192,16 +212,16 @@ hr {
   font-weight: 400;
   line-height: 45px;
   margin:2em 1em 2em;
-  max-width: 160px;
+  width: 160px;
   text-decoration: none;
   vertical-align: middle;
-  width: 50%;
-  background: darken($red, 1.5%);
-  font-weight: 100;
+  text-shadow: 2px 2px 2px #464242;
+ /* background: darken($red, 1.5%); */
   }
 
 .button-recipe:hover {
-  background: rgba($red, 0);
-  font-weight: 600;
-  letter-spacing: 1px;
+  background-color: #d1e9c5;
+  color: #464242;
+  text-shadow: 2px 2px 2px #fff;
+  /* background: rgba($red, 0); */
 }
