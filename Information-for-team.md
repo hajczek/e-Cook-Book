@@ -5,10 +5,8 @@
 
 ### Implemented changes in project 
 
-#### 13.01.2018
+#### 14.01.2018
 
-- index.html, recipe.html, style.css, recipe.css:
 
-	- few correction in both html and css file,
-	- fixed issue in class's
-	
+- script.js, index.html:
+	- update

@@ -6,10 +6,8 @@
 		<title>Recipe-e-Cook-Book</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/recipe.css" media="screen">
-		<link rel="stylesheet" href="assets/css/style.css" media="screen">
-
-		<link rel="stylesheet" href="assets/css/print.css" media="print">
 		<script
 		   src="https://code.jquery.com/jquery-3.2.1.min.js"
 		   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -20,77 +18,87 @@
 
 	<body>
 		<!-- logo + background image -->
-		<header class="header">
-			<div>
-				<img src="assets/img/pink/top-bg-whole.png" alt="background">
-			</div>
-			<img class="logo" src="assets/img/pink/logo.png" alt="logo">
+		<header>
+			 <div class="logo"></div>
+			 <div class="styleSwitch">
+		     		<a id="css-pink" href="#red">Pink</a>
+			        <a id="css-blue" href="#blue">Blue</a>
+		      		<a id="css-green" href="#green">Green</a>
+		    	</div>
 		</header>
 
-		<section class="content">
-
-
+		<section class="container">
 		  <!-- navigation + slogan -->
-		  <nav>
-		    <ul>
-		      <li class="home"><a href="#">home</a></li>
-		      <li class="categories"><a href="#">categories of recipes</a></li>
-		    </ul>
-		    <p class="slogan">subtext will be here - slogan</p>
-				<img class="hr" src="assets/img/pink/hr.png" alt="horizontal rule">
+		  <nav class="row">
+		   	 <ul class="navigation col-lg-7">
+		      		<li class="navbar-nav home"><a href="#">Add new recipe</a></li>
+		      		<li class="navbar-nav categories"><a href="#">Categories of recipes</a></li>
+			  </ul>
 		  </nav>
-
+		 
 		  <!-- photo + ingredients description part -->
+
 		  <div>
-		    <div>
-		      <img src="http://via.placeholder.com/350x150" alt="dish picture">
-		    </div>
-		    <div>
-		      <h2>Title of recipe</h2>
-		      <h3><span>Category:</span> Breakfast</h3>
-		      <div>
-			<div>
-			  <h3>List of chosen ingredients:</h3>
-			  <ol id="ingredients-list">
-			    <li>First ingredient <span><span>1</span> spoon</span></li>
-			    <!-- span in ol for bold elements -->
-			    <li>Second ingredient <span><span>1</span> kilo</span></li>
-			    <li>Third ingredient <span><span>2</span> glasess</span></li>
+	  	   
+		    <div class="row borders">
+		    	<div class="col-lg-5" id="picture">
+		    		<img src="#" class="dish" alt="">
+		    	</div>
 
-			  </ol>
-			</div>
-			<div>
-			  <h3>List of needed things:</h3>
-			  <ol>
-			    <li>First thing</li>
-			    <li>Second thing</li>
-			    <li>Third thing</li>
-			  </ol>
-			</div>
-			<div>
-			  <p>Time to make: 01:00 hrs</p>
-			</div>
-			<div>
-			  <p>Serves: <span id="servings-span"><button id="servings-btn" type="button" name="button"><span>4</span></button></span></p>
+		    	<div class="recipe-things col-lg-7">
+		        <div class="row"><h2 class="col title-cook-book">Creamy Ham and Cheese Quiche</h2></div>
 
+		        <div class="row"><h3 class="col category-name"><span class="category">Category:</span> Breakfast</h3></div>
+		    	<div class="row">
+		    		<div  class="col">
+		    		<h5 class="list-name list-ing">List of ingredients:</h5>
+		    		<ol class="list" id="ingredients-list">
+				  	<!-- span in ol for bold elements -->
+		    		  	<li>First ingredient <span><span>1</span> spoon</span></li>
+			          	<li>Second ingredient <span><span>1</span> kilo</span></li>
+			          	<li>Third ingredient <span><span>2</span> glasess</span></li>
+				</ol>
+				</div>
+				<div class="col">
+					<h5 class="list-name list-things">List of needed things:</h5>
+					<ol class="list">
+					    <li>First thing</li>
+					    <li>Second thing</li>
+					    <li>Third thing</li>
+			  		</ol>
+			  	</div>
+			  </div>
+			  <div class="row">
+			  	<div class="col">
+				  	<p class="font-bold time">Time to make: 01:00:00 hrs</p>
+				    </div>
+				    <div class="col">
+				  	<p class="people font-bold">No of serves: <span id="servings-span">
+				  	<button id="servings-btn" type="button" name="button"><span>4</span></button></span></p>
+			  	</div>
+			  </div>
+		</div>
+		</div>
+			
+		  	<!-- recipe description -->
+		  	<div class="row main">
+		  		<div class="col">
+		  			<h3 class="recipe font-bold">Recipe:</h3>
+		    		<p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		  		</div>
+		  	</div>
+
+		  	<!-- buttons -->
+
+        		<div class="row borders">
+				<div class="buttons col-lg-12">
+					<button class="button-recipe" type="button" id="input_print">Print recipe</button>
+					<button class="button-recipe" type="button">Edit recipe</button>
+					<button class="button-recipe" type="button">Delete recipe</button>
+		  		</div>
 			</div>
-		      </div>
-		    </div>
-		  </div>
-
-		  <!-- recipe description -->
-		  <div>
-		    <h3>Recipe:</h3>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-		      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		  </div>
-
-		  <!-- buttons -->
-		  <div>
-		    <button type="button">Print to .pdf</button>
-		    <button type="button">Edit recipe</button>
-		    <button type="button">Delete recipe</button>
-		  </div>
-		</section>
-	</body>
+		</div>
+	</section>
+	<p class="info">Project made with the help of community of Udacity fewd-challange</p>
+</body>
 </html>
