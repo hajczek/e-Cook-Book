@@ -2,7 +2,6 @@
 $(document).ready(function(){
 // Needed functionalities for 'e-Cook-Book'
 
-
 // 1.0. Make a recipe.
 
 
@@ -33,7 +32,7 @@ function readURL() {
 
     if (this.files && this.files[0]) {
         const reader = new FileReader();
-        reader.readAsDataURL(this.files[0]);    
+        reader.readAsDataURL(this.files[0]);
 
         //when reader has uploaded file, add it to img src
         reader.onload = function(e) {
@@ -125,16 +124,19 @@ function reinstateBtn(e){
 
 
 // 3.3. Display list of recipes from choosen category of recipes - button 'See recipes' (in popup).
-// display popup
-$('#show-recipes-btn').on('click', function(){
-	$('.recipes-popup').css('display', 'block');
-});
 
-//close popup
-$('#close-recipes-popup-btn').on('click', function(){
-	$('.recipes-popup').css('display', 'none');
-	location.hash = "#recipes-categories";
-});
+var toggleRecipeListPopup = (function(){
+	// display popup
+	$('#show-recipes-btn').on('click', function(){
+		$('.recipes-popup').css('display', 'block');
+
+	});
+
+	//close popup
+	$('body').on('click', '#close-recipes-popup-btn', function(){
+			$('.recipes-popup').css('display', 'none');
+	})
+})();
 // 3.4. Delete category of recipes from list of categories of recipes.
 
 
@@ -148,32 +150,34 @@ $('#close-recipes-popup-btn').on('click', function(){
 
 // 4.2. Add new ingredient to choosen category of ingredients.
 (function () {
-	function addIngredents () { 
+	function addIngredents () {
 		for (var n=0;n < $("#categories li div ul li input:checked").length;n++){
     			let name = $("#categories ul li input:checked:eq("+n+") ~ label")
     			let quantity = $("#categories ul li input:checked:eq("+n+") ~ input[name = quantity]")
-    			let unit = $("#categories ul li input:checked:eq("+n+") ~ input[name = unit]")	
+    			let unit = $("#categories ul li input:checked:eq("+n+") ~ input[name = unit]")
     			let element = name.text()+" <span>"+quantity.val()+"</span> "+unit.val()+"<button type=\"button\" name=\"button\">Delete</button>"
     			$("#List-of-ingredients").append("<li>"+element+"</li>")
 		}
 		$("#categories ul li input").prop("checked",false)
 	}
-	
- 	$("#categories li div").on("click","button:eq(0)",addIngredents)	
+
+ 	$("#categories li div").on("click","button:eq(0)",addIngredents)
 })();
 
 // 4.3. Display list of ingredients (button 'See list') from choosen category (in popup).
-// display popup
-$('#show-ingredients-popup-btn').on('click', function(){
+
+var toggleIngredientsListPopup = (function(){
+	// display popup
+	$('#show-ingredients-popup-btn').on('click', function(){
 	$('.ingredients-popup').css('display', 'block');
-});
+	});
 
 //close popup
 $('#close-ingredients-popup-btn').on('click', function(){
 	$('.ingredients-popup').css('display', 'none');
-	location.hash = "#ingredients-categories";
-});
 
+});
+})();
 
 
 // 5.0. Create list of needed things.
@@ -182,29 +186,29 @@ $('#close-ingredients-popup-btn').on('click', function(){
 // 5.1. Add thing to list of needed things.
 (function(){
 	function addNeeded() {
-		for (var n=0;n < $("#needed-things li input:checked").length;n++){  
+		for (var n=0;n < $("#needed-things li input:checked").length;n++){
 			let name = $("#needed-things li input:checked:eq("+n+") ~ label")
 			let element = name.text()+" <button type=\"button\" name=\"button\">Delete</button>"
 			$("#list-of-needed-things").append("<li>"+element+"</li>")
    		}
 		$("#needed-things li input").prop("checked",false)
 	}
-	
+
 	$("#add-needed-things").on("click",addNeeded)
 })();
 
 // 5.2. Display list of needed things (button 'See list') (in popup).
-// display popup
-$('#show-needed-popup-btn').on('click', function(){
-	$('.needed-popup').css('display', 'block');
-});
+var toggleNeededThingsPopup = (function(){
+	// display popup
+	$('#show-needed-popup-btn').on('click', function(){
+		$('.needed-popup').css('display', 'block');
+	});
 
-//close popup
-$('#close-needed-popup-btn').on('click', function(){
-	$('.needed-popup').css('display', 'none');
-	location.hash = "#needed-categories";
+	//close popup
+	$('#close-needed-popup-btn').on('click', function(){
+		$('.needed-popup').css('display', 'none');
 });
-
+})();
 
 
 // 6.0. Buttons:
@@ -213,7 +217,7 @@ $('#close-needed-popup-btn').on('click', function(){
 // 6.1. See recipe.
 
 let tester = $("#see-recipe").click(function(){
-    
+
 titleRecipe = $("#title-recipe").val();     // 1.0 Add title to recipe
 
 let recipesCategory = $("#recips-category :selected").val();       // add category of recipes
@@ -241,11 +245,11 @@ alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDes
 
 
 // 6.3. Edit recipe - on view 'Recipe'.
-	
-	
+
+
 // 6.4. Print recipe
-	
-(function() {	
+
+(function() {
 	/**
 	* @description Print page
 	* @param {}
@@ -257,16 +261,16 @@ alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDes
 			window.print();
 		});
 	};
-		
+
 	let printInput = $('#input_print');
-	
+
 	// TODO: open panel to print
 	printInput.on('click', function(){printProject();});
-})();	
-	
-	
+})();
+
+
 // TODO: switch files with style css
-	
+
 (function (){
   $("#css-pink").click(function() {
     $("link[media=screen]").attr({href : "assets/css/recipe.css"});
