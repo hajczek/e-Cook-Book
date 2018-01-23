@@ -233,15 +233,16 @@ $(document).ready(function() {
 
   // 6.1. See recipe.
 
-  let tester = $("#see-recipe").click(function() {
-
-    titleRecipe = $("#title-recipe").val(); // 1.0 Add title to recipe
+  (function() {
+  let seeRecipe = $('#see-recipe').on('click', function(e){
+	  
+	let titleRecipe = $("#title-recipe").val(); // 1.0 Add title to recipe
 
     let recipesCategory = $("#recips-category :selected").val(); // add category of recipes
 
-    let ingredientsList = $("#List-of-ingredients").text(); // list of ingredients
+    let ingredientsList = $("#list-of-ingredients").html(); // list of ingredients
 
-    let neededThings = $("#list-of-needed-things").text(); // list of needed things
+    let neededThings = $("#list-of-needed-things").html(); // list of needed things
 
     let recipeDescription = $("#description-of-recipe").val(); // description of recipe
 
@@ -250,11 +251,25 @@ $(document).ready(function() {
     let timeToMake = $("#time-to-make").val(); // time to make a recipe
 
     let howMany = $("#how-many-person").val(); // for how many person
+	
+	e.preventDefault();
+	
+	let content = ('<div class="row borders"><div class="col-lg-5 picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things col-lg-7"><div class="row"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2></div><div class="row"><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3></div><div class="row"><div  class="col"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="col"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div></div><div class="row"><div class="col"><p class="font-bold time" id="timeOfMaking">Time to make: ' + timeToMake + ' </p></div><div class="col"><p class="people font-bold">No of serves: ' + howMany + '</p></div></div></div></div><div class="row main"><div class="col"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div></div><div id="close-see-popup-btn">Close X</div>');
+    
+	$(".see-popup").css('display', 'block');
+	  
+	$(".see-popup-content").append(content);
 
-    alert(titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDescription + timeToMake + howMany);
-
+   // return titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDescription + timeToMake + howMany;
+  
+	//close popup
+  	$('#close-see-popup-btn').on('click', function(e) {
+		e.preventDefault();
+    	$('.see-popup').css('display', 'none');
+  	});
 
   });
+})();
 
 
 
