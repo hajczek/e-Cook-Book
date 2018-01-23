@@ -33,6 +33,7 @@ header {
 
 .dish {
   margin: 15px auto 10px auto;
+  display: block;
 }
 
 .borders{
