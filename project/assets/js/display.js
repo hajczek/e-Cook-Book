@@ -1,7 +1,7 @@
 // 7.0 Diplay recipe on page recipe.html
 $(document).ready(function(){
-  let recipeName = location.search.split('?')[1].split('=')[0];
-  let recipeId = location.search.split('?')[1].split('=')[1];
+  let recipeName = window.location.search.split('?')[1].split('=')[0];
+  let recipeId = window.location.search.split('?')[1].split('=')[1];
   if(recipeName == "id"){
     var index = dbAction.recipeArray.find(function(el){
       if(el['id'] == recipeId){
