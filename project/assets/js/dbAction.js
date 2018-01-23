@@ -1,4 +1,4 @@
-var dbAction = (function(){ // naem of the module
+var dbAction = function(){ // naem of the module
 	var recipe,category,ingr;  // vars to use in methods and export
 
 	var execDB = function(action, rid, table, obj) { // method for insert, update and delete data from DB;
@@ -49,4 +49,4 @@ var dbAction = (function(){ // naem of the module
 		categoryArray: category, // array of categories;
 		ingrArray: ingr // array of ingredients categories;
 	};
-})();
+}();
