@@ -12,6 +12,7 @@ This is our all plan:
 - from 6th to 10th day: people who reported to make a HTML5 code - make a HTML5 code - *IT'S DONE*,
 - from 11th to 15th day: people who reported to make a CSS3 code - make a CSS3 code - *WE ARE AT THIS POINT NOW*,
 - from 11th to 18th day: people who reported to make a JS code - make a JS code - *WE ARE AT THIS POINT NOW*,
+- from 11th to 18th day: implementation the functionality of the database - - *WE ARE AT THIS POINT NOW*,
 - from 19th to 24th day: - test project and making corections.
 - 25th - deadline :)
 
