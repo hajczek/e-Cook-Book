@@ -59,6 +59,12 @@ $(document).ready(function() {
     }
   }
 
+  // delete uploaded image
+    $("#deleteImg").on("click", function() {
+      $("#uploadedImg").attr("src", "");
+      $("#inputImg").val("");
+    });
+
 
   // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
   // Added for RECIPE.html view, doesn't update database
