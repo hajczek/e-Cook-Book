@@ -117,7 +117,7 @@ hr {
 
 /* Image */
 
-#picture{
+.picture{
 	background: transparent url(../img/picture.jpg) top center no-repeat;
 }
 

@@ -16,8 +16,6 @@ Methods and variables:
 
 	- .getFromDB(table);
 
-	-.init(putFile, getFile);
-
 	- .recipeArray
 
 	- .ingrArray
@@ -64,24 +62,14 @@ The .getFromDB(table); method :
 
 		- 'table' the table according to the database from where to pull the data
 
-The .init(putFile, getFile); method :
-
-	Initializes the links tot he php files to get data and push data if the files are going to change or the dir is changed. Also there are 3 instances of .getFromDB() with every table to initialize the arrays.
-
-	Parameters:
-
-		- 'putFile' is the php file link to which data is pushed to be writen or updated.
-
-		- 'getFile' is the php file link from which the daca if queried form the database.
 
 The 3 arrays, .recipeArray, .ingrArray, .categoryArray are the resulting arrays from the getFile queries from which data is displayed on site.
 
 
 Examples of utilization:
-	
-	dbAction.init("../lib/put.php", "../lib/get.php"); // sets both the put and get php files form the respective urls.
 
 	string = 'recipe=&title=&ingredients=&category=&timeMaking=&noPortions=&catName=&ingredientCatName="; // ussualy obtained from .serialize() method
+
 	dbAction.execDB("insert", "", "recipe", string);  // this method sends the data for insertion as a new row in the table 'recipe' of the databse with the previous string as the object or data to be passed. When inserting the 'id' parameter is not needed because it will be generated on submit.
 
 	dbAction.getFromDB("recipe"); // refreshes the arrays if some modifications have been made to the database. Altough this method is already run when the .execDB() finishes. I used it for testing.

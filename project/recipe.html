@@ -13,7 +13,12 @@
 		   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		   crossorigin="anonymous">
 		</script>
+		<script src="assets/js/dbAction.js"></script>
 		<script src="assets/js/script.js"></script>
+
+
+
+
 	</head>
 
 	<body>
@@ -35,56 +40,50 @@
 		      		<li class="navbar-nav categories"><a href="#">Categories of recipes</a></li>
 			  </ul>
 		  </nav>
-		 
+
 		  <!-- photo + ingredients description part -->
 
 		  <div>
-	  	   
+
 		    <div class="row borders">
-		    	<div class="col-lg-5" id="picture">
-		    		<img src="#" class="dish" alt="">
+		    	<div class="col-lg-5 picture" id="picture">
+		    		<img src="#" class="dish" alt="" width="420">
 		    	</div>
 
 		    	<div class="recipe-things col-lg-7">
-		        <div class="row"><h2 class="col title-cook-book">Creamy Ham and Cheese Quiche</h2></div>
+		        <div class="row"><h2 id="title" class="col title-cook-book"></h2></div>
 
-		        <div class="row"><h3 class="col category-name"><span class="category">Category:</span> Breakfast</h3></div>
+		        <div class="row"><h3 id="category" class="col category-name"><span class="category">Category:</span> Breakfast</h3></div>
 		    	<div class="row">
 		    		<div  class="col">
 		    		<h5 class="list-name list-ing">List of ingredients:</h5>
 		    		<ol class="list" id="ingredients-list">
 				  	<!-- span in ol for bold elements -->
-		    		  	<li>First ingredient <span><span>1</span> spoon</span></li>
-			          	<li>Second ingredient <span><span>1</span> kilo</span></li>
-			          	<li>Third ingredient <span><span>2</span> glasess</span></li>
 				</ol>
 				</div>
 				<div class="col">
 					<h5 class="list-name list-things">List of needed things:</h5>
-					<ol class="list">
-					    <li>First thing</li>
-					    <li>Second thing</li>
-					    <li>Third thing</li>
+					<ol class="list" id="things">
 			  		</ol>
 			  	</div>
 			  </div>
 			  <div class="row">
 			  	<div class="col">
-				  	<p class="font-bold time">Time to make: 01:00:00 hrs</p>
+				  	<p class="font-bold time" id="timeOfMaking"></p>
 				    </div>
 				    <div class="col">
 				  	<p class="people font-bold">No of serves: <span id="servings-span">
-				  	<button id="servings-btn" type="button" name="button"><span>4</span></button></span></p>
+				  	<button id="servings-btn" type="button" name="button"><span id="servings">4</span></button></span></p>
 			  	</div>
 			  </div>
 		</div>
 		</div>
-			
+
 		  	<!-- recipe description -->
 		  	<div class="row main">
 		  		<div class="col">
 		  			<h3 class="recipe font-bold">Recipe:</h3>
-		    		<p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    		<p id="recipeText" class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		  		</div>
 		  	</div>
 
