@@ -34,6 +34,6 @@ $(document).ready(function(){
   }
 }
 catch(err) {
-  alert("Error! The url is incomplete cannot identify id of recipe.");
+  alert("Error! The url is incomplete cannot identify id of recipe."+ err.name);
 }
 });
