@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   // 1.1. Display list of added ingredients with quantity and unit, and option 'delete'.
   (function() {
-    $("#List-of-ingredients").on("click", "button", function() {
+    $("#list-of-ingredients").on("click", "button", function() {
       $(this).parent().remove();
     });
   })();
@@ -166,7 +166,7 @@ $(document).ready(function() {
         let quantity = $("#categories ul li input:checked:eq(" + n + ") ~ input[name = quantity]")
         let unit = $("#categories ul li input:checked:eq(" + n + ") ~ input[name = unit]")
         let element = name.text() + " <span>" + quantity.val() + "</span> " + unit.val() + "<button type=\"button\" name=\"button\">Delete</button>"
-        $("#List-of-ingredients").append("<li>" + element + "</li>")
+        $("#list-of-ingredients").append("<li>" + element + "</li>")
       }
       $("#categories ul li input").prop("checked", false)
     }
@@ -233,7 +233,7 @@ $(document).ready(function() {
 
   // 6.1. See recipe.
 
-  (function() {
+(function() {
   let seeRecipe = $('#see-recipe').on('click', function(e){
 	  
 	let titleRecipe = $("#title-recipe").val(); // 1.0 Add title to recipe
@@ -270,8 +270,6 @@ $(document).ready(function() {
 
   });
 })();
-
-
 
   // 6.2. Save recipe.
 
