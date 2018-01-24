@@ -1,31 +1,28 @@
 // for JQuery
-$(document).ready(function() {
-  // Needed functionalities for 'e-Cook-Book'
-	
-  // 1.0. Make a recipe.
 
+$(document).ready(function() {  
+
+  // Needed functionalities for 'e-Cook-Book'
 
   // 1.1. Display list of added ingredients with quantity and unit, and option 'delete'.
   (function() {
-    $("#list-of-ingredients").on("click", "button", function() {
+	$("#list-of-ingredients").on("click", "button", function() {
       $(this).parent().remove();
-    });
-  })();
+	});
+   })();
 
-  // 1.2. Display list of added needed things with option 'delete'.
-  (function() {
-    $("#list-of-needed-things").on("click", "button", function() {
-      $(this).parent().remove();
-    });
-  })();
-
-
+   // 1.2. Display list of added needed things with option 'delete'.
+   (function() {
+	 $("#list-of-needed-things").on("click", "button", function() {
+	   $(this).parent().remove();
+	 });
+   })();
 
   // 2.0. Additional elements:
 
-
   // 2.1. Display added image to recipe.
 
+  (function() {
   $("#inputImg").on("change", readURL); //event listener for a file upload
 
   //display the selected file by changing the src of the img element to the specified file
@@ -42,18 +39,17 @@ $(document).ready(function() {
         const source = e.target.result;
         tempImg.src = source;
 
-        //after temporary Image created, update src, height and width of the preview - keeping aspect ratio
-        tempImg.onload = function(e) {
-          const aspectRatio = tempImg.width / tempImg.height; // in order to maintain aspect ratio
-          const newWidth = 150; // width of the displayed image
-          const newHeight = newWidth / aspectRatio;
+      //after temporary Image created, update src, height and width of the preview - keeping aspect ratio
+      tempImg.onload = function(e) {
+        const aspectRatio = tempImg.width / tempImg.height; // in order to maintain aspect ratio
+        const newWidth = 150; // width of the displayed image
+        const newHeight = newWidth / aspectRatio;
           $("#uploadedImg").attr("src", source);
           $("#uploadedImg").css({
             "width": newWidth + "px",
             "height": newHeight + "px",
             "max-height": newWidth + "px",
           });
-
         }
       }
     }
@@ -64,12 +60,14 @@ $(document).ready(function() {
       $("#uploadedImg").attr("src", "");
       $("#inputImg").val("");
     });
+ })();
 
+ // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
+ // Added for RECIPE.html view, doesn't update database
 
-  // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
-  // Added for RECIPE.html view, doesn't update database
-
-  var recalculateIngredients = (function() {
+  (function() {	
+	
+    var recalculateIngredients = (function() {
 
     // get DOM elements
     var $servingsBtn = $("#servings-btn");
@@ -108,6 +106,8 @@ $(document).ready(function() {
       }
     }
   })();
+	
+})();
 
   // DropDown menu for Recipes, Ingredients and Needed things
   (function() {
@@ -132,28 +132,27 @@ $(document).ready(function() {
 
 
   // 3.3. Display list of recipes from choosen category of recipes - button 'See recipes' (in popup).
-  //
-  var toggleRecipeListPopup = (function() {
-    // display popup
-    $('#show-recipes-btn').on('click', function(e) {
-      e.preventDefault();
-      $('.recipes-popup').css('display', 'block');
+  
+  (function() {
+    var toggleRecipeListPopup = (function() {
+      // display popup
+      $('#show-recipes-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.recipes-popup').css('display', 'block');
+   });
 
-    });
-
-    // close popup
-    $('#close-recipes-popup-btn').on('click', function(e) {
+   // close popup
+   $('#close-recipes-popup-btn').on('click', function(e) {
       e.preventDefault();
       $('.recipes-popup').css('display', 'none');
     });
   })();
+  })();
+ 
+	
   // 3.4. Delete category of recipes from list of categories of recipes.
 
-
-
-
   // 4.0. Create categories of ingredients.
-
 
   // 4.1. Add new category of ingredients to list of categories of ingredients.
 
@@ -166,7 +165,7 @@ $(document).ready(function() {
         let quantity = $("#categories ul li input:checked:eq(" + n + ") ~ input[name = quantity]")
         let unit = $("#categories ul li input:checked:eq(" + n + ") ~ input[name = unit]")
         let element = name.text() + " <span>" + quantity.val() + "</span> " + unit.val() + "<button type=\"button\" name=\"button\">Delete</button>"
-        $("#List-of-ingredients").append("<li>" + element + "</li>")
+        $("#list-of-ingredients").append("<li>" + element + "</li>")
       }
       $("#categories ul li input").prop("checked", false)
     }
@@ -176,7 +175,8 @@ $(document).ready(function() {
   })();
 
   // 4.3. Display list of ingredients (button 'See list') from choosen category (in popup).
-
+  
+  (function() {
   var toggleIngredientsListPopup = (function() {
     // display popup
     $('#show-ingredients-popup-btn').on('click', function(e) {
@@ -192,10 +192,9 @@ $(document).ready(function() {
 
     });
   })();
-
+})();
 
   // 5.0. Create list of needed things.
-
 
   // 5.1. Add thing to list of needed things.
   (function() {
@@ -214,18 +213,19 @@ $(document).ready(function() {
   // 5.2. Display list of needed things (button 'See list') (in popup).
 
   // display popup
-  $('#show-needed-popup-btn').on('click', function(e) {
-    e.preventDefault();
-    $('.needed-popup').css('display', 'block');
+  (function() {
+	  $('#show-needed-popup-btn').on('click', function(e) {
+		e.preventDefault();
+		$('.needed-popup').css('display', 'block');
 
-  });
+	  });
 
-  //close popup
-  $('#close-needed-popup-btn').on('click', function(e) {
-    e.preventDefault();
-    $('.needed-popup').css('display', 'none');
-
-  });
+	  //close popup
+	  $('#close-needed-popup-btn').on('click', function(e) {
+		e.preventDefault();
+		$('.needed-popup').css('display', 'none');
+	  });
+  })();
 
 
   // 6.0. Buttons:
@@ -234,7 +234,7 @@ $(document).ready(function() {
   // 6.1. See recipe.
 
   (function() {
-  let seeRecipe = $('#see-recipe').on('click', function(e){
+    let seeRecipe = $('#see-recipe').on('click', function(e){
 	  
 	let titleRecipe = $("#title-recipe").val(); // 1.0 Add title to recipe
 
@@ -270,8 +270,6 @@ $(document).ready(function() {
 
   });
 })();
-
-
 
   // 6.2. Save recipe.
 
