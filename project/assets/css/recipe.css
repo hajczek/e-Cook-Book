@@ -154,6 +154,8 @@ hr {
   opacity: 0.2;
 }
 
+/* **************** Title, category and ingredients  ****************** */
+
 .title-cook-book {
   color: #C12227;
 }
@@ -187,7 +189,8 @@ hr {
   padding-top: 3%;
 }
 
-/* Icons */
+/* ************* Icons ************* */
+
 .list-ing::before {
   display: inline-block;
   content: url("../img/pink/ingredients-icon.jpg");
@@ -227,6 +230,7 @@ hr {
 
 }
 /* ******************* Buttons ******************* */
+
 .buttons {
   justify-content: center;
   text-align: center;
