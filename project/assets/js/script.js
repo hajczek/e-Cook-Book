@@ -1,7 +1,6 @@
 // for JQuery
 
 $(document).ready(function() {
-  
 
   // Needed functionalities for 'e-Cook-Book'
 

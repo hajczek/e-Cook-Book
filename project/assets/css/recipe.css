@@ -37,12 +37,12 @@ header {
 }
 
 .borders{
-    border: 1px solid transparent;
-    padding: 40px 0;
-    -webkit-border-image: url(../img/pink/hr.png) 50 round; /* Safari 3.1-5 */
-    -o-border-image: url(../img/pink/hr.png) 50 round; /* Opera 11-12.1 */
-    border-image: url(../img/pink/hr.png) 50 round;
-  }
+  border: 1px solid transparent;
+  padding: 40px 0;
+  -webkit-border-image: url(../img/pink/hr.png) 50 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/pink/hr.png) 50 round; /* Opera 11-12.1 */
+  border-image: url(../img/pink/hr.png) 50 round;
+}
 
 .container {
   background-color: white;
@@ -250,7 +250,7 @@ hr {
   vertical-align: middle;
   text-shadow: 2px 2px 2px #464242;
   /* background: darken($red, 1.5%); */
-  }
+}
 
 .button-recipe:hover {
   background-color: #f7b1bb;
@@ -268,47 +268,47 @@ hr {
 /* ******************* Style CSS for 'e-Cook Book' *************************** */
 
 .recipes-popup, .ingredients-popup, .needed-popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content {
   background-color: #fefefe;
-   margin: auto;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 60%;
-   overflow: hidden;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  overflow: hidden;
 }
 
 /* *************** popup 'See recipe' ******************* */
 
 .see-popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 150px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .see-popup-content img{
-	display: block;
-	float: left;
+  display: block;
+  float: left;
 }
 
 .see-popup-content .textBox{
@@ -317,37 +317,37 @@ hr {
 }
 
 .see-popup-content .descBox{
-	display: block;
-	float: left;
-	width: 94%;
-	margin: 0 3%;
+  display: block;
+  float: left;
+  width: 94%;
+  margin: 0 3%;
 }
 
 .see-popup-content ol li button{
-	display: none;
+  display: none;
 }
 
 .see-popup-content h3,
 .see-popup-content h2{
-	font-weight: bold;
-	margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .see-popup-content p{
-	font-size: 1.2em;
-	line-height: 1.6;
-	margin-top: 20px;
-	padding-bottom: 30px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 20px;
+  padding-bottom: 30px;
 }
 
 #close-see-popup-btn{
-	font-weight: bold;
-	color: #444;
-	cursor: pointer;
-	width: auto;
-	float: right;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  width: auto;
+  float: right;
 }
 
 #close-see-popup-btn:hover{
-	color: #F47920;
+  color: #F47920;
 }
