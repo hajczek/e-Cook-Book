@@ -24,8 +24,8 @@ header {
 }
 
 .row{
-	margin-right: 0 !important;
-	margin-left:0 !important;
+  margin-right: 0 !important;
+  margin-left:0 !important;
 }
 
 .dish {
@@ -34,12 +34,12 @@ header {
 }
 
 .borders{
-    border: 1px solid transparent;
-    padding: 40px 0;
-    -webkit-border-image: url(../img/blue/hr.png) 50 round; /* Safari 3.1-5 */
-    -o-border-image: url(../img/blue/hr.png) 50 round; /* Opera 11-12.1 */
-    border-image: url(../img/blue/hr.png) 50 round;
-  }
+  border: 1px solid transparent;
+  padding: 40px 0;
+  -webkit-border-image: url(../img/blue/hr.png) 50 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/blue/hr.png) 50 round; /* Opera 11-12.1 */
+  border-image: url(../img/blue/hr.png) 50 round;
+}
 
 .container {
   background-color: white;
@@ -66,13 +66,13 @@ nav {
 }
 
 .navigation{
-	top: 15px;
+  top: 15px;
 }
 
 .navigation li {
   list-style-type: none;
-	display: inline-block;
-	padding-right: 30px;
+  display: inline-block;
+  padding-right: 30px;
 }
 
 .navigation li a:link,
@@ -82,7 +82,7 @@ nav {
 }
 
 .navigation li a:hover{
-	color: #74bbe8;
+  color: #74bbe8;
 }
 
 hr {
@@ -107,42 +107,42 @@ hr {
 /* *********************** Switch for css files ************************** */
 
 .styleSwitch{
-	display: block;
-	float: right;
-	background-color: #fff;
+  display: block;
+  float: right;
+  background-color: #fff;
 }
 
 .styleSwitch a:link,
 .styleSwitch a:visited{
-	display: block;
-	width: 70px;
-	padding: 5px;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
+  display: block;
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
 }
 
 .styleSwitch a:hover{
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 #css-pink{
-	background-color: #F06377;
+  background-color: #F06377;
 }
 
 #css-blue{
-	background-color: #74BAE7;
+  background-color: #74BAE7;
 }
 
 #css-green{
-	background-color: #A6D38B;
+  background-color: #A6D38B;
 }
 
 /* ******************* Recipe ******************* */
 /* Image */
 
 .picture{
-	background: transparent url(../img/picture.jpg) top center no-repeat;
+  background: transparent url(../img/picture.jpg) top center no-repeat;
 }
 
 .img-box {
@@ -223,8 +223,8 @@ hr {
 
 /* ******************* Buttons ******************* */
 .buttons {
-	justify-content: center;
-	text-align: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .button-recipe {
@@ -260,86 +260,86 @@ hr {
 /* ******************* Style CSS for 'e-Cook Book' *************************** */
 
 .recipes-popup, .ingredients-popup, .needed-popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content {
   background-color: #fefefe;
-   margin: auto;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 60%;
-   overflow: hidden;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  overflow: hidden;
 }
 
 /* *************** popup 'See recipe' ******************* */
 
 .see-popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 150px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .see-popup-content img{
-	display: block;
-	float: left;
+  display: block;
+  float: left;
 }
 
 .see-popup-content .textBox{
-	position: relative;
-	top: 40px;
+  position: relative;
+  top: 40px;
 }
 
 .see-popup-content .descBox{
-	display: block;
-	float: left;
-	width: 94%;
-	margin: 0 3%;
+  display: block;
+  float: left;
+  width: 94%;
+  margin: 0 3%;
 }
 
 .see-popup-content ol li button{
-	display: none;
+  display: none;
 }
 
 .see-popup-content h3,
 .see-popup-content h2{
-	font-weight: bold;
-	margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .see-popup-content p{
-	font-size: 1.2em;
-	line-height: 1.6;
-	margin-top: 20px;
-	padding-bottom: 30px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 20px;
+  padding-bottom: 30px;
 }
 
 #close-see-popup-btn{
-	font-weight: bold;
-	color: #444;
-	cursor: pointer;
-	width: auto;
-	float: right;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  width: auto;
+  float: right;
 }
 
 #close-see-popup-btn:hover{
-	color: #2B83B5;
+  color: #2B83B5;
 }
