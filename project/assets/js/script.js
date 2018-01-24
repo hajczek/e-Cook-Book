@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   // 1.1. Display list of added ingredients with quantity and unit, and option 'delete'.
   (function() {
-    $("#List-of-ingredients").on("click", "button", function() {
+    $("#list-of-ingredients").on("click", "button", function() {
       $(this).parent().remove();
     });
   })();
