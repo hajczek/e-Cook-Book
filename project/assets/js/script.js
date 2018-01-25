@@ -70,7 +70,7 @@ $(document).ready(function() {
  })();
 
 
-	/**
+  /**
      * @description Quantity of persons for which is that recipe
      * @param {}
      * @param {}
@@ -218,24 +218,22 @@ $(document).ready(function() {
     $("#add-needed-things").on("click", addNeeded)
   })();
 
-
   (function() {
-	   // TODO: display popup
-	  $('#show-needed-popup-btn').on('click', function(e) {
-		e.preventDefault();
-		$('.needed-popup').css('display', 'block');
+    // TODO: display popup
+    $('#show-needed-popup-btn').on('click', function(e) {
+    e.preventDefault();
+    $('.needed-popup').css('display', 'block');
+  });
 
-	  });
-
-	  // TODO: close popup
-	  $('#close-needed-popup-btn').on('click', function(e) {
-		e.preventDefault();
-		$('.needed-popup').css('display', 'none');
-	  });
+    // TODO: close popup
+    $('#close-needed-popup-btn').on('click', function(e) {
+    e.preventDefault();
+    $('.needed-popup').css('display', 'none');
+    });
   })();
 
 
-	 /**
+  /**
      * @description Display view of recipe when button 'See recipe' is clicked.
      * @param {}
      * @param {}
@@ -244,36 +242,25 @@ $(document).ready(function() {
 
   (function() {
     let seeRecipe = $('#see-recipe').on('click', function(e){
-	 
-	let titleRecipe = $("#title-recipe").val();
-
+    let titleRecipe = $("#title-recipe").val();
     let recipesCategory = $("#recips-category :selected").val();
-
     let ingredientsList = $("#list-of-ingredients").html();
-
     let neededThings = $("#list-of-needed-things").html();
-
     let recipeDescription = $("#description-of-recipe").val();
-
     let imageUpload = $("#uploadedImg").attr("src");
-
     let timeToMake = $("#time-to-make").val();
-
     let howMany = $("#how-many-person").val();
 	
-	e.preventDefault();
-	
-	let content = ('<div class="row borders"><div class="col-lg-5 picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things col-lg-7"><div class="row"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2></div><div class="row"><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3></div><div class="row"><div  class="col"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="col"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div></div><div class="row"><div class="col"><p class="font-bold time" id="timeOfMaking">Time to make: ' + timeToMake + ' </p></div><div class="col"><p class="people font-bold">No of serves: ' + howMany + '</p></div></div></div></div><div class="row main"><div class="col"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div></div><div id="close-see-popup-btn">Close X</div>');
-    
-	$(".see-popup").css('display', 'block');
-	  
-	$(".see-popup-content").append(content);
+    e.preventDefault();
+    let content = ('<div class="row borders"><div class="col-lg-5 picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things col-lg-7"><div class="row"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2></div><div class="row"><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3></div><div class="row"><div  class="col"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="col"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div></div><div class="row"><div class="col"><p class="font-bold time" id="timeOfMaking">Time to make: ' + timeToMake + ' </p></div><div class="col"><p class="people font-bold">No of serves: ' + howMany + '</p></div></div></div></div><div class="row main"><div class="col"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div></div><div id="close-see-popup-btn">Close X</div>');
+    $(".see-popup").css('display', 'block');
+    $(".see-popup-content").append(content);
 
-	 // TODO: close popup
-  	$('#close-see-popup-btn').on('click', function(e) {
-		e.preventDefault();
-    	$('.see-popup').css('display', 'none');
-  	});
+    // TODO: close popup
+    $('#close-see-popup-btn').on('click', function(e) {
+	e.preventDefault();
+    $('.see-popup').css('display', 'none');
+  });
 
   });
 })();
