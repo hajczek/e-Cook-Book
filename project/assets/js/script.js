@@ -4,28 +4,33 @@ $(document).ready(function() {
 
   // Needed functionalities for 'e-Cook-Book'
 
-  // 1.1. Display list of added ingredients with quantity and unit, and option 'delete'.
+  // TODO: display list of added ingredients with quantity and unit, and option 'delete'.
+	
   (function() {
 	$("#list-of-ingredients").on("click", "button", function() {
       $(this).parent().remove();
 	});
    })();
 
-   // 1.2. Display list of added needed things with option 'delete'.
+   // TODO: display list of added needed things with option 'delete'.
+	
    (function() {
 	 $("#list-of-needed-things").on("click", "button", function() {
 	   $(this).parent().remove();
 	 });
    })();
-
-  // 2.0. Additional elements:
-
-  // 2.1. Display added image to recipe.
+	
+	
+  /**
+     * @description Read url of added image to recipe
+     * @param {}
+     * @param {}
+     * @returns {} Display the selected file by changing the src of the img element to the specified file
+     */
 
   (function() {
   $("#inputImg").on("change", readURL); //event listener for a file upload
 
-  //display the selected file by changing the src of the img element to the specified file
   function readURL() {
     $("#uploadedImg").attr("src", "");
 
@@ -33,13 +38,14 @@ $(document).ready(function() {
       const reader = new FileReader();
       reader.readAsDataURL(this.files[0]);
 
-      //when reader has uploaded file, add it to img src
+      // TODO: when reader has uploaded file, add it to img src
       reader.onload = function(e) {
-        const tempImg = new Image(); //create a temporary Image object to extract image's height and width
+		// TODO: create a temporary Image object to extract image's height and width
+        const tempImg = new Image();
         const source = e.target.result;
         tempImg.src = source;
 
-      //after temporary Image created, update src, height and width of the preview - keeping aspect ratio
+      // TODO: after temporary Image created, update src, height and width of the preview - keeping aspect ratio
       tempImg.onload = function(e) {
         const aspectRatio = tempImg.width / tempImg.height; // in order to maintain aspect ratio
         const newWidth = 150; // width of the displayed image
@@ -55,42 +61,48 @@ $(document).ready(function() {
     }
   }
 
-  // delete uploaded image
+  // TODO: delete uploaded image
+	  
     $("#deleteImg").on("click", function() {
       $("#uploadedImg").attr("src", "");
       $("#inputImg").val("");
     });
  })();
 
- // 2.2. Quantity of persons for which is that recipe - this can be change by user and then the quantity of ingredients must be appropriately adapted to recipe.
- // Added for RECIPE.html view, doesn't update database
+
+	/**
+     * @description Quantity of persons for which is that recipe
+     * @param {}
+     * @param {}
+     * @returns {} Recalculate original ingredient quantities & display on page
+     */
 
   (function() {	
 	
     var recalculateIngredients = (function() {
 
-    // get DOM elements
+    // TODO: get DOM elements
     var $servingsBtn = $("#servings-btn");
     var $servingsSpan = $("#servings-span");
     var $ingredientsList = Array(...$("#ingredients-list li span > span"));
 
-    // get & store quantity of ingredients needed for single serving
+    // TODO: get & store quantity of ingredients needed for single serving
     var servingsMultiplicators = $ingredientsList.map(function(el) {
       return Number(el.innerText) / Number($servingsBtn[0].innerText);
     });
 
-    //event listeners for button & input
+    // TODO: event listeners for button & input
     $servingsSpan.on("input", "#servings-input", updateIngredients);
     $servingsSpan.on("keyup", "#servings-input", reinstateBtn);
     $servingsSpan.on("click", "#servings-btn", openServingsForm);
 
-    // open input field for adding number of servings changes
+    // TODO: open input field for adding number of servings changes
     function openServingsForm() {
       var $servingsInputValue = Number($servingsBtn[0].innerText);
       $servingsSpan.html('<input type="number" name="quantity" id="servings-input" min="1" value="' + $servingsInputValue + '">');
     }
 
-    // recalculate original ingredient quantities & display on page
+    // TODO: recalculate original ingredient quantities & display on page
     function updateIngredients() {
       var servingsNumber = Number($("#servings-input").val());
 
@@ -99,7 +111,7 @@ $(document).ready(function() {
         el.innerText = String(quantity);
       });
     }
-    // close input form & display button when enter pressed
+    // TODO: close input form & display button when enter pressed
     function reinstateBtn(e) {
       if (e.which == 13) {
         $servingsSpan.html('<button id="servings-btn" type="button" name="button"><span>' + $("#servings-input").val() + '</span></button>');
@@ -109,7 +121,8 @@ $(document).ready(function() {
 	
 })();
 
-  // DropDown menu for Recipes, Ingredients and Needed things
+  // TODO: DropDown menu for Recipes, Ingredients and Needed things
+	
   (function() {
     $('#recipesDrop').on('click', function() {
       $('#recipesDropForm').slideToggle();
@@ -122,16 +135,8 @@ $(document).ready(function() {
     });
   })();
 
-  // 3.0.  Create categories of recipes.
 
-
-  // 3.1. Add new category of recipe to list of categories of recipes.
-
-
-  // 3.2. Add choosen category of recipes to recipe.
-
-
-  // 3.3. Display list of recipes from choosen category of recipes - button 'See recipes' (in popup).
+  // TODO: Display list of recipes from choosen category of recipes - button 'See recipes' (in popup).
   
   (function() {
     var toggleRecipeListPopup = (function() {
@@ -141,7 +146,7 @@ $(document).ready(function() {
         $('.recipes-popup').css('display', 'block');
    });
 
-   // close popup
+   // TODO: close popup
    $('#close-recipes-popup-btn').on('click', function(e) {
       e.preventDefault();
       $('.recipes-popup').css('display', 'none');
@@ -149,15 +154,13 @@ $(document).ready(function() {
   })();
   })();
  
+  /**
+     * @description Add chosen ingredient to recipe
+     * @param {}
+     * @param {}
+     * @returns {} Display list of ingredients (button 'See list') from choosen category (in popup)
+     */
 	
-  // 3.4. Delete category of recipes from list of categories of recipes.
-
-  // 4.0. Create categories of ingredients.
-
-  // 4.1. Add new category of ingredients to list of categories of ingredients.
-
-
-  // 4.2. Add new ingredient to choosen category of ingredients.
   (function() {
     function addIngredents() {
       for (var n = 0; n < $("#categories li div ul li input:checked").length; n++) {
@@ -174,7 +177,7 @@ $(document).ready(function() {
 
   })();
 
-  // 4.3. Display list of ingredients (button 'See list') from choosen category (in popup).
+  // TODO: Display list of ingredients (button 'See list') from choosen category (in popup).
   
   (function() {
   var toggleIngredientsListPopup = (function() {
@@ -185,7 +188,7 @@ $(document).ready(function() {
 
     });
 
-    //close popup
+    // TODO: close popup
     $('#close-ingredients-popup-btn').on('click', function(e) {
       e.preventDefault();
       $('.ingredients-popup').css('display', 'none');
@@ -194,9 +197,14 @@ $(document).ready(function() {
   })();
 })();
 
-  // 5.0. Create list of needed things.
-
-  // 5.1. Add thing to list of needed things.
+	
+  /**
+     * @description Add chosen thing to recipe
+     * @param {}
+     * @param {}
+     * @returns {} Display list of ingredients (button 'See list') from choosen category (in popup)
+     */
+	
   (function() {
     function addNeeded() {
   		for (var n = 0; n < $("#needed-things li input:checked").length; n++) {
@@ -210,17 +218,16 @@ $(document).ready(function() {
     $("#add-needed-things").on("click", addNeeded)
   })();
 
-  // 5.2. Display list of needed things (button 'See list') (in popup).
 
-  // display popup
   (function() {
+	   // TODO: display popup
 	  $('#show-needed-popup-btn').on('click', function(e) {
 		e.preventDefault();
 		$('.needed-popup').css('display', 'block');
 
 	  });
 
-	  //close popup
+	  // TODO: close popup
 	  $('#close-needed-popup-btn').on('click', function(e) {
 		e.preventDefault();
 		$('.needed-popup').css('display', 'none');
@@ -228,29 +235,31 @@ $(document).ready(function() {
   })();
 
 
-  // 6.0. Buttons:
-
-
-  // 6.1. See recipe.
+	 /**
+     * @description Display view of recipe when button 'See recipe' is clicked.
+     * @param {}
+     * @param {}
+     * @returns {}
+     */
 
   (function() {
     let seeRecipe = $('#see-recipe').on('click', function(e){
-	  
-	let titleRecipe = $("#title-recipe").val(); // 1.0 Add title to recipe
+	 
+	let titleRecipe = $("#title-recipe").val();
 
-    let recipesCategory = $("#recips-category :selected").val(); // add category of recipes
+    let recipesCategory = $("#recips-category :selected").val();
 
-    let ingredientsList = $("#list-of-ingredients").html(); // list of ingredients
+    let ingredientsList = $("#list-of-ingredients").html();
 
-    let neededThings = $("#list-of-needed-things").html(); // list of needed things
+    let neededThings = $("#list-of-needed-things").html();
 
-    let recipeDescription = $("#description-of-recipe").val(); // description of recipe
+    let recipeDescription = $("#description-of-recipe").val();
 
-    let imageUpload = $("#uploadedImg").attr("src"); // uploaded Image
+    let imageUpload = $("#uploadedImg").attr("src");
 
-    let timeToMake = $("#time-to-make").val(); // time to make a recipe
+    let timeToMake = $("#time-to-make").val();
 
-    let howMany = $("#how-many-person").val(); // for how many person
+    let howMany = $("#how-many-person").val();
 	
 	e.preventDefault();
 	
@@ -260,9 +269,7 @@ $(document).ready(function() {
 	  
 	$(".see-popup-content").append(content);
 
-   // return titleRecipe + recipesCategory + ingredientsList + neededThings + recipeDescription + timeToMake + howMany;
-  
-	//close popup
+	 // TODO: close popup
   	$('#close-see-popup-btn').on('click', function(e) {
 		e.preventDefault();
     	$('.see-popup').css('display', 'none');
@@ -271,21 +278,15 @@ $(document).ready(function() {
   });
 })();
 
-  // 6.2. Save recipe.
 
-
-  // 6.3. Edit recipe - on view 'Recipe'.
-
-
-  // 6.4. Print recipe
-
-  (function() {
-    /**
+  /**
      * @description Print page
      * @param {}
      * @param {}
      * @returns {} Opened panel to print page
      */
+
+  (function() {
     function printProject() {
       $('#input_print').click(function() {
         window.print();
@@ -295,13 +296,13 @@ $(document).ready(function() {
     let printInput = $('#input_print');
 
     // TODO: open panel to print
+	  
     printInput.on('click', function() {
       printProject();
     });
   })();
 
-
-  // TODO: switch files with style css
+   // TODO: switch files with style css
 
   (function() {
     $("#css-pink").click(function() {
