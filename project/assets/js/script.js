@@ -2,9 +2,9 @@
 
 $(document).ready(function() {
 
-  // Needed functionalities for 'e-Cook-Book'
+  // Functionalities for 'e-Cook-Book'
 
-  // TODO: display list of added ingredients with quantity and unit, and option 'delete'.
+  // TODO: displays list of added ingredients with quantity and unit, and option 'delete'.
 	
   (function() {
 	$("#list-of-ingredients").on("click", "button", function() {
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
    })();
 
-   // TODO: display list of added needed things with option 'delete'.
+   // TODO: displays list of added needed things with option 'delete'.
 	
    (function() {
 	 $("#list-of-needed-things").on("click", "button", function() {
@@ -22,10 +22,10 @@ $(document).ready(function() {
 	
 	
   /**
-     * @description Read url of added image to recipe
+     * @description Reads url of added image to recipe
      * @param {}
      * @param {}
-     * @returns {} Display the selected file by changing the src of the img element to the specified file
+     * @returns {} Displays the selected file by changing the src of the img element to the specified file
      */
 
   (function() {
@@ -61,7 +61,7 @@ $(document).ready(function() {
     }
   }
 
-  // TODO: delete uploaded image
+  // TODO: deletes uploaded image
 	  
     $("#deleteImg").on("click", function() {
       $("#uploadedImg").attr("src", "");
@@ -74,7 +74,7 @@ $(document).ready(function() {
      * @description Quantity of persons for which is that recipe
      * @param {}
      * @param {}
-     * @returns {} Recalculate original ingredient quantities & display on page
+     * @returns {} Recalculates original ingredient quantities & display on page
      */
 
   (function() {	
@@ -96,13 +96,13 @@ $(document).ready(function() {
     $servingsSpan.on("keyup", "#servings-input", reinstateBtn);
     $servingsSpan.on("click", "#servings-btn", openServingsForm);
 
-    // TODO: open input field for adding number of servings changes
+    // TODO: opens input field for adding number of servings changes
     function openServingsForm() {
       var $servingsInputValue = Number($servingsBtn[0].innerText);
       $servingsSpan.html('<input type="number" name="quantity" id="servings-input" min="1" value="' + $servingsInputValue + '">');
     }
 
-    // TODO: recalculate original ingredient quantities & display on page
+    // TODO: recalculates original ingredient quantities & display on page
     function updateIngredients() {
       var servingsNumber = Number($("#servings-input").val());
 
@@ -111,7 +111,7 @@ $(document).ready(function() {
         el.innerText = String(quantity);
       });
     }
-    // TODO: close input form & display button when enter pressed
+    // TODO: closes input form & display button when enter pressed
     function reinstateBtn(e) {
       if (e.which == 13) {
         $servingsSpan.html('<button id="servings-btn" type="button" name="button"><span>' + $("#servings-input").val() + '</span></button>');
@@ -121,7 +121,7 @@ $(document).ready(function() {
 	
 })();
 
-  // TODO: DropDown menu for Recipes, Ingredients and Needed things
+  // TODO: Opens DropDown box for Recipes, Ingredients and Needed things
 	
   (function() {
     $('#recipesDrop').on('click', function() {
@@ -136,17 +136,17 @@ $(document).ready(function() {
   })();
 
 
-  // TODO: Display list of recipes from choosen category of recipes - button 'See recipes' (in popup).
+  // TODO: Displays list of recipes from choosen category of recipes - button 'See recipes' (in popup).
   
   (function() {
     var toggleRecipeListPopup = (function() {
-      // display popup
+      // displays popup
       $('#show-recipes-btn').on('click', function(e) {
         e.preventDefault();
         $('.recipes-popup').css('display', 'block');
    });
 
-   // TODO: close popup
+   // TODO: closes popup
    $('#close-recipes-popup-btn').on('click', function(e) {
       e.preventDefault();
       $('.recipes-popup').css('display', 'none');
@@ -155,10 +155,10 @@ $(document).ready(function() {
   })();
  
   /**
-     * @description Add chosen ingredient to recipe
+     * @description Adds chosen ingredient to recipe
      * @param {}
      * @param {}
-     * @returns {} Display list of ingredients (button 'See list') from choosen category (in popup)
+     * @returns {} Displays list of ingredients (button 'See list') from choosen category (in popup)
      */
 	
   (function() {
@@ -177,7 +177,7 @@ $(document).ready(function() {
 
   })();
 
-  // TODO: Display list of ingredients (button 'See list') from choosen category (in popup).
+  // TODO: Displays list of ingredients (button 'See list') from choosen category (in popup).
   
   (function() {
   var toggleIngredientsListPopup = (function() {
@@ -199,10 +199,10 @@ $(document).ready(function() {
 
 	
   /**
-     * @description Add chosen thing to recipe
+     * @description Adds chosen thing to recipe
      * @param {}
      * @param {}
-     * @returns {} Display list of ingredients (button 'See list') from choosen category (in popup)
+     * @returns {} Displays list of ingredients (button 'See list') from choosen category (in popup)
      */
 	
   (function() {
@@ -234,10 +234,10 @@ $(document).ready(function() {
 
 
   /**
-     * @description Display view of recipe when button 'See recipe' is clicked.
+     * @description Displays view of recipe when button 'See recipe' is clicked.
      * @param {}
      * @param {}
-     * @returns {}
+     * @returns {} View of recipe
      */
 
   (function() {
@@ -270,7 +270,7 @@ $(document).ready(function() {
      * @description Print page
      * @param {}
      * @param {}
-     * @returns {} Opened panel to print page
+     * @returns {} Opens panel to print page
      */
 
   (function() {
@@ -282,30 +282,10 @@ $(document).ready(function() {
 
     let printInput = $('#input_print');
 
-    // TODO: open panel to print
+    // TODO: opens panel to print
 	  
     printInput.on('click', function() {
       printProject();
-    });
-  })();
-
-   // TODO: switch files with style css
-
-  (function() {
-    $("#css-pink").click(function() {
-      $("link[media=screen]").attr({
-        href: "assets/css/recipe.css"
-      });
-    });
-    $("#css-blue").click(function() {
-      $("link[media=screen]").attr({
-        href: "assets/css/recipe-blue.css"
-      });
-    });
-    $("#css-green").click(function() {
-      $("link[media=screen]").attr({
-        href: "assets/css/recipe-green.css"
-      });
     });
   })();
 
