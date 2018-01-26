@@ -2,6 +2,11 @@
 // Functionalities for 'e-Cook-Book'
 
 // TODO: switches files with style css
+
+$('#css-pink').on('click', savePink);
+$('#css-blue').on('click', saveBlue);
+$('#css-green').on('click', saveGreen);
+
 function savePink(){
   	localStorage.setItem('link', 'assets/css/recipe.css');
   	$('link[media=screen]').attr({href: localStorage.getItem('link')});
