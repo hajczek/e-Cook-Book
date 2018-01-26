@@ -14,38 +14,6 @@
 		   crossorigin="anonymous">
 		</script>
 		<script src="assets/js/script.js"></script>
-		
-		<script type="text/javascript">
-			
-			// TODO: switches files with style css
-			
-			function savePink(){
-				localStorage.setItem('link', 'assets/css/recipe.css');
-				$('link[media=screen]').attr({href: localStorage.getItem('link')});
-				savePink();
-			}	
-
-			function saveBlue(){
-				localStorage.setItem('link', 'assets/css/recipe-blue.css');
-				$('link[media=screen]').attr({href: localStorage.getItem('link')});
-				saveBlue();
-			}	
-
-			function saveGreen(){
-				localStorage.setItem('link', 'assets/css/recipe-green.css');
-				$('link[media=screen]').attr({href: localStorage.getItem('link')});
-				saveGreen();
-			}	
-
-			function displayLink(){
-				if(localStorage.getItem('link') != null){
-					$('link[media=screen]').attr({href: localStorage.getItem('link')});
-				}
-			}
-		
-			displayLink();
-		
-		</script>
 	</head>
 
 	<body>
@@ -54,9 +22,9 @@
 		<header class="header">
 			<div class="logo"></div>
 			<div class="styleSwitch">
-				<a id="css-pink" href="#pink" onclick="savePink()">Pink</a>
-				<a id="css-blue" href="#blue" onclick="saveBlue()">Blue</a>
-				<a id="css-green" href="#green" onclick="saveGreen()">Green</a>
+				<a id="css-pink" href="">Pink</a>
+				<a id="css-blue" href="">Blue</a>
+				<a id="css-green" href="">Green</a>
 			</div>
 		</header>
 
