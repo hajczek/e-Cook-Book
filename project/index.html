@@ -14,6 +14,7 @@
 		   crossorigin="anonymous">
 		</script>
 		<script src="assets/js/script.js"></script>
+		<script src="assets/js/collect.js"></script>
 	</head>
 
 	<body>
@@ -38,7 +39,7 @@
 		    </ul>
 		  </nav>
 
-		  <form>
+		  <form id="dataFrm">
 
 			<!-- Add title to recipe (label, input) -->
 			<label for="">Add title to recipe</label>
@@ -80,7 +81,7 @@
 			<!-- Add image, choose image from computer, delete added file (label, input, button) -->
 			<label for="">Add image</label>
 			<input name="" type="file" value="Choose file" accept="image/*" id="inputImg">
-			<input type="submit" name="" value="Upload" />
+			<input type="button" name="" value="Upload" id="sendImg"/>
 			<button type="button" name="button" id="deleteImg">Delete file</button>
 			<img src="" alt="" id="uploadedImg">
 
@@ -100,7 +101,7 @@
 
 
 			<!-- Save recipe (button) -->
-			<button type="button" name="button">Save recipe</button>
+			<button type="submit" name="button">Save recipe</button>
 
 		</form>
 
