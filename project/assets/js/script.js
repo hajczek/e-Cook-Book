@@ -317,4 +317,13 @@ $('#css-pink').on('click', savePink);
 $('#css-blue').on('click', saveBlue);
 $('#css-green').on('click', saveGreen); 
 
+  // Listener for form submit
+  $("#dataFrm").on("submit", function(e) {
+    e.preventDefault();
+    gatherData();
+  });
+
+  //listener for image upload
+  $("#sendImg").on("click", sendImg);
+
 }); // on document ready
