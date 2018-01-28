@@ -6,15 +6,14 @@
 		<title>Add recipe e-Cook-Book</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/recipe.css" media="screen">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/recipe.css" media="screen">
 		<script
 		   src="https://code.jquery.com/jquery-3.2.1.min.js"
 		   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		   crossorigin="anonymous">
 		</script>
 		<script src="assets/js/script.js"></script>
-		<script src="assets/js/collect.js"></script>
 	</head>
 
 	<body>
@@ -34,95 +33,123 @@
 		   <!-- navigation + slogan -->
 		  <nav class="row">
 		    <ul class ="navigation col-lg-7">
-		      <li class="home"><a href="#">home</a></li>
-		      <li class="categories"><a href="#">categories of recipes</a></li>
+		      <li class="navbar-nav home"><a href="#">home</a></li>
+		      <li class="navbar-nav categories"><a href="#">categories of recipes</a></li>
 		    </ul>
 		  </nav>
+		  <hr>
 
-		  <form id="dataFrm">
+		  	
+		 
+		  <div class="row">
+		  	<div class="col-lg-6">
 
-			<!-- Add title to recipe (label, input) -->
-			<label for="">Add title to recipe</label>
-			<input type="text" name="" value="" id="title-recipe">
+		  		<form>
 
-			<!-- Choos category of recipes to recipe (label, select) -->
-			<label for="">Choose category of recipes for recipe</label>
-			<select class="" name="" id="recips-category">
-				<option value="First category of recipes">First category of recipes</option>
-			</select>
+		  			<div class="row position">
+						<!-- Add title to recipe (label, input) -->
+						<label class="col-lg-6" for="">Add title to recipe</label>
+						<input class="col-lg-6 box" type="text" name="" value="" id="title-recipe">
+						</div>
+
+		  		<div class="row position">
+					<!-- Choos category of recipes to recipe (label, select) -->
+					<label class="col-lg-6" for="">Choose the category of recipe</label>
+					<select class="col-lg-6 box" name="" id="recips-category">
+						<option value="First category of recipes">Choose category</option>
+					</select>
+				</div>
 
 			<!-- List of added ingredients: (h3) -->
-			<h3>List of added ingredients</h3>
-
+			<h3 class="row">List of added ingredients</h3>
+			
 			<!-- List of added ingredients with quantity, unit and option 'delete' (ul, button) -->
 			<ol id="list-of-ingredients">
-				<li>First ingredient <span>1</span> spoon<button type="button" name="button">Delete</button></li>
-				<li>Second ingredient <span>1</span> kilo<button type="button" name="button">Delete</button></li>
+				<div class="row position">
+					<li>First ingredient <span>1</span> spoon<button class="menue-btn" type="button" name="button">Delete</button></li>
+				</div>
+				<div class="row position">
+					<li>Second ingredient <span>1</span> kilo<button class="menue-btn" type="button" name="button">Delete</button></li>
+				</div>
+				
 			</ol>
+			
 
 			<!-- List of added needed things: (h3) -->
-			<h3>List of added needed things</h3>
-
+			<h3 class="row">List of added needed things</h3>
+			
+			<div class="row">
 			<!-- List of added needed things with option 'delete' (ul, button) -->
 			<ol id="list-of-needed-things">
-				<li>First thing <button type="button" name="button">Delete</button></li>
+				<div class="row position">
+				<li>First thing <button class="menue-btn" type="button" name="button">Delete</button></li>
+				</div>
 			</ol>
-
-			<!-- Recipe: (h3) -->
-			<h3>Recipe</h3>
-
-			<!-- File for description of recipe (textarea) -->
-			<textarea name="name" id="description-of-recipe" rows="15" cols="60"></textarea>
-
-			<!-- Additional elements: (h3) -->
-			<h3>Additional elements</h3>
-
-
-			<!-- Add image, choose image from computer, delete added file (label, input, button) -->
-			<label for="">Add image</label>
-			<input name="" type="file" value="Choose file" accept="image/*" id="inputImg">
-			<input type="button" name="" value="Upload" id="sendImg"/>
-			<button type="button" name="button" id="deleteImg">Delete file</button>
-			<img src="" alt="" id="uploadedImg">
-
-			<!-- Add time needed to make a recipe (label, input) -->
-			<label for="">Add time to make</label>
-			<input type="text" name="" id="time-to-make" value="00:00">
-
-			<!-- For how many person (label, input) -->
-			<label for="">No. of portions</label>
-			<input type="text" name="" id="how-many-person" value="">
-
-			<!-- See recipe (button) -->
-			<button type="button" name="button" id="see-recipe">See recipe</button>
-			<div class="see-popup">
-				<div class="see-popup-content"></div>
 			</div>
 
+			<!-- Recipe: (h3) -->
+			<h3 class="row">Recipe</h3>
 
-			<!-- Save recipe (button) -->
-			<button type="submit" name="button">Save recipe</button>
+			<!-- File for description of recipe (textarea) -->
+			<textarea class="row position" name="name" id="description-of-recipe" rows="15" cols="60"></textarea>
+
+			<!-- Additional elements: (h3) -->
+			<h3 class="row">Additional elements</h3>
+
+			<div class="row">
+	  			<div class="col-lg-7">
+	  				<div class="row position">
+						<!-- Add image, choose image from computer, delete added file (label, input, button) -->
+						<label class="col-lg-6" for="">Add image</label>
+						<input class="col-lg-5 choose-file" name="" type="file" value="Choose file" accept="image/*" id="inputImg">
+						</div>
+
+		  				<div class="row">
+						<input class="col-lg-5 menue-btn" type="submit" name="" value="Upload" />
+						<button class="col-lg-5 menue-btn" type="button" name="button" id="deleteImg">Delete file</button>
+						</div>
+		  				<div class="row add-time">
+						
+						<!-- Add time needed to make a recipe (label, input) -->
+						<label class="col-lg-7" for="">Add time to make</label>
+						<input class="col-lg-5 box" type="text" name="" id="time-to-make" value="00:00">
+						</div>
+						<div class="position row">
+
+						<!-- For how many person (label, input) -->
+						<label class="col-lg-7" for="">No. of portions</label>
+						<input class="col-lg-5 box" type="text" name="" id="how-many-person" value="">
+						</div>
+					</div>
+
+		  			<div class="col-lg-5">
+						<img src="" alt="" id="uploadedImg">
+
+		  			</div>
+	  			</div>
 
 		</form>
+	</div>
 
 		<!-- Add recipe -->
 
+		<div class="col-lg-6">
 		<!-- List of categories of recipies: -->
-    		<h3  id='recipesDrop'>Categories of recipes &raquo;</h3>
+    		<h3  class="position" id='recipesDrop'>Categories of recipes &raquo;</h3>
     		<!-- This code will be open in drop down element when element <h3>List of categories of recipes</h3> be clicked -->
 			<div id='recipesDropForm'>
 				<form>
 				<!-- Add new category of recipes to list of categories of recipes (label, input) -->
 				<label for="">Add new category of recipes to list</label>
-				<input type="text" name="" value="Category name">
-				<button type="button" name="button">Add</button>
+				<input class="box" type="text" name="" value="Category name">
+				<button class="menue-btn" type="button" name="button">Add</button>
 
 				<!-- List of category of recipes with options: 'See recipes' and 'Delete' (ul, button, button) -->
 				<ol>
-					<li><a href="#">First Category of recipes</a>
+					<li class="position"><a href="#">First Category of recipes</a>
 
-						<button id="show-recipes-btn" type="button" name="button">See recipes</button>
-						<button type="button" name="button">Delete</button>
+						<button class="menue-btn" id="show-recipes-btn" type="button" name="button">See recipes</button>
+						<button class="menue-btn" type="button" name="button">Delete</button>
 						<!-- List-of-recipes-part-of-code -->
 						<!-- First category of recipes -->
 						<!-- This code will be open in popup when button 'See recipes' will be clicked-->
@@ -133,22 +160,22 @@
 								<!-- Display list of recipes with options: 'Delete from list' and 'See recipe' -->
 									<ul>
 										<li>
-											<input type="checkbox"><label>First recipe </label>
-											<button name="" type="button">See Recipe</button>
+											<input class="box" type="checkbox"><label>First recipe </label>
+											<button class="menue-btn" name="" type="button">See Recipe</button>
 										</li>
 										<li>
-											<input type="checkbox"><label>Second recipe </label>
-											<button name="" type="button">See Recipe</button>
+											<input class="box" type="checkbox"><label>Second recipe </label>
+											<button class="menue-btn" name="" type="button">See Recipe</button>
 										</li>
 										<li>
-											<input type="checkbox"><label>Third recipe</label>
-											<button name="" type="button">See Recipe</button>
+											<input class="box" type="checkbox"><label>Third recipe</label>
+											<button class="menue-btn" name="" type="button">See Recipe</button>
 										</li>
 									</ul>
 								</form>
-								<button type="button" name="button">Delete chosen recipes from this list</button>
+								<button class="menue-btn" type="button" name="button">Delete chosen recipes from this list</button>
 								<!-- Close popup window (button) -->
-								<button id='close-recipes-popup-btn' name="" type="">Close List</button>
+								<button class="menue-btn" id='close-recipes-popup-btn' name="" type="">Close List</button>
 							</div>
 						</div>
 					</li>
@@ -162,26 +189,32 @@
 			<!-- Add new category of ingredients to list of categories of ingredients (label, input)-->
 			<div id='ingredientsDropForm'>
 				<form>
+					<div class="row position display">
 					<label for="">Add new category of ingredients</label>
-					<input type="text" name="" value="Category name">
-					<button type="button" name="button">Add</button> <br>
+					<input class="box" type="text" name="" value="Category name">
+					<button class="menue-btn" type="button" name="button">Add</button> <br>
+					</div>
 
 					<!-- Add new ingredient to choosen category of ingredients (label, select, input) -->
 
-					<label for="">Add new ingredient to chosen category</label>			<select>
+					<label for="">Add new ingredient to chosen category</label><br>		
+					<div class="row display">
+						<select class="position box">
 						<option value="">Choose category</option>
 						<option value="">category​ 1</option>
 						<option value="">category​ 2</option>
 						<option value="">category​ 3</option>
 					</select>
-					<input type="list" name="" value="Ingredient name">
-					<button type="button" name="button">Add</button>
+					<input class="position box" type="list" name="" value="Ingredient name">
+					<button class="position menue-btn" type="button" name="button">Add</button>
 
+					</div>
+					
 					<!-- List of category of ingredients with options: 'See list' and 'Delete' (ul, button, button) -->
 					<ol id="categories">
 						<li><a href="#">First Category of ingredients</a>
-							<button id='show-ingredients-popup-btn' type="button" name="button">See list</button>
-							<button type="button" name="button">Delete</button>
+							<button class="menue-btn" id='show-ingredients-popup-btn' type="button" name="button">See list</button>
+							<button class="menue-btn" type="button" name="button">Delete</button>
 							<!-- This part of code will be open in popup window when button 'See list' will be clicked -->
 							<!-- List-of-ingredients-part-of-code -->
 							<div class='ingredients-popup'>
@@ -192,19 +225,19 @@
 										<ul>
 											<li>
 												<input type="checkbox"><label>First ingredient </label>
-												<input type="" name="quantity"><input type="text" name="unit">
+												<input class="box" type="" name="quantity"><input type="text" name="unit">
 											</li>
 											<li><input type="checkbox"><label>Second ingredient </label>
-												<input type="" name="quantity"><input type="text" name="unit">
+												<input class="box" type="" name="quantity"><input type="text" name="unit">
 											</li>
 											<li><input type="checkbox"><label>Third ingredient </label>
-												<input type="" name="quantity"><input type="text" name="unit">
+												<input class="box" type="" name="quantity"><input type="text" name="unit">
 											</li>
 										</ul>
-										<button type="button">Add choosen ingredients to recipe</button>
-										<button type="button">Delete choosen ingredients from list</button>
+										<button class="menue-btn" type="button">Add choosen ingredients to recipe</button>
+										<button class="menue-btn" type="button">Delete choosen ingredients from list</button>
 										<!-- Close popup window (button) -->
-										<button id='close-ingredients-popup-btn' name="" type="">Close List</button>
+										<button class="menue-btn" id='close-ingredients-popup-btn' name="" type="">Close List</button>
 									</form>
 								</div>
 							</div>
@@ -220,28 +253,49 @@
 				<div id='thingsDropForm'>
 					<form>
 						<label for="">Add things to list</label>
-						<input type="text" name="" value="">
-						<button type="button" name="button">Add</button>
-						<button id='show-needed-popup-btn' type="button" name="button">See list</button>
+						<input class="box" type="text" name="" value="">
+						<button class="menue-btn" type="button" name="button">Add</button>
+						<button class="menue-btn" id='show-needed-popup-btn' type="button" name="button">See list</button>
 						<!-- This part of code will be open in popup window when button 'See list' will be clicked -->
 						<div class='needed-popup'>
 							<div class='needed-popup-content'>
 								<h2>List of needed things</h2>
 								<form>
 									<ul id="needed-things">
-										<li><input type="checkbox"><label>First thing </label></li>
-										<li><input type="checkbox"><label>Second thing </label></li>
-										<li><input type="checkbox"><label>Third thing </label></li>
+										<li><input class="box" type="checkbox"><label>First thing </label></li>
+										<li><input class="box" type="checkbox"><label>Second thing </label></li>
+										<li><input class="box" type="checkbox"><label>Third thing </label></li>
 									</ul>
-									<button type="button" id="add-needed-things">Add choosen things to recipe</button>
-									<button type="button">Delete choosen things from needed things list</button>
+									<button class="menue-btn" type="button" id="add-needed-things">Add choosen things to recipe</button>
+									<button class="menue-btn" type="button">Delete choosen things from needed things list</button>
 									<!-- Close popup window (button) -->
-									<button id='close-needed-popup-btn' name="" type="">Close List</button>
+									<button class="menue-btn" id='close-needed-popup-btn' name="" type="">Close List</button>
 								</form>
 							</div>
 						</div>
 					</form>
 				</div>
+				</div>
+				</div>
+
+
+				<!-- See recipe (button) -->
+		<div class="row borders">
+			<div class="buttons col-lg-12">
+		
+			<button class="col-lg-6 button-recipe" type="button" name="button" id="see-recipe">See recipe</button>
+			<div class="see-popup">
+				<div class="see-popup-content"></div>
+			</div>
+
+
+			<!-- Save recipe (button) -->
+			<button class="col-lg-6 button-recipe" type="button" name="button">Save recipe</button>
+
+			</div>
+		</div>
+	 
+
 		</section>
 		<p class="info">Project made with the help of community of Udacity fewd-challange</p>
 	</body>
