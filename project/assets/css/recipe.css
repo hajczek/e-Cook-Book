@@ -15,6 +15,9 @@ header {
 }
 .add-rec {
   font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top: -40px; 
+  text-shadow: 2px 2px 2px #9f0a39;
 }
 .logo {
   /* margin-top: -180px; */
@@ -31,6 +34,7 @@ header {
 .row{
   margin-right: 0 !important;
   margin-left:0 !important;
+  margin-bottom: 20px;
 }
 
 .dish {
@@ -62,7 +66,9 @@ header {
 }
 
 h3{
-  font-size: 1.4em !important;
+  font-size: 1.3em !important;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .recipe-items{
@@ -93,11 +99,24 @@ ol {
   width: 100%;
 list-style-type:decimal;
 }
+
 .position-select{
   margin-right: 9%;
   height: 1.8em;
   width: 35%;
 }
+
+input,
+textarea,
+select{
+  border: 1px solid #bbb;
+}
+
+#inputImg{
+  border: none;
+  height: 30px;
+}
+
 .position-input{
   width: 35%;
 }
@@ -105,13 +124,14 @@ list-style-type:decimal;
 .btn-position{
   margin-right: 40%;
 }
- .menue-btn:hover{
+
+.menue-btn:hover{
   background-color: #f7b1bb;
   color: #464242;
   text-shadow: 2px 2px 2px #fff;
+}
 
- }
- .choose-file{
+.choose-file{
   text-align: center;
   margin-left: 21px;
   text-decoration:none;
@@ -121,18 +141,27 @@ list-style-type:decimal;
   height: auto;
   display:inline-block;
   line-height:auto;
-  
 }
 
- .display{
+.img-thumbnail{
+	border: none;
+	background: none;
+	position: relative;
+	top: 20px;
+}
+#deleteImg{
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
 
-  padding-right:12px;
-
+.display{
+  padding-right: 12px;
  }
+
  ul li {
   width: 100%;
   display: inline !important;
-
+  margin-right: 20px;
  }
 
  .add-time{
@@ -146,6 +175,7 @@ list-style-type:decimal;
 
 nav {
   font-size: 1.2em;
+  padding: 20px 0;
 }
 
 a{
@@ -235,6 +265,7 @@ hr {
 
 .title-cook-book {
   color: #C12227;
+  margin-bottom: 20px;
 }
 
 .category {
@@ -252,15 +283,17 @@ hr {
 }
 
 .list {
-  font-size: 90%;
+  /* font-size: 90%; */
   /* font-family: Georgia, Times, "Times New Roman", serif; */
   -webkit-padding-start: 0;
   list-style-position: inside;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 h5{
   margin: 20px 0;
+  font-weight: bold !important;
 }
 
 .font-bold {
@@ -306,8 +339,8 @@ h5{
 
 /* Recipe */
 .recipe-description {
-  font-size: 95%;
-  line-height:130%;
+  /* font-size: 95%; */
+  line-height: 1.6;
   padding-bottom: 3%
 
 }
