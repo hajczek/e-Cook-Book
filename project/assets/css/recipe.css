@@ -99,6 +99,19 @@ h3{
   margin-left: 0;
 }
 
+#recipesDrop,
+#ingredientsDrop,
+#thingsDrop{
+	margin-left: 20px;
+}
+
+label[for="Add new category of recipes"],
+label[for="Add new category of ingredients"],
+label[for="Add new ingredient to chosen category"],
+label[for="Add things to list"]{
+	margin-left: 20px;
+}
+
 #categories li a{
 	margin-right: 20px;
 }
@@ -181,7 +194,7 @@ input[value="Category name"]{
 
  ul li {
   /* width: 100%; */
-  display: inline !important;
+  /* display: inline !important; */
   margin-right: 20px;
  }
 
@@ -224,14 +237,17 @@ hr {
 
 #recipesDropForm{
   display:none;
+  margin-top: 20px;
 }
 
 #ingredientsDropForm{
   display:none;
+  margin-top: 20px;
 }
 
 #thingsDropForm{
   display:none;
+  margin-top: 20px;
 }
 
 /* *********************** Switch for css files ************************** */
@@ -422,10 +438,77 @@ h5{
 .recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #888;
   width: 60%;
   overflow: hidden;
+  min-height: 400px; 
+  position: relative;
+  top: 80px;
+}
+
+.recipes-popup-content h2,
+.ingredients-popup-content h2,
+.needed-popup-content h2{
+	text-align: center;
+	margin-bottom: 20px;
+	color: #C12227;
+}
+
+.recipes-popup-content ul,
+.ingredients-popup-content ul
+.needed-popup-content ul{
+	display: block;
+	float: left;
+	list-style-type: none;
+}
+
+.recipes-popup-content ul li,
+.ingredients-popup-content ul li,
+.needed-popup-content ul li{
+	list-style-type: none;
+}
+.recipes-popup-content ul li label,
+.ingredients-popup-content ul li label{
+	width: 130px;
+	margin-right: 20px;
+}
+input[type="checkbox"]{
+	border: 1px solid #bbb;
+}
+.recipes-popup-content .buttons,
+.ingredients-popup-content .buttons,
+.needed-popup-content .buttons{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+}
+
+.recipes-popup-content .buttons button,
+.ingredients-popup-content .buttons button,
+.needed-popup-content .buttons button{
+  font-size: 14px;
+  padding: 7px 10px;
+}
+
+input[name="quantity"],
+input[name="unit"]{
+	width: 50px;
+}
+
+.measure{
+	display: block;
+	float: left;
+	width: 87%;
+	margin-right: 13%;
+}
+
+.qty,
+.unit{
+	display: block;
+	float: right;
+	font-weight: bold;
+	width: 20%;
 }
 
 /* *************** popup 'See recipe' ******************* */
