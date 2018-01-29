@@ -68,6 +68,12 @@ h3{
 .recipe-items{
   padding-top: 1%;
 }
+
+.navigation{
+  position: relative;
+  top: 5px;
+}
+
 .menue-btn{
   text-decoration:none;
   cursor: pointer;
@@ -125,7 +131,7 @@ list-style-type:decimal;
  }
  ul li {
   width: 100%;
-  display: inline-block;
+  display: inline !important;
 
  }
 
@@ -133,9 +139,11 @@ list-style-type:decimal;
   margin-top: 2%;
   margin-bottom: 2%;
  }
- .box{
+
+.box{
   background-color: #FDF9EE;
  }
+
 nav {
   font-size: 1.2em;
 }
@@ -245,9 +253,14 @@ hr {
 
 .list {
   font-size: 90%;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  /* font-family: Georgia, Times, "Times New Roman", serif; */
   -webkit-padding-start: 0;
   list-style-position: inside;
+  padding: 0;
+}
+
+h5{
+  margin: 20px 0;
 }
 
 .font-bold {
