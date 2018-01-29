@@ -31,16 +31,16 @@
      <section class="content container">
      <h2 class="row add-rec">Add Recipe</h2>
      <!-- navigation + slogan -->
-       <nav class="row">
-         <ul class ="navigation col-lg-7">
-	   <li class="navbar-nav home"><a href="#">home</a></li>
-	   <li class="navbar-nav categories"><a href="#">categories of recipes</a></li>
+       <nav class="row navbar-default navbar-expand-md ">
+         <ul class ="navbar-nav col-lg-5">
+	   <li class="nabar-item home"><a href="#">home</a></li>
+	   <li class="navbar-item categories"><a href="#">categories of recipes</a></li>
 	 </ul>
        </nav>
        <hr>
 <!-- main row start -->
 <div class="row">
-       <form class="col-lg-6" id="dataFrm"><!-- start of left col -->
+       <form class="col-lg-6 " id="dataFrm"><!-- start of left col -->
        <!-- Add title to recipe (label, input) -->
 	<div class="row position">
 
@@ -94,28 +94,28 @@
 	  <div class="row">
 	  <div class="col-lg-7">	
 	  	<div class="row position">
-		  <label class="col-lg-6" for="">Add image</label>
-		  <input class="col-lg-5 choose-file" name="" type="file" value="Choose file" accept="image/*" id="inputImg">
+		  <label class="col-md-6 col-sm-6" for="">Add image</label>
+		  <input class="col-md-5 col-sm-5 choose-file" name="" type="file" value="Choose file" accept="image/*" id="inputImg">
 	    </div>
 	    <div class="row position btn-position ">
-		  <input class="col-lg-5 menue-btn" type="button" name="" value="Upload" id="sendImg"/>
-		  <button class="col-lg-5 menue-btn float-right" type="button" name="button" id="deleteImg">Delete file</button>
+		  <input class="col-md-5 col-sm-5 menue-btn" type="button" name="" value="Upload" id="sendImg"/>
+		  <button class="col-md-5 col-sm-5 menue-btn float-right" type="button" name="button" id="deleteImg">Delete file</button>
 		</div>
 	  
 	  <!-- Add time needed to make a recipe (label, input) -->
 	    <div class="row add-time">
-		  <label class="col-lg-7" for="">Add time to make</label>
-		  <input class="col-lg-5 box" type="text" name="" id="time-to-make" value="00:00">
+		  <label class="col-md-7 col-sm-7" for="">Add time to make</label>
+		  <input class="col-md-5 col-sm-5 box" type="text" name="" id="time-to-make" value="00:00">
 		</div>
 
 	  <!-- For how many person (label, input) -->
 	  <div class="position row">
-		  <label class="col-lg-7" for="">No. of portions</label>
-		  <input class="col-lg-5 box" type="text" name="" id="how-many-person" value="">
+		  <label class="col-md-7 col-sm-7" for="">No. of portions</label>
+		  <input class="col-md-5 col-sm-5 box" type="text" name="" id="how-many-person" value="">
 	  </div>
   </div>
 	  
-	  <div class="col-lg-5 img-thumbnail position">
+	  <div class="col-md-5 col-sm-5 img-thumbnail position">
 		<img src="" alt="" id="uploadedImg">
 	  </div>
 
@@ -123,7 +123,7 @@
 </form>
         
 	<!-- Add recipe -->
-	<div class="col-lg-6">
+	<div class="col-lg-6 font">
 	<!-- List of categories of recipies: -->
     	<h3  class="position" id='recipesDrop'>Categories of recipes &raquo;</h3>
     	<!-- This code will be open in drop down element when element <h3>List of categories of recipes</h3> be clicked -->
