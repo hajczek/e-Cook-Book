@@ -34,7 +34,6 @@ header {
 .row{
   margin-right: 0 !important;
   margin-left:0 !important;
-  margin-bottom: 20px;
 }
 
 .dish {
@@ -92,12 +91,25 @@ h3{
   text-align:center;
   background-color:#F06377;
   margin-left: 1.85em;
+}
 
+#recipesDropForm .menue-btn,
+#ingredientsDropForm .menue-btn,
+#thingsDropForm .menue-btn{
+  margin-left: 0;
+}
+
+#categories li a{
+	margin-right: 20px;
 }
 
 ol {
   width: 100%;
 list-style-type:decimal;
+}
+
+#dataFrm{
+	margin-top: 20px;
 }
 
 .position-select{
@@ -110,11 +122,20 @@ input,
 textarea,
 select{
   border: 1px solid #bbb;
+  color: #888;
 }
 
 #inputImg{
   border: none;
   height: 30px;
+}
+
+#how-many-person{
+	margin-bottom: 20px;
+}
+
+input[value="Category name"]{
+	width: 180px;
 }
 
 .position-input{
@@ -159,7 +180,7 @@ select{
  }
 
  ul li {
-  width: 100%;
+  /* width: 100%; */
   display: inline !important;
   margin-right: 20px;
  }
@@ -182,13 +203,13 @@ a{
   color: black;
 }
 
-.navigation li a:link,
-.navigation li a:visited{
+nav ul li a:link,
+nav ul li a:visited{
   text-decoration: none;
   color: black;
 }
 
-.navigation li a:hover{
+nav ul li a:hover{
   color: #f16276;
 }
 
@@ -440,7 +461,7 @@ h5{
   margin: 0 3%;
 }
 .font h3{
-  color: #C12227;
+  color: #d15768;
 }
 
 .see-popup-content ol li button{
