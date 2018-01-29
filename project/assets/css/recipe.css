@@ -140,15 +140,6 @@ nav {
   font-size: 1.2em;
 }
 
-.navigation{
- margin-top: 15px;
-}
-
-.navigation li {
-  list-style-type: none;
-  display: inline-block;
-  padding-right: 30px;
-}
 a{
   color: black;
 }
@@ -401,6 +392,9 @@ hr {
   float: left;
   width: 94%;
   margin: 0 3%;
+}
+.font h3{
+  color: #C12227;
 }
 
 .see-popup-content ol li button{
