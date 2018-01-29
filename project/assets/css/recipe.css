@@ -467,6 +467,7 @@ h5{
 .ingredients-popup-content ul li,
 .needed-popup-content ul li{
 	list-style-type: none;
+	width: 33%;
 }
 .recipes-popup-content ul li label,
 .ingredients-popup-content ul li label{
