@@ -13,7 +13,9 @@ header {
  /* position: fixed; */
 
 }
-
+.add-rec {
+  font-family: 'Dancing Script', cursive;
+}
 .logo {
   /* margin-top: -180px; */
   position: relative;
@@ -75,11 +77,28 @@ h3{
   padding:0 15px;
   line-height:20px;
   height: auto;
-  display:inline-block;
   text-align:center;
   background-color:#F06377;
   margin-left: 1.85em;
- }
+
+}
+
+ol {
+  width: 100%;
+list-style-type:decimal;
+}
+.position-select{
+  margin-right: 9%;
+  height: 1.8em;
+  width: 35%;
+}
+.position-input{
+  width: 35%;
+}
+
+.btn-position{
+  margin-right: 40%;
+}
  .menue-btn:hover{
   background-color: #f7b1bb;
   color: #464242;
@@ -100,15 +119,15 @@ h3{
 }
 
  .display{
-  display : inline;
-  padding-right:8px;
+
+  padding-right:12px;
+
  }
-ol li{
-   display: inline-block;
-   margin-left: 50px 0;
-   padding: 0;
+ ul li {
+  width: 100%;
+  display: inline-block;
+
  }
- 
 
  .add-time{
   margin-top: 2%;
@@ -302,14 +321,14 @@ hr {
   display: inline-block;
   font-size:16px;
   font-weight: 400;
-  line-height: 45px;
+  line-height: 40px;
   margin:0 1em;
   max-width: 160px;
   text-decoration: none;
   vertical-align: middle;
   text-shadow: 2px 2px 2px #464242;
   height: auto;
-  width: auto;
+  width: 30%;
   /* background: darken($red, 1.5%); */
 }
 
