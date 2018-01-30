@@ -567,7 +567,8 @@ input[name="unit"]{
 }
 
 .font h3{
-  color: #83a176;
+  color: #5aab5a;
+  cursor: pointer;
 }
 
 .see-popup-content ol li button{
