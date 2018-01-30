@@ -1,4 +1,4 @@
-<?php 
+<?php
 //TO BE IMPROVED
 
 $img = $_FILES["pic"];
@@ -7,6 +7,8 @@ $destination = "../" . "uploads/" . $name;
 if (! file_exists($destination)) {
     if (move_uploaded_file($img["tmp_name"], $destination)) {
         echo "File uploaded successfully.";
+        echo ";";
+        echo $name;
     }
     else {
         echo "error while moving file.";

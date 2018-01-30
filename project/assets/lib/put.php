@@ -11,6 +11,7 @@ $recipeImage = $_POST["recipeImage"];
 $thingsNeeded = $_POST["thingsNeeded"];
 $table = $_POST["table"];
 $ingrCatName = $_POST["ingrCatName"];
+$ingrCatVal = $_POST["ingrCatVal"];
 $catName = $_POST["catName"];
 
 $db = new SQLite3("recipes.db");
@@ -33,7 +34,7 @@ if ($table == "recipe"){
 		$delete = "DELETE FROM ingredients WHERE id='$rid'";
 		$db->exec($delete);
 	}else if($action == "update"){
-		$update = "UPDATE ingredients SET 'name'=$ingrCatName";
+		$update = "UPDATE ingredients SET 'name'='$ingrCatName', 'ingr'='$ingrCatVal' WHERE id='$rid'";
 		$db->exec($update);
 	};
 }else if($table == "category"){

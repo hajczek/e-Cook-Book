@@ -27,7 +27,7 @@ function savePink(){
 $(document).ready(function() {
 
   // TODO: displays list of added ingredients with quantity and unit, and option 'delete'.
-	
+
   (function() {
 	$("#list-of-ingredients").on("click", "button", function() {
       $(this).parent().remove();
@@ -35,14 +35,14 @@ $(document).ready(function() {
    })();
 
    // TODO: displays list of added needed things with option 'delete'.
-	
+
    (function() {
 	 $("#list-of-needed-things").on("click", "button", function() {
 	   $(this).parent().remove();
 	 });
    })();
-	
-	
+
+
   /**
      * @description Reads url of added image to recipe
      * @param {}
@@ -84,7 +84,7 @@ $(document).ready(function() {
   }
 
   // TODO: deletes uploaded image
-	  
+
     $("#deleteImg").on("click", function() {
       $("#uploadedImg").attr("src", "");
       $("#inputImg").val("");
@@ -99,8 +99,8 @@ $(document).ready(function() {
      * @returns {} Recalculates original ingredient quantities & display on page
      */
 
-  (function() {	
-	
+  (function() {
+
     var recalculateIngredients = (function() {
 
     // TODO: get DOM elements
@@ -140,11 +140,11 @@ $(document).ready(function() {
       }
     }
   })();
-	
+
 })();
 
   // TODO: Opens DropDown box for Recipes, Ingredients and Needed things
-	
+
   (function() {
     $('#recipesDrop').on('click', function() {
       $('#recipesDropForm').slideToggle();
@@ -159,7 +159,7 @@ $(document).ready(function() {
 
 
   // TODO: Displays list of recipes from choosen category of recipes - button 'See recipes' (in popup).
-  
+
   (function() {
     var toggleRecipeListPopup = (function() {
       // displays popup
@@ -175,14 +175,14 @@ $(document).ready(function() {
     });
   })();
   })();
- 
+
   /**
      * @description Adds chosen ingredient to recipe
      * @param {}
      * @param {}
      * @returns {} Displays list of ingredients (button 'See list') from choosen category (in popup)
      */
-	
+
   (function() {
     function addIngredents() {
       for (var n = 0; n < $("#categories li div ul li input:checked").length; n++) {
@@ -200,7 +200,7 @@ $(document).ready(function() {
   })();
 
   // TODO: Displays list of ingredients (button 'See list') from choosen category (in popup).
-  
+
   (function() {
   var toggleIngredientsListPopup = (function() {
     // display popup
@@ -219,14 +219,14 @@ $(document).ready(function() {
   })();
 })();
 
-	
+
   /**
      * @description Adds chosen thing to recipe
      * @param {}
      * @param {}
      * @returns {} Displays list of ingredients (button 'See list') from choosen category (in popup)
      */
-	
+
   (function() {
     function addNeeded() {
   		for (var n = 0; n < $("#needed-things li input:checked").length; n++) {
@@ -272,7 +272,7 @@ $(document).ready(function() {
     let imageUpload = $("#uploadedImg").attr("src");
     let timeToMake = $("#time-to-make").val();
     let howMany = $("#how-many-person").val();
-	
+
     e.preventDefault();
     let content = ('<div id="close-see-popup-btn">Close x</div><div class="row borders"><div class="col-lg-5 picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things col-lg-7"><div class="row"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2></div><div class="row"><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3></div><div class="row"><div  class="col"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="col"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div></div><div class="row"><div class="col"><p class="font-bold time" id="timeOfMaking">Time to make: ' + timeToMake + ' </p></div><div class="col"><p class="people font-bold">No of serves: ' + howMany + '</p></div></div></div></div><div class="row main"><div class="col"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div></div>');
     $(".see-popup").css('display', 'block');
@@ -305,25 +305,17 @@ $(document).ready(function() {
     let printInput = $('#input_print');
 
     // TODO: opens panel to print
-	  
+
     printInput.on('click', function() {
       printProject();
     });
   })();
-	
+
  // TODO: listeners for buttons switches files with style css
-	  
+
 $('#css-pink').on('click', savePink);
 $('#css-blue').on('click', saveBlue);
-$('#css-green').on('click', saveGreen); 
+$('#css-green').on('click', saveGreen);
 
-  // Listener for form submit
-  $("#dataFrm").on("submit", function(e) {
-    e.preventDefault();
-    gatherData();
-  });
-
-  //listener for image upload
-  $("#sendImg").on("click", sendImg);
 
 }); // on document ready
