@@ -89,7 +89,7 @@ h3{
   line-height: 20px;
   height: auto;
   text-align: center;
-  background-color: #83a176;
+  background-color: #5aab5a;
   margin-left: 1.85em;
 }
 
@@ -391,7 +391,7 @@ h5{
 }
 
 .button-recipe {
-  background-color: #83a176;
+  background-color: #5aab5a;
   color: #fff;
   cursor: pointer;
   display: inline-block;
