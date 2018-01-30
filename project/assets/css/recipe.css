@@ -13,12 +13,14 @@ header {
  /* position: fixed; */
 
 }
+
 .add-rec {
   font-family: 'Dancing Script', cursive;
   position: absolute;
   top: -40px; 
   text-shadow: 2px 2px 2px #9f0a39;
 }
+
 .logo {
   /* margin-top: -180px; */
   position: relative;
@@ -60,6 +62,7 @@ header {
   position: relative;
   z-index: 0;
 }
+
 .position{
   margin-bottom: 2%;
 }
@@ -80,16 +83,16 @@ h3{
 }
 
 .menue-btn{
-  text-decoration:none;
+  text-decoration: none;
   cursor: pointer;
-  color:#fff;
-  font-size:12px;
-  font-weight:normal;
-  padding:0 15px;
-  line-height:20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 15px;
+  line-height: 20px;
   height: auto;
-  text-align:center;
-  background-color:#F06377;
+  text-align: center;
+  background-color: #F06377;
   margin-left: 1.85em;
 }
 
@@ -118,7 +121,7 @@ label[for="Add things to list"]{
 
 ol {
   width: 100%;
-list-style-type:decimal;
+  list-style-type:decimal;
 }
 
 #dataFrm{
@@ -168,13 +171,13 @@ input[value="Category name"]{
 .choose-file{
   text-align: center;
   margin-left: 21px;
-  text-decoration:none;
-  font-size:12px;
-  font-weight:normal;
-  padding:0 15px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 15px;
   height: auto;
-  display:inline-block;
-  line-height:auto;
+  display: inline-block;
+  line-height: auto;
 }
 
 .img-thumbnail{
@@ -190,15 +193,15 @@ input[value="Category name"]{
 
 .display{
   padding-right: 12px;
- }
+}
 
- ul li {
+ul li {
   /* width: 100%; */
-  /* display: inline !important; */
+  display: inline !important;
   margin-right: 20px;
  }
 
- .add-time{
+.add-time{
   margin-top: 2%;
   margin-bottom: 2%;
  }
@@ -393,10 +396,10 @@ h5{
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size:16px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 40px;
-  margin:0 1em;
+  margin: 0 1em;
   max-width: 160px;
   text-decoration: none;
   vertical-align: middle;
@@ -438,13 +441,23 @@ h5{
 .recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 40px;
+  padding: 20px;
   border: 1px solid #888;
   width: 60%;
   overflow: hidden;
-  min-height: 400px; 
+  min-height: 400px;
   position: relative;
-  top: 80px;
+  top: 20px;
+  text-align: left;
+}
+
+.recipes-popup-content,
+.ingredients-popup-content,
+.needed-popup-content{
+  overflow: scroll;
+  display: block;
+  scroll-behavior: auto;
+  height: 600px;
 }
 
 .recipes-popup-content h2,
@@ -452,6 +465,7 @@ h5{
 .needed-popup-content h2{
 	text-align: center;
 	margin-bottom: 20px;
+	margin-top: 80px;
 	color: #C12227;
 }
 
@@ -461,13 +475,16 @@ h5{
 	display: block;
 	float: left;
 	list-style-type: none;
+	width: 100%;
 }
 
 .recipes-popup-content ul li,
 .ingredients-popup-content ul li,
 .needed-popup-content ul li{
 	list-style-type: none;
-	width: 33%;
+	width: 30%;
+	display: inline;
+	float: left;
 }
 .recipes-popup-content ul li label,
 .ingredients-popup-content ul li label{
@@ -477,6 +494,7 @@ h5{
 input[type="checkbox"]{
 	border: 1px solid #bbb;
 }
+
 .recipes-popup-content .buttons,
 .ingredients-popup-content .buttons,
 .needed-popup-content .buttons{
@@ -497,20 +515,6 @@ input[name="unit"]{
 	width: 50px;
 }
 
-.measure{
-	display: block;
-	float: left;
-	width: 87%;
-	margin-right: 13%;
-}
-
-.qty,
-.unit{
-	display: block;
-	float: right;
-	font-weight: bold;
-	width: 20%;
-}
 
 /* *************** popup 'See recipe' ******************* */
 
@@ -526,6 +530,22 @@ input[name="unit"]{
   overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.see-popup-content{
+	padding-top: 50px;
+	overflow: scroll;
+	display: block;
+	scroll-behavior: auto;
+	height: 600px;
+}
+
+.see-popup-content h3{
+	margin-top: 0;
+}
+
+.see-popup-content .borders{
+	padding: 0 !important;
 }
 
 .see-popup-content img{
@@ -544,6 +564,7 @@ input[name="unit"]{
   width: 94%;
   margin: 0 3%;
 }
+
 .font h3{
   color: #d15768;
 }
@@ -560,9 +581,7 @@ input[name="unit"]{
 
 .see-popup-content p{
   font-size: 1.2em;
-  line-height: 1.6;
-  margin-top: 20px;
-  padding-bottom: 30px;
+  line-height: 1.4;
 }
 
 #close-see-popup-btn{

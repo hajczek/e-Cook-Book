@@ -12,6 +12,13 @@ header {
   z-index: +1;
 }
 
+.add-rec {
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top: -40px; 
+  text-shadow: 2px 2px 2px #93C1DA;
+}
+
 .logo {
   position: relative;
   z-index: +2;
@@ -41,19 +48,6 @@ header {
   border-image: url(../img/blue/hr.png) 50 round;
 }
 
-.dish {
-  margin: 15px auto 10px auto;
-  display: block;
-}
-
-.borders{
-    border: 1px solid transparent;
-    padding: 40px 0;
-    -webkit-border-image: url(../img/blue/hr.png) 50 round; /* Safari 3.1-5 */
-    -o-border-image: url(../img/blue/hr.png) 50 round; /* Opera 11-12.1 */
-    border-image: url(../img/blue/hr.png) 50 round;
-  }
-
 .container {
   background-color: white;
   width: auto;
@@ -66,54 +60,194 @@ header {
   z-index: 0;
 }
 
+.position{
+  margin-bottom: 2%;
+}
+
 h3{
-  font-size: 1.4em !important;
+  font-size: 1.3em !important;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .recipe-items{
   padding-top: 1%;
 }
 
+.navigation{
+  position: relative;
+  top: 5px;
+}
+
+.menue-btn{
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 15px;
+  line-height: 20px;
+  height: auto;
+  text-align: center;
+  background-color: #549fc7;
+  margin-left: 1.85em;
+}
+
+#recipesDropForm .menue-btn,
+#ingredientsDropForm .menue-btn,
+#thingsDropForm .menue-btn{
+  margin-left: 0;
+}
+
+#recipesDrop,
+#ingredientsDrop,
+#thingsDrop{
+	margin-left: 20px;
+}
+
+label[for="Add new category of recipes"],
+label[for="Add new category of ingredients"],
+label[for="Add new ingredient to chosen category"],
+label[for="Add things to list"]{
+	margin-left: 20px;
+}
+
+#categories li a{
+	margin-right: 20px;
+}
+
+ol {
+  width: 100%;
+  list-style-type:decimal;
+}
+
+#dataFrm{
+	margin-top: 20px;
+}
+
+.position-select{
+  margin-right: 9%;
+  height: 1.8em;
+  width: 35%;
+}
+
+input,
+textarea,
+select{
+  border: 1px solid #bbb;
+  color: #888;
+}
+
+#inputImg{
+  border: none;
+  height: 30px;
+}
+
+#how-many-person{
+	margin-bottom: 20px;
+}
+
+input[value="Category name"]{
+	width: 180px;
+}
+
+.position-input{
+  width: 35%;
+}
+
+.btn-position{
+  margin-right: 40%;
+}
+
+.menue-btn:hover{
+  background-color: #B9DDf4;
+  color: #464242;
+  text-shadow: 2px 2px 2px #fff;
+}
+
+.choose-file{
+  text-align: center;
+  margin-left: 21px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding:0 15px;
+  height: auto;
+  display: inline-block;
+  line-height: auto;
+}
+
+.img-thumbnail{
+	border: none;
+	background: none;
+	position: relative;
+	top: 20px;
+}
+#deleteImg{
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.display{
+  padding-right: 12px;
+}
+
+ul li {
+  /* width: 100%; */
+  display: inline !important;
+  margin-right: 20px;
+ }
+
+.add-time{
+  margin-top: 2%;
+  margin-bottom: 2%;
+ }
+
+.box{
+  background-color: #f8fdef;
+ }
+
 nav {
   font-size: 1.2em;
+   padding: 20px 0;
 }
 
-.navigation{
-  top: 15px;
+a{
+  color: black;
 }
 
-.navigation li {
-  list-style-type: none;
-  display: inline-block;
-  padding-right: 30px;
-}
-
-.navigation li a:link,
-.navigation li a:visited{
+nav ul li a:link,
+nav ul li a:visited{
   text-decoration: none;
   color: black;
 }
 
-.navigation li a:hover{
+nav ul li a:hover{
   color: #74bbe8;
 }
 
 hr {
+   margin-top:0; 
   width: auto;
-  border: 1px dashed #2B83B5;
-  opacity: 0.2;
+  margin-bottom: 2%;
+  -webkit-border-image: url(../img/blue/hr.png) 50 round; /* Safari 3.1-5 */
+  -o-border-image: url(../img/blue/hr.png) 50 round; /* Opera 11-12.1 */
+  border-image: url(../img/blue/hr.png) 50 round;
 }
 
 #recipesDropForm{
   display:none;
+  margin-top: 20px;
 }
 
 #ingredientsDropForm{
   display:none;
+  margin-top: 20px;
 }
 
 #thingsDropForm{
   display:none;
+  margin-top: 20px;
 }
 
 
@@ -169,6 +303,7 @@ hr {
 
 .title-cook-book {
   color: #74BAE7;
+  margin-bottom: 20px;
 }
 
 .category {
@@ -186,17 +321,29 @@ hr {
 }
 
 .list {
-  font-size: 90%;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  /* font-size: 90%;
+  font-family: Georgia, Times, "Times New Roman", serif; */
   -webkit-padding-start: 0;
   list-style-position: inside;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+h5{
+  margin: 20px 0;
+  font-weight: bold !important;
 }
 
 .font-bold {
   font-weight: 600;
 }
 
-/* Icons */
+.recipe{
+  padding-top: 3%;
+}
+
+/* ************* Icons ************* */
+
 .list-ing::before {
   display: inline-block;
   content: url("../img/blue/ingredients-icon.jpg");
@@ -229,35 +376,33 @@ hr {
 
 /* Recipe */
 .recipe-description {
-  font-size: 95%;
-  line-height:130%;
+  /* font-size: 95%; */
+  line-height: 1.6;
   padding-bottom: 3%
 }
 
 /* ******************* Buttons ******************* */
+
 .buttons {
-<<<<<<< HEAD
-	justify-content: center;
-	text-align: center;
-=======
   justify-content: center;
   text-align: center;
->>>>>>> 4bbe0833c016070099fc26b68eca27d5ebaaf76e
 }
 
 .button-recipe {
-  background-color: #74BAE7;
+  background-color: #549fc7;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size:16px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 45px;
-  margin:2em 1em 2em;
-  width: 160px;
+  line-height: 40px;
+  margin: 0 1em;
+  max-width: 160px;
   text-decoration: none;
   vertical-align: middle;
   text-shadow: 2px 2px 2px #464242;
+  height: auto;
+  width: 30%;
  /* background: darken($red, 1.5%); */
   }
 
@@ -298,7 +443,76 @@ hr {
   border: 1px solid #888;
   width: 60%;
   overflow: hidden;
+  min-height: 400px;
+  position: relative;
+  top: 20px;
+  text-align: left;
 }
+
+.recipes-popup-content,
+.ingredients-popup-content,
+.needed-popup-content{
+  overflow: scroll;
+  display: block;
+  scroll-behavior: auto;
+  height: 600px;
+}
+
+.recipes-popup-content h2,
+.ingredients-popup-content h2,
+.needed-popup-content h2{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 80px;
+	color: #74BAE7;
+}
+
+.recipes-popup-content ul,
+.ingredients-popup-content ul,
+.needed-popup-content ul{
+	display: inline block;
+    float: left;
+    list-style-type: none;
+    width: 100%;
+}
+
+.recipes-popup-content ul li,
+.ingredients-popup-content ul li,
+.needed-popup-content ul li{
+	list-style-type: none;
+	width: 30%;
+	display: inline;
+	float: left;
+}
+.recipes-popup-content ul li label,
+.ingredients-popup-content ul li label{
+	width: 130px;
+	margin-right: 20px;
+}
+
+input[type="checkbox"]{
+	border: 1px solid #bbb;
+}
+.recipes-popup-content .buttons,
+.ingredients-popup-content .buttons,
+.needed-popup-content .buttons{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+}
+
+.recipes-popup-content .buttons button,
+.ingredients-popup-content .buttons button,
+.needed-popup-content .buttons button{
+  font-size: 14px;
+  padding: 7px 10px;
+}
+
+input[name="quantity"],
+input[name="unit"]{
+	width: 50px;
+}
+
 
 /* *************** popup 'See recipe' ******************* */
 
@@ -314,6 +528,22 @@ hr {
   overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.see-popup-content{
+	padding-top: 50px;
+	overflow: scroll;
+	display: block;
+	scroll-behavior: auto;
+	height: 600px;
+}
+
+.see-popup-content h3{
+	margin-top: 0;
+}
+
+.see-popup-content .borders{
+	padding: 0 !important;
 }
 
 .see-popup-content img{
@@ -333,6 +563,11 @@ hr {
   margin: 0 3%;
 }
 
+.font h3{
+  color: #549fc7;
+  cursor: pointer;
+}
+
 .see-popup-content ol li button{
   display: none;
 }
@@ -345,9 +580,7 @@ hr {
 
 .see-popup-content p{
   font-size: 1.2em;
-  line-height: 1.6;
-  margin-top: 20px;
-  padding-bottom: 30px;
+  line-height: 1.4;
 }
 
 #close-see-popup-btn{
