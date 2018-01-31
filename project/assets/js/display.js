@@ -5,7 +5,7 @@ $(document).ready(function(){
   let recipeId = window.location.search.split('?')[1].split('=')[1];
 
   if(recipeName == "id"){
-    var index = dbAction.recipeArray.find(function(el){
+    recipeArray.find(function(el){
       if(el['id'] == recipeId){
         $('#title').html(el['title']);
         $('#category').html('<span class="category">Category:</span> '+el['category']);
@@ -15,6 +15,7 @@ $(document).ready(function(){
         for(let j=0;j<ingredients.length-1;j++){
           $('#ingredients-list').append('<li>'+ingredients[j][2]+' <span><span>'+ingredients[j][0]+'</span> '+ingredients[j][1]+'</span></li>')
         }
+        $('#picture').toggleClass('picture');
         $('#picture img').attr('src',el['img']);
         let things = el['things'].split(';');
         for(let k=0;k<things.length-1;k++){
@@ -22,18 +23,12 @@ $(document).ready(function(){
         }
         $('#timeOfMaking').html('Time to Make: '+el['time']);
         $('#servings').text(el['portions']);
-        recipeText = el['recipe'].split(';');
-        $('#recipeText').html('<ul></ul>');
-        for(let l=0;l<recipeText.length-1;l++){
-          $('#recipeText ul').append('<li>'+recipeText[l]+'</li>');
-        }
-      }else{
-        alert("The recipe was not found!");
+        $('#recipeText').html(el['recipe']);
       }
     });
   }
 }
 catch(err) {
-  alert("Error! The url is incomplete cannot identify id of recipe."+ err.name);
+
 }
 });

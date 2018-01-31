@@ -1,9 +1,10 @@
+var recipeArray,categoryArray,ingrArray;
 var dbAction = function(){ // naem of the module
-	var recipe,category,ingr;  // vars to use in methods and export
-
-	var execDB = function(action, rid, table, obj) { // method for insert, update and delete data from DB;
+	  // vars to use in methods and export
+		var execDB = function(action, rid, table, obj) { // method for insert, update and delete data from DB;
 		var str = obj+"&action="+action+"&rid="+rid+"&table="+table;
 		$.ajax({
+			async: false,
 			method: "POST",
 			url: 'assets/lib/put.php',
 			data: str
@@ -24,12 +25,12 @@ var dbAction = function(){ // naem of the module
 			url: 'assets/lib/get.php',
 			data: {table:table},
 			success: function(d){
-			    if(table === "recipe"){
-					recipe  = JSON.parse(d);
-				}else if(table === "category") {
-					category  = JSON.parse(d);
-				}else if(table === "ingredients"){
-					ingr  = JSON.parse(d);
+			    if(table == "recipe"){
+					recipeArray  = JSON.parse(d);
+				}else if(table == "category") {
+					categoryArray  = JSON.parse(d);
+				}else if(table == "ingredients"){
+					ingrArray  = JSON.parse(d);
 				}
 			}
 		});
@@ -44,9 +45,6 @@ var dbAction = function(){ // naem of the module
 	return {
 		execDB: execDB, // export the method for inserting or deleting data from DB;
 		getFromDB: getFromDB, // export the method for for updating the data into arrays;
-		init: init, // export the method to initialize the php files;
-		recipeArray: recipe, //array of recipes;
-		categoryArray: category, // array of categories;
-		ingrArray: ingr // array of ingredients categories;
+		init: init // export the method to initialize the php files;
 	};
 }();

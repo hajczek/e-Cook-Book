@@ -27,6 +27,7 @@ if($table == "recipe"){
     while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
         $arr[$i]['id'] = $row['id'];
         $arr[$i]['name'] = $row['name'];
+	$arr[$i]['ingr'] = $row['ingr'];
         $i++;
     }
 }else if($table == "category"){
