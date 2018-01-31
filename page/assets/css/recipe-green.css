@@ -75,7 +75,7 @@ h2{
 }
 
 h2.smallSlogan{
-  font-size: 0.8em !important;
+  font-size: 0.9em !important;
   margin-top: 20px;
   color: darkred;
   color: #5aab5a;
@@ -153,11 +153,11 @@ ol {
 ul li {
   /* width: 100%; */
   display: inline !important;
-  margin-right: 20px;
+  margin-right: 10px;
  }
 
 nav {
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 20px 0;
 }
 
