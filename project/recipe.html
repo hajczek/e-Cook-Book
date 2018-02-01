@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recipe - e-Cook-Book</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>Recipe - e-CookBook</title>
+    <meta name="description" content="e-CookBook - tool for cooks" />
+    <meta name="keywords" content="e-cookbook, keep your recipes, tool for cooks" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/recipe.css" media="screen">
@@ -34,12 +34,9 @@
     <!-- navigation + slogan -->
     <nav class="row">
       <ul class="navigation col-lg-7">
-        <li class="navbar-nav home">
-	     <a href="#">Add new recipe</a>
+	     <li class="nabar-item home">
+	     <a href="index.html">Add recipe</a>
 	    </li>
-	<li class="navbar-nav categories">
-	  <a href="#">Categories of recipes</a>
-	</li>
       </ul>
     </nav>
     <!-- photo + ingredients description part -->
@@ -59,8 +56,11 @@
 	    <div  class="col">
 	      <h5 class="list-name list-ing">List of ingredients:</h5>
 	      <ol class="list" id="ingredients-list">
-	        <li>First ingredient</li>
-	      </ol>
+			<!-- span in ol for bold elements -->
+		    <li>First ingredient <span><span>1</span> spoon</span></li>
+			<li>Second ingredient <span><span>1</span> kilo</span></li>
+			<li>Third ingredient <span><span>2</span> glasess</span></li>
+		   </ol>
 	    </div>
 	    <div class="col">
 	      <h5 class="list-name list-things">List of needed things:</h5>

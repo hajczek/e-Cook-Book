@@ -10,8 +10,6 @@ header {
   height: 195px;
   text-align: center;
   z-index: +1;
- /* position: fixed; */
-
 }
 
 .add-rec {
@@ -22,7 +20,6 @@ header {
 }
 
 .logo {
-  /* margin-top: -180px; */
   position: relative;
   z-index: +2;
   background: transparent url(../img/pink/logo.png) top center no-repeat;
@@ -82,6 +79,10 @@ h3{
   top: 5px;
 }
 
+button{
+	border: none;
+}
+
 .menue-btn{
   text-decoration: none;
   cursor: pointer;
@@ -94,6 +95,7 @@ h3{
   text-align: center;
   background-color: #F06377;
   margin-left: 1.85em;
+  border: none;
 }
 
 #recipesDropForm .menue-btn,
@@ -121,7 +123,7 @@ label[for="Add things to list"]{
 
 ol {
   width: 100%;
-  list-style-type:decimal;
+  list-style-type: decimal;
 }
 
 #dataFrm{
@@ -294,6 +296,10 @@ hr {
    background: transparent url(../img/picture.jpg) top center no-repeat;
 }
 
+#picture img{
+	width: 100%
+}
+
 .img-box {
   width: 40%;
   height: auto;
@@ -305,6 +311,7 @@ hr {
 
 .title-cook-book {
   color: #C12227;
+  font-size: 1.8em;
 }
 
 .category {
@@ -484,6 +491,8 @@ h5{
 	width: 30%;
 	display: inline;
 	float: left;
+	background-color: #eee;
+	padding: 0.5em;
 }
 .recipes-popup-content ul li label,
 .ingredients-popup-content ul li label{
@@ -544,7 +553,7 @@ input[name="unit"]{
 }
 
 .see-popup-content .borders{
-	padding: 0 !important;
+	/* padding: 0 !important; */
 }
 
 .see-popup-content img{
