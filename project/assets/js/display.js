@@ -15,8 +15,10 @@ $(document).ready(function(){
         for(let j=0;j<ingredients.length-1;j++){
           $('#ingredients-list').append('<li>'+ingredients[j][2]+' <span><span>'+ingredients[j][0]+'</span> '+ingredients[j][1]+'</span></li>')
         }
-        $('#picture').toggleClass('picture');
-        $('#picture img').attr('src',el['img']);
+        if (el['img'] != "assets/uploads/undefined"){
+          $('#picture').toggleClass('picture');
+          $('#picture img').attr('src',el['img']);
+        }
         let things = el['things'].split(';');
         for(let k=0;k<things.length-1;k++){
           $('#things').append('<li>'+things[k]+'</li>');
