@@ -47,7 +47,7 @@ h2{
 
 .borders{
   border: 1px solid transparent;
-  padding: 40px 0;
+  padding: 30px 0;
   -webkit-border-image: url(../img/blue/hr.png) 50 round; /* Safari 3.1-5 */
   -o-border-image: url(../img/blue/hr.png) 50 round; /* Opera 11-12.1 */
   border-image: url(../img/blue/hr.png) 50 round;
@@ -66,8 +66,7 @@ h2{
 }
 
 .boxText{
-	margin-top: 40px;
-	
+  margin-top: 40px;	
   margin-bottom: 40px;
 }
 
@@ -180,7 +179,7 @@ nav ul li a.activeLink{
 }
 
 hr {
-   margin-top:0; 
+  margin-top:0; 
   width: auto;
   margin-bottom: 2%;
   -webkit-border-image: url(../img/blue/hr.png) 50 round; /* Safari 3.1-5 */

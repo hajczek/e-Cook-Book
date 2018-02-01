@@ -47,7 +47,7 @@ h2{
 
 .borders{
     border: 1px solid transparent;
-    padding: 40px 0;
+    padding: 30px 0;
     -webkit-border-image: url(../img/green/hr.png) 50 round; /* Safari 3.1-5 */
     -o-border-image: url(../img/green/hr.png) 50 round; /* Opera 11-12.1 */
     border-image: url(../img/green/hr.png) 50 round;
@@ -128,7 +128,6 @@ p.slogan{
   color: #464242 !important;
   text-shadow: 2px 2px 2px #fff;
 }
-
 
 #categories li a{
 	margin-right: 20px;
@@ -239,14 +238,11 @@ hr{
   opacity: 0.2;
 }
 
-.dish {
-  margin: 15px auto 10px auto;
-}
-
 /* **************** Title, category and ingredients  ****************** */
 
 .title-cook-book {
   color: #83C458;
+  margin-bottom: 20px;
 }
 
 .list-name {
