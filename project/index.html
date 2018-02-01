@@ -52,7 +52,7 @@
 	 <!-- Choos category of recipes to recipe (label, select) -->
 	 <div class="row position">
 	 <label class="col-lg-6" for="">Choose the category of recipe</label>
-	 <select class=" col-lg-6 box" name="category" id="recips-category">
+	 <select class=" col-lg-6 box" id="recips-category">
 	   <option value="First category of recipes">Choose Category</option>
 	 </select>
 	 </div>
@@ -167,7 +167,7 @@
 		    </ul>
 	          </form>
 				<div class="buttons">
-	          <button class="menue-btn" type="button" name="button">Delete chosen recipes</button>
+	          <button id="delete-recipes" class="menue-btn" type="button" name="button">Delete chosen recipes</button>
 			  <!-- Close popup window (button) -->
 			  <button class="menue-btn" id='close-recipes-popup-btn' name="" type="">Close List</button>
 			  </div>
@@ -211,7 +211,7 @@
 	      <!-- List-of-ingredients-part-of-code -->
 	      <div class='ingredients-popup'>
 	        <div class='ingredients-popup-content'>
-		  <h2>List of Ingredients - First Category</h2>
+		  <h2 id="ingrTitle">List of Ingredients - First Category</h2>
 		  <form name="FirstCategoryOfRecipes">
 
 			<!--   <p class="measure">
@@ -229,7 +229,7 @@
 				</span>
 			  </p> -->
 
-		    <ul>
+		    <ul id="ingredientsTitles">
 		      <li class="position">
 		     <input type="checkbox">
 			<label>First ingredient</label>
@@ -252,7 +252,7 @@
 		      </ul>
 		      <div class="buttons">
 		      <button class="menue-btn" type="button">Add choosen ingredients to recipe</button>
-		      <button class="menue-btn" type="button">Delete choosen ingredients</button>
+		      <button id="delete-ingredients" class="menue-btn" type="button">Delete choosen ingredients</button>
 		      <!-- Close popup window (button) -->
 		      <button class="menue-btn" id='close-ingredients-popup-btn' name="" type="">Close List</button>
 		      </div>
@@ -321,6 +321,6 @@
 			</div>
 		</div>
      </section>
-     <p class="info">Project made with the help of community of Udacity fewd-challange</p>
+     <p class="info">Project made with the help of Udacity FEWD Challenge community</p>
   </body>
 </html>

@@ -52,14 +52,16 @@ $(document).ready(function(){
   function refreshIngrCat(ingrcat){
     ingrcat.children().remove();
     for(let i=0;i<ingrArray.length;i++){
-      ingrcat.append("<option value='"+ingrArray[i]['id']+"'>"+ingrArray[i]['name']+"</option>");
+      ingrcat.append("<option data-ingrid='"+i+"' value='"+ingrArray[i]['id']+"'>"+ingrArray[i]['name']+"</option>");
     };
   };
 
   // Listener for form submit
   $("#pushData").on("click", function(e) {
     e.preventDefault();
-    var ser = $('#dataFrm').serialize();
+    let ser = $('#dataFrm').serialize();
+    let cat = categoryArray[$('#recips-category').val()]['name'];
+    ser += "&category="+cat;
     console.log(ser);
     gatherData(ser);
   });
@@ -106,18 +108,60 @@ $(document).ready(function(){
     $('#list-of-needed-things').append('<li class="position">'+things+'<button class="menue-btn float-right btn-position" type="button" name="button">Delete</button></li>');
   });
   // add recipes based on the selected category
-  $('#show-recipes-btn').on('click', function(){
+  function addCatRecipes(){
     let catRid = $('#seeCategory').val();
     $('#categoryTitle').html(categoryArray[catRid]['name']);
     $('#categoryRecipeTitles').children().remove();
     for(let j=0;j<recipeArray.length;j++){
       if(recipeArray[j]['category'] == categoryArray[catRid]['name']){
-        $('#categoryRecipeTitles').append('<li><input class="box" type="checkbox"><label><a href="recipe.html?id='+recipeArray[j]['id']+'" target="_blank">'+recipeArray[j]['title']+'</a></label></li>');
-        $('#categorySeeRecipe').on('click', function(){
-          window.open('recipe.html?id='+recipeArray[j]['id'], '_blank');
-        });
-
+        $('#categoryRecipeTitles').append('<li><input class="box" type="checkbox"><label data-recipeid="'+recipeArray[j]['id']+'"><a href="recipe.html?id='+recipeArray[j]['id']+'" target="_blank">'+recipeArray[j]['title']+'</a></label></li>');
       };
     }
-  });
+  };
+  $('#show-recipes-btn').on('click', addCatRecipes);
+  //add ingredients based on selected ingredients category
+  function addIngredients(){
+    let ingrRid = $('#seeIngrCategory option:selected').attr('data-ingrid');
+     $('#ingrTitle').html(ingrArray[ingrRid]['name']);
+     $('#ingredientsTitles').children().remove();
+     let ingredients = ingrArray[ingrRid]['ingr'].split(',');
+     for(let i=0;i<ingredients.length;i++){
+       $('#ingredientsTitles').append('<li class="position"><input type="checkbox"><label data-id="'+ingrArray[i]['id']+'" data-ingrname="'+ingredients[i]+'">'+ingredients[i]+'</label><input class="box" type="" name="quantity" value="Qty"><input class="box" type="text" name="unit" value="Unit"></li>');
+     };
+  };
+  $('#show-ingredients-popup-btn').on('click', addIngredients);
+
+  //delete recipes from category drop down
+  function deleteRecipe(){
+    for (let n = 0; n < $("#categoryRecipeTitles li input:checked").length; n++){
+      let dataRecipeId = $("#categoryRecipeTitles li input:checked:eq(" + n + ") ~ label");
+      let rid = dataRecipeId.attr('data-recipeid');
+      dbAction.execDB('delete', rid, 'recipe');
+    }
+    addCatRecipes();
+  };
+  $('#delete-recipes').on('click', deleteRecipe);
+  //delete chosen ingredients in pop-up
+  function deleteIngr(){
+    let data=[];
+    let ingredArrayId = $('#seeIngrCategory option:selected').attr('data-ingrid');
+    let ingrId = $('#seeIngrCategory option:selected').val();
+    let ingredients = ingrArray[ingredArrayId]['ingr'].split(',');
+    for(let n=0;n< $('#ingredientsTitles li input:checked').length;n++){
+      let dataIngrId = $('#ingredientsTitles li input:checked:eq('+n+') ~ label');
+      //let ingrId = dataIngrId.attr('data-id');
+      let ingredientName = dataIngrId.attr('data-ingrname');
+
+      ingredients.forEach(function(el,idx){
+        if(el == ingredientName){
+          ingredients.splice(idx,1);
+        };
+      });
+    };
+    afterDelIngr = ingredients.join(',');
+    dbAction.execDB('update', ingrId, 'ingredients', 'ingrCatName='+ingrArray[ingredArrayId]['name']+'&ingrCatVal='+afterDelIngr);
+    console.log(afterDelIngr);
+    addIngredients();
+  };
+  $('#delete-ingredients').on('click', deleteIngr);
 });
