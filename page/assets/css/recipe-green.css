@@ -164,6 +164,21 @@ a{
   color: black;
 }
 
+a.demo:link,
+a.demo:visited,
+a.active{
+	color: #83a176;
+	font-size: 2em;
+	float: right;
+	margin-right: 8%;
+	margin-top: 2%;
+	text-decoration: underline;
+	border: none;
+}
+a.demo:hover{
+	text-decoration: none;
+}
+
 nav ul li a:link,
 nav ul li a:visited{
   text-decoration: none;
