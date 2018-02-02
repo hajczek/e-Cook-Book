@@ -265,7 +265,7 @@ $(document).ready(function() {
   (function() {
     let seeRecipe = $('#see-recipe').on('click', function(e){
     let titleRecipe = $("#title-recipe").val();
-    let recipesCategory = $("#recips-category :selected").val();
+    let recipesCategory = $("#recips-category :selected").text();
     let ingredientsList = $("#list-of-ingredients").html();
     let neededThings = $("#list-of-needed-things").html();
     let recipeDescription = $("#description-of-recipe").val();
