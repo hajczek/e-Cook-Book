@@ -35,11 +35,8 @@ const sendImg = function() {
 // TODO: Gather all user inputs and make calls to dbAction module.
 //Handler method for form submit
 const gatherData = function(data) {
-    console.log("in gatherData function");
-    if(pushToDb != undefined){
-      dbAction.execDB('insert','','recipe', data + "&recipeImage=assets/uploads/" + pushToDb);
-    }
-}
+  dbAction.execDB('insert','','recipe', data + "&recipeImage=assets/uploads/" + pushToDb);
+};
 
 $(document).ready(function(){
 
@@ -62,6 +59,21 @@ $(document).ready(function(){
     let ser = $('#dataFrm').serialize();
     let cat = categoryArray[$('#recips-category').val()]['name'];
     ser += "&category="+cat;
+    let ingredients = "";
+    let ingredientsList = $('#list-of-ingredients li');
+    ingredientsList.each(function(idx){
+      let ingrName = this.childNodes[0].data.slice(0,-1);
+      let ingrQty = this.childNodes[1].innerText;
+      let ingrUnit = this.childNodes[2].data.slice(1);
+      ingredients += ingrQty+":"+ingrUnit+":"+ingrName+";";
+    });
+    ser += "&ingredients="+ingredients;
+    let needeThings = "";
+    let neededThingList = $('#list-of-needed-things li');
+    neededThingList.each(function(idx){
+      needeThings += this.childNodes[0].data+";";
+    });
+    ser += "&thingsNeeded="+needeThings;
     console.log(ser);
     gatherData(ser);
   });
@@ -164,4 +176,19 @@ $(document).ready(function(){
     addIngredients();
   };
   $('#delete-ingredients').on('click', deleteIngr);
+  // delete a category button listener
+  $('#delete-recipes-btn').on('click', function(){
+    let catRid = categoryArray[$('#seeCategory').val()]['id'];
+    dbAction.execDB('delete', catRid, 'category');
+    refreshCat($('#recips-category'));
+    refreshCat($('#seeCategory'));
+  });
+  // delete a category of ingredient listener
+  $('#delete-ingrCat-btn').on('click', function(){
+    let ingrRid = $('#seeIngrCategory option:selected').val();
+    dbAction.execDB('delete', ingrRid, 'ingredients');
+    refreshIngrCat($('#ingrCategory'));
+    refreshIngrCat($('#seeIngrCategory'));
+  });
+
 });

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Add recipe - e-CookBook</title>
-    <meta name="description" content="Add next recipe to your e-CookBook" />
-    <meta name="keywords" content="cookbook, add recipe, storage of recipes, tool for cooks" />
+    <<title>Add recipe - e-CookBook</title>
+-    <meta name="description" content="Add next recipe to your e-CookBook" />
+-    <meta name="keywords" content="cookbook, add recipe, storage of recipes, tool for cooks" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/recipe.css" media="screen">
@@ -34,14 +34,14 @@
      <!-- navigation + slogan -->
        <nav class="row navbar-default navbar-expand-md ">
          <ul class ="navbar-nav col-lg-5">
-		   <li class="nabar-item home">
-		   	<a href="index.html" class="activeLink">Add recipe</a>
-		   </li>
-	 	</ul>
+           <li class="nabar-item home">
+      -		   	<a href="index.html" class="activeLink">Add recipe</a>
+      -		   </li>
+	 </ul>
        </nav>
        <hr>
-    <!-- main row start -->
-    <div class="row">
+<!-- main row start -->
+<div class="row">
        <form class="col-lg-6 " id="dataFrm"><!-- start of left col -->
        <!-- Add title to recipe (label, input) -->
 	<div class="row position">
@@ -66,9 +66,7 @@
 
 
 	 <ol id="list-of-ingredients">
-	   <li class="position">First ingredient <span>1</span> spoon<button class="menue-btn float-right btn-position" type="button" name="button">Delete</button></li>
 
-	   <li>Second ingredient <span>1</span> kilo<button class="menue-btn float-right btn-position" type="button" name="button">Delete</button></li>
 	 </ol>
 
 
@@ -78,7 +76,7 @@
 	 <!-- List of added needed things with option 'delete' (ul, button) -->
 
 	 <ol id="list-of-needed-things">
-	   <li class="position">First thing <button class="menue-btn float-right btn-position" type="button" name="button">Delete</button></li>
+
 	 </ol>
 
 
@@ -140,7 +138,7 @@
 	      <li class="position display">
 	      <select class=" col-lg-6 box" id="seeCategory"></select>
 	      <button class="menue-btn" id="show-recipes-btn" type="button" name="button">See recipes</button>
-	      <button class="menue-btn" type="button" name="button">Delete</button>
+	      <button id="delete-recipes-btn" class="menue-btn" type="button" name="button">Delete</button>
 	      <!-- List-of-recipes-part-of-code -->
 	      <!-- First category of recipes -->
 	      <!-- This code will be open in popup when button 'See recipes' will be clicked-->
@@ -207,7 +205,7 @@
 	    <li>
 	      <select class="col-lg-6 box" id="seeIngrCategory"></select>
 	      <button class="menue-btn" id='show-ingredients-popup-btn' type="button" name="button">See list</button>
-	      <button class="menue-btn" type="button" name="button">Delete</button>
+	      <button id="delete-ingrCat-btn" class="menue-btn" type="button" name="button">Delete</button>
 	      <!-- This part of code will be open in popup window when button 'See list' will be clicked -->
 	      <!-- List-of-ingredients-part-of-code -->
 	      <div class='ingredients-popup'>
@@ -250,8 +248,6 @@
 			<input class="box" type="text" name="unit" value="Unit">
 
 			</li>
-	      
-	      
 		      </ul>
 		      <div class="buttons">
 		      <button class="menue-btn" type="button">Add choosen ingredients to recipe</button>
@@ -270,11 +266,11 @@
 	<h3 id='thingsDrop'>Needed things &raquo;</h3>
 	<!-- This code will be open in drop down element when <h3>Needed things:</h3> be clicked -->
 	<!-- Add thing to list of needed things with option 'See list' (label, input, button)-->
-    <div id='thingsDropForm'>
+  <div id='thingsDropForm'>
 	    <label class="display" for="Add things to list">Add things to list</label>
 	    <input id="addThingsInput" class="box" type="text" name="" value="">
 	    <button id="addThings" class="menue-btn display" type="button" name="button">Add</button>
-	    <button class="menue-btn" id='show-needed-popup-btn' type="button" name="button">See list</button>
+	   <!-- <button class="menue-btn" id='show-needed-popup-btn' type="button" name="button">See list</button>-->
 	    <!-- This part of code will be open in popup window when button 'See list' will be clicked -->
 	    <!-- <div class='needed-popup'>
 	      <div class='needed-popup-content'>
