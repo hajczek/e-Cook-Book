@@ -282,6 +282,7 @@ $(document).ready(function() {
     $('#close-see-popup-btn').on('click', function(e) {
 	e.preventDefault();
     $('.see-popup').css('display', 'none');
+	window.location.reload();
   });
 
   });
