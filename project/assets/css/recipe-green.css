@@ -295,6 +295,7 @@ hr{
 
 .picture{
   background: transparent url(../img/picture.jpg) top center no-repeat;
+  min-height: 250px;
 }
 
 #picture img{
