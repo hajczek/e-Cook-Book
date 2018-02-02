@@ -143,6 +143,12 @@ select{
   color: #888;
 }
 
+input,
+select{
+  width: 180px;
+  height: 1.6em;
+}
+
 #inputImg{
   border: none;
   height: 30px;
