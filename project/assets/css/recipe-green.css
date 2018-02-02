@@ -127,7 +127,7 @@ ol {
 }
 
 #dataFrm{
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .position-select{
@@ -147,6 +147,7 @@ input,
 select{
   width: 180px;
   height: 1.6em;
+  margin-right: 0.3em !important;
 }
 
 #inputImg{
