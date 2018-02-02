@@ -504,6 +504,7 @@ input[type="checkbox"]{
 	border: 1px solid #bbb;
 	transform: scale(2);
 	margin-right: 0.5em;
+	margin-left: 0.5em;
 }
 
 .recipes-popup-content .buttons,
