@@ -145,7 +145,7 @@ select{
 
 input,
 select{
-  width: 35%;
+  width: 180px;
   height: 1.6em;
 }
 
