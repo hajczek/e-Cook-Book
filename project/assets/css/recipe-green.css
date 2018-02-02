@@ -147,6 +147,10 @@ input,
 select{
   width: 180px;
   height: 1.6em;
+}
+
+#recipesDropForm select
+#ingredientsDropForm select{
   margin-right: 0.3em !important;
 }
 
