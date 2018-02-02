@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <<title>Add recipe - e-CookBook</title>
+    <title>Add recipe - e-CookBook</title>
 -    <meta name="description" content="Add next recipe to your e-CookBook" />
 -    <meta name="keywords" content="cookbook, add recipe, storage of recipes, tool for cooks" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
@@ -47,7 +47,7 @@
 	<div class="row position">
 
          <label class="col-lg-6" for="">Add title to recipe</label>
-	 <input class="col-lg-6 box" type="text" name="title" value="" id="title-recipe">
+	 <input class="col-lg-6 box" type="text" name="title" value="" placeholder="Recipe title" id="title-recipe">
 	 </div>
 
 	 <!-- Choos category of recipes to recipe (label, select) -->
@@ -105,7 +105,7 @@
 	  <!-- Add time needed to make a recipe (label, input) -->
 	    <div class="row add-time">
 		  <label class="col-md-8 col-sm-8" for="Add time">Add time to make</label>
-		  <input class="col-md-4 col-sm-4 box" type="text" name="timeMaking" id="time-to-make" value="00:00">
+		  <input class="col-md-4 col-sm-4 box" type="text" name="timeMaking" id="time-to-make" placeholder="00:00" value="">
 		</div>
 
 		  <!-- For how many person (label, input) -->
@@ -130,7 +130,7 @@
 	<div id='recipesDropForm'>
 	  <!-- Add new category of recipes to list of categories of recipes (label, input) -->
 	    <label class="position" for="Add new category of recipes">Add new category of recipes</label>
-	    <input id="addCatInput" class="box position" type="text" name="" value="Category name">
+	    <input id="addCatInput" class="box position" type="text" name="" value="" placeholder="Category name">
 	    <button id="addCatSubmit" class="position menue-btn" type="button" name="button">Add</button>
 
 	    <!-- List of category of recipes with options: 'See recipes' and 'Delete' (ul, button, button) -->
@@ -232,20 +232,20 @@
 		      <li class="position">
 		     <input type="checkbox">
 			<label>First ingredient</label>
-			<input class="box" type="" name="quantity" value="Qty">
-			<input class="box" type="text" name="unit" value="Unit">
+			<input class="box" type="" name="quantity" value="" placeholder="Qty">
+			<input class="box" type="text" name="unit" value="" placeholder="Unit">
 		      </li>
 		      <li class="position">
 			<input class="box" type="checkbox">
 			<label>Second ingredient </label>
-			<input class="box" type="" name="quantity" value="Qty">
-			<input class="box" type="text" name="unit" value="Unit">
+			<input class="box" type="" name="quantity" value="" placeholder="Qty">
+			<input class="box" type="text" name="unit" value="" placeholder="Unit">
 		       </li>
 		       <li class="position">
 		         <input type="checkbox">
 			 <label>Third ingredient</label>
-			 <input class="box" type="" name="quantity" value="Qty">
-			<input class="box" type="text" name="unit" value="Unit">
+			 <input class="box" type="" name="quantity" value="" placeholder="Qty">
+			 <input class="box" type="text" name="unit" value="" placeholder="Unit">
 
 			</li>
 		      </ul>
