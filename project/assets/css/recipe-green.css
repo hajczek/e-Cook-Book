@@ -123,7 +123,7 @@ label[for="Add things to list"]{
 
 ol {
   width: 100%;
-  list-style-type:decimal;
+  list-style-type: decimal;
 }
 
 #dataFrm{
@@ -209,7 +209,7 @@ ul, ol{
 ul li {
   /* width: 100%; */
   display: inline !important;
-  margin-right: 20px;{
+  margin-right: 20px;
 	   
  }
 
@@ -482,12 +482,12 @@ h5{
 .needed-popup-content h2{
 	text-align: center;
 	margin-bottom: 20px;
-	margin-top: 80px;
+	margin-top: 100px;
 	color: #83a176;
 }
 
 .recipes-popup-content ul,
-.ingredients-popup-content ul
+.ingredients-popup-content ul,
 .needed-popup-content ul{
 	display: block;
 	float: left;
@@ -505,17 +505,35 @@ h5{
 	background-color: #eee;
 	padding: 0.5em;
 }
-.recipes-popup-content ul li label,
-.ingredients-popup-content ul li label{
-	width: 130px;
-	margin-right: 20px;
+
+.recipes-popup-content ul li label{
+	width: 90%;
+	margin-left: 2em;
 }
+
+.recipes-popup-content ul li label a:link,
+.recipes-popup-content ul li label a:visited
+.recipes-popup-content ul li label a:active{
+	color: #666;
+	text-decoration: underline;
+	border: none;
+	margin-left: 0.2em;
+}
+.recipes-popup-content ul li label a:hover{
+	text-decoration: none;
+}
+
+.ingredients-popup-content ul li label{
+	width: 190px;
+	margin-left: 30px;
+}
+
 input[type="checkbox"]{
 	border: 1px solid #bbb;
-	border: 1px solid #bbb;
-	transform: scale(2);
+	transform: scale(1.5);
 	margin-right: 0.5em;
 	margin-left: 0.5em;
+	position: fixed;
 }
 
 .recipes-popup-content .buttons,
@@ -535,7 +553,11 @@ input[type="checkbox"]{
 
 input[name="quantity"],
 input[name="unit"]{
-	width: 50px;
+	width: 35px;
+}
+
+input[name="unit"]{
+	margin-left: 3px;
 }
 
 

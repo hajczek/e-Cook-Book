@@ -482,7 +482,7 @@ h5{
 .needed-popup-content h2{
 	text-align: center;
 	margin-bottom: 20px;
-	margin-top: 80px;
+	margin-top: 100px;
 	color: #74BAE7;
 }
 
@@ -505,18 +505,37 @@ h5{
 	background-color: #eee;
 	padding: 0.5em;
 }
-.recipes-popup-content ul li label,
+
+.recipes-popup-content ul li label{
+	width: 90%;
+	margin-left: 2em;
+}
+
+.recipes-popup-content ul li label a:link,
+.recipes-popup-content ul li label a:visited
+.recipes-popup-content ul li label a:active{
+	color: #666;
+	text-decoration: underline;
+	border: none;
+	margin-left: 0.2em;
+}
+.recipes-popup-content ul li label a:hover{
+	text-decoration: none;
+}
+
 .ingredients-popup-content ul li label{
-	width: 130px;
-	margin-right: 20px;
+	width: 190px;
+	margin-left: 30px;
 }
 
 input[type="checkbox"]{
 	border: 1px solid #bbb;
-	transform: scale(2);
+	transform: scale(1.5);
 	margin-right: 0.5em;
 	margin-left: 0.5em;
+	position: fixed;
 }
+
 .recipes-popup-content .buttons,
 .ingredients-popup-content .buttons,
 .needed-popup-content .buttons{
@@ -534,7 +553,11 @@ input[type="checkbox"]{
 
 input[name="quantity"],
 input[name="unit"]{
-	width: 50px;
+	width: 35px;
+}
+
+input[name="unit"]{
+	margin-left: 3px;
 }
 
 
