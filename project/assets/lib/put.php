@@ -18,7 +18,8 @@ $db = new SQLite3("recipes.db");
 if ($table == "recipe"){
 	if ($action == "insert"){
 		$insert = "INSERT INTO recipe ('title', 'ingredients', 'recipe', 'category', 'time', 'portions', 'img', 'things') VALUES('$title','$ingredients', '$recipe','$category','$timeMaking','$noPortions', '$recipeImage', '$thingsNeeded')";
-		$db->exec($insert);
+		echo ";recipeInsert;";
+		echo $db->exec($insert); //echo number of rows affected. if 0, then insert unsuccessful
 	}else if($action == "delete"){
 		$delete = "DELETE FROM recipe WHERE id='$rid'";
 		$db->exec($delete);
