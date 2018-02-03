@@ -111,23 +111,29 @@ p.slogan{
 }
 
 .button-download{
+  display: block;
   text-decoration: none;
   cursor: pointer;
   color: #fff;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: normal;
-  padding: 40px 35px;
+  padding: 30px 30px;
   text-align: center;
   background-color: #F06377;
   color: #fff !important;
   position: relative;
-  top: 120px;
+  top: 75px;
 }
 
 .button-download:hover{
   background-color: #f7b1bb;
   color: #464242 !important;
   text-shadow: 2px 2px 2px #fff;
+}
+.eCookBook{
+	font-size: 0.6em;
+	position: relative;
+	bottom: 10px;
 }
 
 #categories li a{
@@ -171,7 +177,7 @@ a.active{
 	color: #f16276;
 	font-size: 2em;
 	float: right;
-	margin-right: 8%;
+	margin-right: 1%;
 	margin-top: 2%;
 	text-decoration: underline;
 	border: none;
