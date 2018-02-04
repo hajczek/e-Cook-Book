@@ -189,7 +189,7 @@ $(document).ready(function() {
         let name = $("#categories ul li input:checked:eq(" + n + ") ~ label")
         let quantity = $("#categories ul li input:checked:eq(" + n + ") ~ input[name = quantity]")
         let unit = $("#categories ul li input:checked:eq(" + n + ") ~ input[name = unit]")
-        let element = name.text() + " <span>" + quantity.val() + "</span> " + unit.val() + "<button class=\"menue-btn float-right btn-position\" type=\"button\" name=\"button\">Delete</button>"
+        let element = name.text() + " <span>" + quantity.val() + "</span> " + unit.val() + "<button class=\"menue-btn btn-position\" type=\"button\" name=\"button\">Delete</button>"
         $("#list-of-ingredients").append("<li>" + element + "</li>")
       }
       $("#categories ul li input").prop("checked", false)
@@ -231,7 +231,7 @@ $(document).ready(function() {
     function addNeeded() {
   		for (var n = 0; n < $("#needed-things li input:checked").length; n++) {
         let name = $("#needed-things li input:checked:eq(" + n + ") ~ label")
-        let element = name.text() + " <button class=\"menue-btn float-right btn-position\" type=\"button\" name=\"button\">Delete</button>"
+        let element = name.text() + " <button class=\"menue-btn btn-position\" type=\"button\" name=\"button\">Delete</button>"
         $("#list-of-needed-things").append("<li>" + element + "</li>")
       }
       $("#needed-things li input").prop("checked", false)

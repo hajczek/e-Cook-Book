@@ -5,7 +5,7 @@ body {
   width: 100%;
 }
 
-.header {
+header {
   width: 100%;
   height: 195px;
   text-align: center;
@@ -89,9 +89,10 @@ button{
   color: #fff;
   font-size: 12px;
   font-weight: normal;
-  padding: 0 15px;
+  padding: 3px 0;
   line-height: 20px;
   height: auto;
+  min-width: 60px;
   text-align: center;
   background-color: #5aab5a;
   margin-left: 1.85em;
@@ -102,23 +103,27 @@ button{
 #ingredientsDropForm .menue-btn,
 #thingsDropForm .menue-btn{
   margin-left: 0;
+  padding: 3px 5px;
+  min-width: 60px;
 }
 
-#recipesDrop,
-#ingredientsDrop,
-#thingsDrop{
-	margin-left: 20px;
-}
 
 label[for="Add new category of recipes"],
 label[for="Add new category of ingredients"],
 label[for="Add new ingredient to chosen category"],
 label[for="Add things to list"]{
-	margin-left: 20px;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+#categories,
+#categories li{
+  list-style-type: none;
 }
 
 #categories li a{
-	margin-right: 20px;
+  margin-right: 20px;
 }
 
 ol {
@@ -130,11 +135,6 @@ ol {
   margin-top: 20px;
 }
 
-.position-select{
-  margin-right: 9%;
-  height: 1.8em;
-  width: 35%;
-}
 
 input,
 textarea,
@@ -143,14 +143,43 @@ select{
   color: #888;
 }
 
-#recipesDropForm select
-#ingredientsDropForm select{
-  margin-right: 0.3em !important;
+#recipesDropForm select,
+#ingredientsDropForm select,
+#thingsDropForm select{
+	width: 200px;
+	padding: 1px 0;
+}
+
+#recipesDropForm ul,
+#ingredientsDropForm ul,
+#thingsDropForm ul,
+#recipesDropForm ol,
+#ingredientsDropForm ol,
+#thingsDropForm ol{
+	margin-left: 0;
+	padding: 0;
 }
 
 #inputImg{
   border: none;
   height: 30px;
+}
+
+.boxRight{
+  padding-left: 40px !important;
+}
+
+/* 
+
+.position-select{
+  margin-right: 9%;
+  height: 1.8em;
+  width: 35%;
+}
+
+#recipesDropForm select
+#ingredientsDropForm select{
+  margin-right: 0.3em !important;
 }
 
 #how-many-person{
@@ -168,6 +197,7 @@ input[value="Category name"]{
 .btn-position{
   margin-right: 40%;
 }
+*/
 
 .menue-btn:hover{
   background-color: #D2E9C5;
@@ -309,7 +339,7 @@ hr{
 }
 
 #picture img{
-	width: 100%
+  width: 100%
 }
 
 .img-box {
@@ -429,7 +459,6 @@ h5{
   background-color: #d1e9c5;
   color: #464242;
   text-shadow: 2px 2px 2px #fff;
-  /* background: rgba($red, 0); */
 }
 
 .info{
@@ -521,6 +550,7 @@ h5{
 }
 .recipes-popup-content ul li label a:hover{
 	text-decoration: none;
+	color: #666;
 }
 
 .ingredients-popup-content ul li label{

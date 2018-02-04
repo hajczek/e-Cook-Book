@@ -89,9 +89,10 @@ button{
   color: #fff;
   font-size: 12px;
   font-weight: normal;
-  padding: 0 15px;
+  padding: 3px 0;
   line-height: 20px;
   height: auto;
+  min-width: 60px;
   text-align: center;
   background-color: #549fc7;
   margin-left: 1.85em;
@@ -102,19 +103,23 @@ button{
 #ingredientsDropForm .menue-btn,
 #thingsDropForm .menue-btn{
   margin-left: 0;
+  padding: 3px 5px;
+  min-width: 60px;
 }
 
-#recipesDrop,
-#ingredientsDrop,
-#thingsDrop{
-	margin-left: 20px;
-}
 
 label[for="Add new category of recipes"],
 label[for="Add new category of ingredients"],
 label[for="Add new ingredient to chosen category"],
 label[for="Add things to list"]{
-	margin-left: 20px;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+#categories,
+#categories li{
+	list-style-type: none;
 }
 
 #categories li a{
@@ -130,12 +135,6 @@ ol {
 	margin-top: 20px;
 }
 
-.position-select{
-  margin-right: 9%;
-  height: 1.8em;
-  width: 35%;
-}
-
 input,
 textarea,
 select{
@@ -143,14 +142,43 @@ select{
   color: #888;
 }
 
-#recipesDropForm select
-#ingredientsDropForm select{
-  margin-right: 0.3em !important;
+#recipesDropForm select,
+#ingredientsDropForm select,
+#thingsDropForm select{
+	width: 200px;
+	padding: 1px 0;
+}
+
+#recipesDropForm ul,
+#ingredientsDropForm ul,
+#thingsDropForm ul,
+#recipesDropForm ol,
+#ingredientsDropForm ol,
+#thingsDropForm ol{
+	margin-left: 0;
+	padding: 0;
 }
 
 #inputImg{
   border: none;
   height: 30px;
+}
+
+.boxRight{
+  padding-left: 40px !important;
+}
+
+/*
+
+.position-select{
+  margin-right: 9%;
+  height: 1.8em;
+  width: 35%;
+}
+
+#recipesDropForm select
+#ingredientsDropForm select{
+  margin-right: 0.3em !important;
 }
 
 #how-many-person{
@@ -168,6 +196,7 @@ input[value="Category name"]{
 .btn-position{
   margin-right: 40%;
 }
+*/
 
 .menue-btn:hover{
   background-color: #B9DDf4;
@@ -308,7 +337,7 @@ hr {
 }
 
 #picture img{
-	width: 100%
+  width: 100%
 }
 
 .img-box {
@@ -480,30 +509,30 @@ h5{
 .recipes-popup-content h2,
 .ingredients-popup-content h2,
 .needed-popup-content h2{
-	text-align: center;
-	margin-bottom: 20px;
-	margin-top: 100px;
-	color: #74BAE7;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  color: #74BAE7;
 }
 
 .recipes-popup-content ul,
 .ingredients-popup-content ul,
 .needed-popup-content ul{
-	display: inline block;
-    float: left;
-    list-style-type: none;
-    width: 100%;
+  display: inline block;
+  float: left;
+  list-style-type: none;
+  width: 100%;
 }
 
 .recipes-popup-content ul li,
 .ingredients-popup-content ul li,
 .needed-popup-content ul li{
-	list-style-type: none;
-	width: 30%;
-	display: inline;
-	float: left;
-	background-color: #eee;
-	padding: 0.5em;
+  list-style-type: none;
+  width: 30%;
+  display: inline;
+  float: left;
+  background-color: #eee;
+  padding: 0.5em;
 }
 
 .recipes-popup-content ul li label{
