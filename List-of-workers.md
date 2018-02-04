@@ -1,42 +1,58 @@
-# LIST OF WORKESR FOR PROJECT 'e-Cook-Book'
+# 'e-CookBook' PROJECT WORKERS
 
-## JS/JSON GROUP
 
-1. violipopovaemaea 
-2. amierzwinska
-3. Baacioana 
-4. ewamal
-5. ioanazzz
-6. Scruffy
-7. piotrkulpa1982
-8. sergio_kagiema 
-9. kekoessam.ketvsp
-10. dmpire2
-11. emanuel.mares
-12. A.Borneck
+## Project originator:
+1. i.hajczewska
 
-## HTML/CSS GROUP
+## Mockups maker:
+1. i.hajczewska
 
-1. klara.borowska 
-2. krzysiek.grychu
-3. katekarelova
-4. dominika.szukalawms1
-5. dalnokipapp.zsofia
-6. lech2 
-7. enas_eng2007kv3
-8. paulaccardosoutgm 
-9. chris_zin
-10. irina.seppanen 
-11. evigiannakou
-12. dijack
-13. joaomgfonsecad_upx
+## HTML coders:
+1. evigiannakou!
+2. dominika.szukalawms1
+3. klara.borowska!
+4. chris_zin
+5. paulaccardosoutgm
 
-## GRAPHICS DESIGNERS GROUP
+## CSS coders:
+1. enas_eng2007kv3 
+2. paulaccardosoutgm 
+3. klara.borowska 
+4. chris_zin 
+5. joaomgfonsecad_upx 
+6. emanuel.mares
+7. i.hajczewska
 
-1. kate.valachova4m7ki 
-2. emanuel.mares
+## JS coders:
+1. emanuel.mares
+2. Scruffy
+3. amierzwinska
+4. kekoessam.ketvsp 
+5. Baacioana 
+6. ioanazzz 
+7. A.Borneck 
+8. iga_pl 
+9. i.hajczewska
 
-## RESERVED GROUP
+## Database makers:
+1. emanuel.mares
+2. Scruffy
+3. piotrkulpa1982 
 
-1. malajustine
+## Graphic project designer:
+1. emanuel.mares
 
+## Text corrector: 
+1. amierzwinska
+
+## Github repository organization:
+1. dijack
+
+## Enthusiastics of project:
+1. irina.seppanen 
+2. krzysiek.grychu 
+3. kate.valachova4m7ki
+4. maevanap.contact 
+5. malajustine 
+6. katekarelova 
+7. sergio_kagiema
