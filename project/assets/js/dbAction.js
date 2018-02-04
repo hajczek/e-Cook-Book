@@ -11,10 +11,12 @@ var dbAction = function(){ // naem of the module
 		})
 		.done(function( msg ) {
 			console.log( "Data Saved: " + msg );
+			handleResponse(msg);
 			dbAction.getFromDB(table);
 		})
 		.fail(function( msg ) {
 			console.log( "Data not Saved: " + msg );
+			$('#saveContainer').append("<div id='recipeAlert' class='alert alert-danger'>" + msg + "</div>");
 		});
 	};
 

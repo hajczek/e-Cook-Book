@@ -26,7 +26,8 @@ const sendImg = function() {
         })
     }
     else {
-    alert("no file chosen");
+      $('#imgAlert').remove();
+      $('#imageload').append("<div id='imgAlert' class='alert alert-danger'>Please select photo first.</div>");
     }
 }
 
@@ -36,6 +37,21 @@ const sendImg = function() {
 //Handler method for form submit
 const gatherData = function(data) {
   dbAction.execDB('insert','','recipe', data + "&recipeImage=assets/uploads/" + pushToDb);
+};
+
+const handleResponse = function(msg) {
+  const dataArr = msg.split(";");
+  const len = dataArr.length;
+  if (dataArr[len-2] === "recipeInsert") {
+    if (Number(dataArr[len-1]) >= 1) {
+      console.log("success");
+      window.location.reload();
+    }
+    else {
+      $('#recipeAlert').remove();
+      $('#saveContainer').append("<div id='recipeAlert' class='alert alert-danger'>Saving the recipe failed.</div>");
+    }
+  }
 };
 
 $(document).ready(function(){
