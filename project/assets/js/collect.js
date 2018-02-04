@@ -116,6 +116,7 @@ $(document).ready(function(){
   $('#addThings').on('click', function(){
     let things = $('#addThingsInput').val();
     $('#list-of-needed-things').append('<li class="position">'+things+'<button class="menue-btn btn-position" type="button" name="button">Delete</button></li>');
+    $('#addThingsInput').val('');
   });
   // add recipes based on the selected category
   function addCatRecipes(){
