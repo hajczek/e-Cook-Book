@@ -8,6 +8,7 @@ const sendImg = function() {
         const data = new FormData();
         data.append("pic", myImg, myImg.name);
         $.ajax({
+            async: false,
             url: "assets/lib/verify_img.php",
             data: data,
             processData: false,
@@ -15,7 +16,7 @@ const sendImg = function() {
             method: "POST",
             success: function(response) { //add confirmation that file was uploaded, or error if it wasn't
                 if(response.split(';')[1] != undefined){
-                  pushToDb = response.split(';')[1];
+                  pushToDb = "assets/uploads/" + response.split(';')[1];
                   $('#imgAlert').remove();
                   $('#imageload').append("<div id='imgAlert' class='alert alert-success'>"+response.split(';')[0]+"</div>");
                 }else{
@@ -31,28 +32,6 @@ const sendImg = function() {
     }
 }
 
-
-
-// TODO: Gather all user inputs and make calls to dbAction module.
-//Handler method for form submit
-const gatherData = function(data) {
-  dbAction.execDB('insert','','recipe', data + "&recipeImage=assets/uploads/" + pushToDb);
-};
-
-const handleResponse = function(msg) {
-  const dataArr = msg.split(";");
-  const len = dataArr.length;
-  if (dataArr[len-2] === "recipeInsert") {
-    if (Number(dataArr[len-1]) >= 1) {
-      console.log("success");
-      window.location.reload();
-    }
-    else {
-      $('#recipeAlert').remove();
-      $('#saveContainer').append("<div id='recipeAlert' class='alert alert-danger'>Saving the recipe failed.</div>");
-    }
-  }
-};
 
 $(document).ready(function(){
 
@@ -70,30 +49,30 @@ $(document).ready(function(){
   };
 
   // Listener for form submit
-  $("#pushData").on("click", function(e) {
-    e.preventDefault();
-    let ser = $('#dataFrm').serialize();
-    let cat = categoryArray[$('#recips-category').val()]['name'];
-    ser += "&category="+cat;
-    let ingredients = "";
-    let ingredientsList = $('#list-of-ingredients li');
-    ingredientsList.each(function(idx){
-      let ingrName = this.childNodes[0].data.slice(0,-1);
-      let ingrQty = this.childNodes[1].innerText;
-      let ingrUnit = this.childNodes[2].data.slice(1);
-      ingredients += ingrQty+":"+ingrUnit+":"+ingrName+";";
+  function UploadData(action,id){
+    $("#pushData").on("click", function(e) {
+      e.preventDefault();
+      let ser = $('#dataFrm').serialize();
+      let cat = categoryArray[$('#recips-category').val()]['name'];
+      ser += "&category="+cat;
+      let ingredients = "";
+      let ingredientsList = $('#list-of-ingredients li');
+      ingredientsList.each(function(idx){
+        let ingrName = this.childNodes[0].data.slice(0,-1);
+        let ingrQty = this.childNodes[1].innerText;
+        let ingrUnit = this.childNodes[2].data.slice(1);
+        ingredients += ingrQty+":"+ingrUnit+":"+ingrName+";";
+      });
+      ser += "&ingredients="+ingredients;
+      let needeThings = "";
+      let neededThingList = $('#list-of-needed-things li');
+      neededThingList.each(function(idx){
+        needeThings += this.childNodes[0].data+";";
+      });
+      ser += "&thingsNeeded="+needeThings;
+      dbAction.execDB(action,id,'recipe', ser + "&recipeImage=" + pushToDb);
     });
-    ser += "&ingredients="+ingredients;
-    let needeThings = "";
-    let neededThingList = $('#list-of-needed-things li');
-    neededThingList.each(function(idx){
-      needeThings += this.childNodes[0].data+";";
-    });
-    ser += "&thingsNeeded="+needeThings;
-    console.log(ser);
-    gatherData(ser);
-  });
-
+  };
 
   //listener for image upload
   $('#sendImg').on('click',sendImg);
@@ -103,6 +82,7 @@ $(document).ready(function(){
     dbAction.execDB('insert', '', 'category', 'catName='+addCatVal);
     refreshCat($('#recips-category'));
     refreshCat($('#seeCategory'));
+    $('#addCatInput').val('');
 
   });
   refreshCat($('#recips-category'));
@@ -113,6 +93,7 @@ $(document).ready(function(){
     dbAction.execDB('insert', '', 'ingredients', 'ingrCatName='+addIngrCatVal)
     refreshIngrCat($('#ingrCategory'));
     refreshIngrCat($('#seeIngrCategory'));
+    $('#addIngrCatInput').val('');
   });
   refreshIngrCat($('#ingrCategory'));
   refreshIngrCat($('#seeIngrCategory'));
@@ -129,6 +110,7 @@ $(document).ready(function(){
         dbAction.execDB('update', addIngrValCat, 'ingredients', 'ingrCatName='+ingrArray[i]['name']+'&ingrCatVal='+addIngrVal);
       };
     };
+    $('#addIngrValues').val('');
   });
   //Add needed things to left list
   $('#addThings').on('click', function(){
@@ -154,7 +136,7 @@ $(document).ready(function(){
      $('#ingredientsTitles').children().remove();
      let ingredients = ingrArray[ingrRid]['ingr'].split(',');
      for(let i=0;i<ingredients.length;i++){
-       $('#ingredientsTitles').append('<li class="position"><input type="checkbox"><label data-id="'+ingrArray[i]['id']+'" data-ingrname="'+ingredients[i]+'">'+ingredients[i]+'</label><input class="box" type="" name="quantity" value="Qty"><input class="box" type="text" name="unit" value="Unit"></li>');
+       $('#ingredientsTitles').append('<li class="position"><input type="checkbox"><label data-ingrname="'+ingredients[i]+'">'+ingredients[i]+'</label><input class="box" type="" name="quantity" value="" placeholder="Qty"><input class="box" type="text" name="unit" value="" placeholder="Unit"></li>');
      };
   };
   $('#show-ingredients-popup-btn').on('click', addIngredients);
@@ -188,7 +170,6 @@ $(document).ready(function(){
     };
     afterDelIngr = ingredients.join(',');
     dbAction.execDB('update', ingrId, 'ingredients', 'ingrCatName='+ingrArray[ingredArrayId]['name']+'&ingrCatVal='+afterDelIngr);
-    console.log(afterDelIngr);
     addIngredients();
   };
   $('#delete-ingredients').on('click', deleteIngr);
@@ -206,5 +187,49 @@ $(document).ready(function(){
     refreshIngrCat($('#ingrCategory'));
     refreshIngrCat($('#seeIngrCategory'));
   });
-
+  try{
+    let recipeName = window.location.search.split('?')[1].split('=')[0];
+    let recipeId = window.location.search.split('?')[1].split('=')[1];
+    if(recipeName = 'update'){
+      recipeArray.find(function(el){
+        if(el['id'] == recipeId){
+          $('#title-recipe').val(el['title']);
+          categoryArray.forEach(function(element,idx){
+            if(el['category'] == categoryArray[idx]['name']){
+              $('#recips-category').val(idx);
+            }
+          });
+          let ingredients = el['ingredients'].split(';').map(function(val){
+            return val.split(':');
+          });
+          for(let j=0;j<ingredients.length-1;j++){
+            $('#list-of-ingredients').append('<li>'+ingredients[j][2]+' <span>'+ingredients[j][0]+'</span> '+ingredients[j][1]+'<button class=\"menue-btn btn-position\" type=\"button\" name=\"button\">Delete</button></li>')
+          };
+          let things = el['things'].split(';');
+          for(let k=0;k<things.length-1;k++){
+            $('#list-of-needed-things').append('<li>'+things[k]+'<button class=\"menue-btn btn-position\" type=\"button\" name=\"button\">Delete</button></li>');
+          };
+          $('#description-of-recipe').val(el['recipe']);
+          let image = el['img'];
+          $("#uploadedImg").attr("src", image);
+          $("#uploadedImg").css('width','150px');
+          $('#sendImg').on('click', function(){
+            if(pushToDb == undefined){
+              pushToDb = el['img'];
+            }
+          });
+          $('#time-to-make').val(el['time']);
+          $('#how-many-person').val(el['portions']);
+          UploadData('update',el['id']);
+          $('#pushData').on('click', function(){
+            let link = window.location.origin + window.location.pathname.split('index')[0] + "recipe.html?id=" + recipeId;
+            window.location.href = link;
+          });
+        }
+      });
+    }
+  }
+  catch(err){
+    UploadData('insert');
+  }
 });
