@@ -3,6 +3,22 @@
 
 // TODO: switches files with style css
 
+const handleResponse = function(msg) {
+  const dataArr = msg.split(";");
+  const len = dataArr.length;
+  if (dataArr[len-2] === "recipeInsert") {
+    if (Number(dataArr[len-1]) >= 1) {
+      console.log("success");
+      $('#saveContainer').append("<div id='recipeAlert' class='alert alert-success'>Recipe saved succesfully.</div>");
+      location.assign(location);
+    }
+    else {
+      $('#recipeAlert').remove();
+      $('#saveContainer').append("<div id='recipeAlert' class='alert alert-danger'>Saving the recipe failed.</div>");
+    }
+  }
+};
+
 function savePink(){
   	localStorage.setItem('link', 'assets/css/recipe.css');
   	$('link[media=screen]').attr({href: localStorage.getItem('link')});

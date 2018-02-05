@@ -20,7 +20,7 @@ var dbAction = function(){ // naem of the module
 		});
 	};
 
-	var getFromDB = function(table,callback){ // method for updating after execDB did it's job or initialize the arrays;
+	var getFromDB = function(table){ // method for updating after execDB did it's job or initialize the arrays;
 		$.ajax({
 			async: false,
 			method: "POST",
