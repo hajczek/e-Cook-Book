@@ -91,14 +91,15 @@ button{
   font-weight: normal;
   padding: 3px 0;
   line-height: 20px;
-  height: auto;
+  height: 28px;
   min-width: 60px;
   text-align: center;
   background-color: #F06377;
   margin-left: 1.85em;
   border: none;
+ vertical-align: bottom;
+  width: auto;
 }
-
 #recipesDropForm .menue-btn,
 #ingredientsDropForm .menue-btn,
 #thingsDropForm .menue-btn{
@@ -129,7 +130,9 @@ ol {
   width: 100%;
   list-style-type: decimal;
 }
-
+ol li{
+  margin-bottom: 2%;
+}
 #dataFrm{
 	margin-top: 20px;
 }
@@ -137,8 +140,15 @@ ol {
 input,
 textarea,
 select{
+  /*margin:0;*/
   border: 1px solid #bbb;
   color: #888;
+  background-color: #FDF9EE;
+
+}
+.up-btn{
+
+    margin-top: 1.5%;
 }
 
 #recipesDropForm select,
@@ -196,7 +206,6 @@ input[value="Category name"]{
   margin-right: 40%;
 }
 */
-
 .menue-btn:hover{
   background-color: #f7b1bb;
   color: #464242;
@@ -204,7 +213,8 @@ input[value="Category name"]{
 }
 
 .choose-file{
-  text-align: center;
+
+text-align: center;
   margin-left: 21px;
   text-decoration: none;
   font-size: 12px;
@@ -213,8 +223,9 @@ input[value="Category name"]{
   height: auto;
   display: inline-block;
   line-height: auto;
+  background: none;
+  border-color: transparent;
 }
-
 .img-thumbnail{
 	border: none;
 	background: none;
@@ -232,6 +243,7 @@ input[value="Category name"]{
 
 ul, ol{
   -webkit-padding-start: 20px;
+  padding-bottom: 2%;
 }
 
 ul li {
@@ -246,7 +258,18 @@ ul li {
  }
 
 .box{
-  background-color: #FDF9EE;
+  height: 28px;
+  width: 200px !important;
+ }
+ .pos-box{
+position: absolute;
+    right: 0;
+margin-top: -1.5%;
+ }
+
+ .box-align {
+  vertical-align: bottom;
+  margin-right: 5px;
  }
 
 nav {
@@ -469,7 +492,18 @@ h5{
   text-align: center;
   margin-top: 70px;
 }
-
+.popup-btn{
+  position: absolute;
+  left: 0;
+  right: 0 ;
+  top: 80% ;
+  margin: auto;
+  
+}
+.adjust{
+  margin-left: 35% !important;
+  margin-right: 35% !important;
+}
 /* ******************* Style CSS for 'e-Cook Book' *************************** */
 
 .recipes-popup, .ingredients-popup, .needed-popup {
@@ -484,6 +518,7 @@ h5{
   overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
 
 .recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content {
@@ -572,27 +607,24 @@ input[type="checkbox"]{
 .recipes-popup-content .buttons,
 .ingredients-popup-content .buttons,
 .needed-popup-content .buttons{
-	position: absolute;
+  /*margin-top:50%;*/
+	/*position: absolute;
 	bottom: 30px;
-	right: 20px;
+  left: 35%;*/
 }
 
-.recipes-popup-content .buttons button,
+/*.recipes-popup-content .buttons button,
 .ingredients-popup-content .buttons button,
 .needed-popup-content .buttons button{
   font-size: 14px;
   padding: 7px 10px;
-}
+
+}*/
 
 input[name="quantity"],
 input[name="unit"]{
 	width: 35px;
 }
-
-input[name="unit"]{
-	margin-left: 3px;
-}
-
 
 /* *************** popup 'See recipe' ******************* */
 
@@ -668,7 +700,8 @@ input[name="unit"]{
   color: #444;
   cursor: pointer;
   width: auto;
-  float: right;
+  /*float: right;*/
+  margin-left: 30px;
 }
 
 #close-see-popup-btn:hover{
