@@ -62,6 +62,12 @@
 
 'e-CookBook' can will be install on local or external server.
 
+### REQUIREMENTS
+
+ Server (local or external).
+ PHP v.5x or higher with enable SQLite 3.
+ Browser with JavaScript enabled.
+
 ### VERSION
 
 1.0
