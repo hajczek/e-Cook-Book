@@ -1,10 +1,10 @@
-# 'e-Cook-Book' - PROJECT IN PREPARATION
+# 'e-CookBook' - PROJECT IN PREPARATION
 
 ## Description
 
-'e-Cook-Book' is an aplication for installation on local server on your computer and in the internet wherein you can save your recipes, your specific ingredients and needed things to do your recipies. This is useful for professional and amateur chefs. It makes work on your recipies easier.
+'e-CookBook' is an aplication for installation on local server on your computer and in the internet wherein you can save your recipes, your specific ingredients and needed things to do your recipies. This is useful for professional and amateur chefs. It makes work on your recipies easier.
 
-### THE ELEMENTS OF 'e-Cook-Book':
+### THE ELEMENTS OF 'e-CookBook':
 
 - recipies,
 - categories of recipies,
@@ -12,7 +12,7 @@
 - categories of ingredients,
 - list of needed things to make recpipies.
 
-### THE FUNCTIONALITY OF 'e-Cook-Book':
+### THE FUNCTIONALITY OF 'e-CookBook':
 
 #### For recipies:
 
@@ -60,7 +60,7 @@
 
 ### INSTALLATION
 
-'e-Cook-Book' can will be install on local or online server.
+'e-CookBook' can will be install on local or external server.
 
 ### VERSION
 
