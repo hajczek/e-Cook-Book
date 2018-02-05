@@ -55,8 +55,6 @@
 
 #### For things which are needed to make recipe:
 
-- add new thing to list of needed thing,
-- delete thing from list of needed thing,
 - add needed thing to recipe,
 - delete needed thing from recipe.
 
