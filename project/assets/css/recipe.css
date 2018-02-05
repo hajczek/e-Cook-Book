@@ -91,12 +91,14 @@ button{
   font-weight: normal;
   padding: 3px 0;
   line-height: 20px;
-  height: auto;
+  height: 28px;
   min-width: 60px;
   text-align: center;
   background-color: #F06377;
   margin-left: 1.85em;
   border: none;
+ 
+  width: auto;
 }
 
 #recipesDropForm .menue-btn,
@@ -139,6 +141,8 @@ textarea,
 select{
   border: 1px solid #bbb;
   color: #888;
+  background-color: #FDF9EE;
+
 }
 
 #recipesDropForm select,
@@ -196,7 +200,6 @@ input[value="Category name"]{
   margin-right: 40%;
 }
 */
-
 .menue-btn:hover{
   background-color: #f7b1bb;
   color: #464242;
@@ -204,7 +207,8 @@ input[value="Category name"]{
 }
 
 .choose-file{
-  text-align: center;
+
+text-align: center;
   margin-left: 21px;
   text-decoration: none;
   font-size: 12px;
@@ -213,6 +217,11 @@ input[value="Category name"]{
   height: auto;
   display: inline-block;
   line-height: auto;
+  background: none;
+  border-color: transparent;
+}
+.align{
+  display: inline-block;
 }
 
 .img-thumbnail{
@@ -246,7 +255,16 @@ ul li {
  }
 
 .box{
-  background-color: #FDF9EE;
+  height: 28px;
+  width: 200px !important;
+ }
+ .m{
+position: absolute;
+    right: 0;
+ }
+ .box-align {
+  vertical-align: bottom;
+  margin-right: 10px;
  }
 
 nav {
