@@ -12,8 +12,8 @@ This is our all plan:
 - from 6th to 10th day: people who reported to make a HTML5 code - make a HTML5 code - *IT'S DONE*,
 - from 11th to 15th day: people who reported to make a CSS3 code - make a CSS3 code - *MINOR CORRECTIONS*,
 - from 11th to 18th day: people who reported to make a JS code - make a JS code - *IT'S DONE*,
-- from 11th to 18th day: implementation the functionality of the database - - *WE ARE AT THIS POINT NOW*,
-- from 19th to 24th day: - test project and making corections.
+- from 11th to 18th day: implementation the functionality of the database - *IT'S DONE*,
+- from 19th to 24th day: - test project and making corections - *WE ARE AT THIS POINT NOW*,
 - 25th - deadline :)
 
 *WARNING* - This plan can change because of many reasons. For example, we have now only one graphic designer and because of this we don't need to choose 1 graphic project from many. We only can make an amendments in one project ...
