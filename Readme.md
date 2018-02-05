@@ -2,7 +2,7 @@
 
 ## Description
 
-'e-CookBook' is an aplication for installation on local server on your computer and in the internet wherein you can save your recipes, your specific ingredients and needed things to do your recipies. This is useful for professional and amateur chefs. It makes work on your recipies easier.
+'e-CookBook' is an aplication for installation on local server on your computer or in the internet wherein you can save your recipes, your specific ingredients and needed things to do your recipies. This is useful for professional and amateur chefs. It makes work on your recipies easier.
 
 ### THE ELEMENTS OF 'e-CookBook':
 
@@ -10,63 +10,48 @@
 - categories of recipies,
 - ingredients,
 - categories of ingredients,
-- list of needed things to make recpipies.
+- needed things to make recpipies.
 
 ### THE FUNCTIONALITY OF 'e-CookBook':
 
-#### For recipies:
+- Save individual recipes, recipe & ingredient lists, utensils needed.
+- Get ingredients quantities for any number of servings.
+- Easily print recipes.
+- Add your own categories of recipes & ingredients.
 
-- add title to recipe,
-- add category of recipies to recipe,
-- add ingredient to recipe with quantity and measure,
-- delete ingredient from recipe,
-- add needed thing to recipe,
-- delete needed thing from recipe,
-- add description to recipe,
-- add image to recipe,
-- delete image from recipe,
-- add time needed to make recipe,
-- add for how many persons this recipe is,
-- print recipe to .pdf file,
-- edit and change recipe,
-- save recipe,
-- delete recipe.
-	
-#### For categories of recipies:
+### INSTALLATION GUIDE
 
-- add new category to list of categories of recipies,
-- delete category from list of categories of recipies,
-- add choose category of recipies to recipe,
-- display list of recipies from choose category,
-- display choosen recipe from choosen category.
-
-#### For ingredients: 
-
-- add new ingredient to choosen category of ingredients,
-- delete ingredient from category of ingredients,
-- add ingredient to recipe with quantity and measure,
-- change ingredinet quantity for recipe when the persons quantity changes,
-- delete ingredient from recipe.
-
-#### For categories of ingredients:
-
-- add new category of ingredients to list of categories of ingredients,
-- delete category of ingredients from list of categories of ingredients.
-
-#### For things which are needed to make recipe:
-
-- add needed thing to recipe,
-- delete needed thing from recipe.
-
-### INSTALLATION
-
-'e-CookBook' can will be install on local or external server.
+- Download e-CookBook.
+- Put e-CookBook folder on local or remote server.
+- Open folder link in your browser.
+- That's it! You're all set to use e-CookBook – go ahead and add the first recipe!
 
 ### REQUIREMENTS
 
- Server (local or external).
- PHP v.5x or higher with enable SQLite 3.
- Browser with JavaScript enabled.
+ - Server (local or external).
+ - PHP v.5x or higher with enable SQLite 3.
+ - Browser with JavaScript enabled.
+ 
+### USER GUIDE
+
+## General:
+
+ - Add any needed recipe categories to your e-CookBook: e.g. 'Soups', 'Desserts', 'Mains'.
+ - Add whatever ingredient categories you would like to have in your e-CookBook: 'fruits', 'vegetables', 'herbs', etc.
+ - Add ingredients you typically use when cooking to the appropriate ingredient categories.
+ - Add cooking gear that you may need to use when preparing a recipe.
+
+## Individual recipes:
+
+ - Add title of recipe.
+ - Add chosen category of recipe to recipe.
+ - Add selected ingredients needed for the recipe.
+ - Add needed things to making the recipe.
+ - Add method.
+ - Add an image of the dish if you like!
+ - Add cooking time.
+ - Add the number of servings the recipe yields.
+ - Your recipe is ready to save now!
 
 ### VERSION
 
