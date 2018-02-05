@@ -46,14 +46,14 @@
        <!-- Add title to recipe (label, input) -->
 	<div class="row position ">
 
-         <label class="col-lg-7.5" for="">Add title to recipe</label>
-	 <input class="col-lg-4.5 box m" type="text" name="title" value="" placeholder="Recipe title" id="title-recipe">
+         <label for="">Add title to recipe</label>
+	 <input class="box pos-box" type="text" name="title" value="" placeholder="Recipe title" id="title-recipe">
 	 </div>
 
 	 <!-- Choos category of recipes to recipe (label, select) -->
 	 <div class="row position">
-	 <label class="col-lg-7.5" for="">Choose the category of recipe</label>
-	 <select class=" col-lg-5.5 float-right box m" id="recips-category">
+	 <label for="">Choose the category of recipe</label>
+	 <select class="box pos-box" id="recips-category">
 	   <option value="First category of recipes">Choose Category</option>
 	 </select>
 	 </div>
@@ -97,9 +97,9 @@
 		  <label class="col-md-6 col-sm-6 position" for="Add image">Add image</label>
 		  <input class="col-md-5 col-sm-5 choose-file" name="" type="file" value="Choose file" accept="image/*" id="inputImg"> 
 	    </div>
-	    <div class="row position">
-		  <input class="col-md-5 col-sm-5 menue-btn " type="button" name="" value="Upload" id="sendImg"/>
-		  <button class="col-md-5 col-sm-5 menue-btn float-right" type="button" name="button" id="deleteImg">Delete file</button>
+	    <div class="row">
+		  <input class="col-md-5 menue-btn up-btn" type="button" name="" value="Upload" id="sendImg"/>
+		  <button class="col-md-5 menue-btn" type="button" name="button" id="deleteImg">Delete file</button>
 		</div>
 
 	  <!-- Add time needed to make a recipe (label, input) -->
@@ -149,23 +149,23 @@
 		  <!-- Display list of recipes with options: 'Delete from list' and 'See recipe' -->
 		    <ul id="categoryRecipeTitles">
 		      <li>
-		        <input class="box box-align" type="checkbox">
+		        <input type="checkbox">
 			<label>First recipe</label>
 		        <button class="menue-btn float-right" name="" type="button">See Recipe</button>
 		      </li>
 		      <li>
-		        <input class="box box-align" type="checkbox">
+		        <input type="checkbox">
 			<label>Second recipe</label>
 			<button class="menue-btn float-right" name="" type="button">See Recipe</button>
 		      </li>
 		      <li>
-		        <input class="box box-align" type="checkbox">
+		        <input type="checkbox">
 			<label>Third recipe</label>
 		        <button class="menue-btn float-right" name="" type="button">See Recipe</button>
 		      </li>
 		    </ul>
 	          </form>
-				<div class="buttons">
+				<div class="popup-btn adjust">
 	          <button id="delete-recipes" class="menue-btn" type="button" name="button">Delete chosen recipes</button>
 			  <!-- Close popup window (button) -->
 			  <button class="menue-btn" id='close-recipes-popup-btn' name="" type="">Close List</button>
@@ -206,7 +206,7 @@
 	      <button id="delete-ingrCat-btn" class="menue-btn" type="button" name="button">Delete</button>
 	      <!-- This part of code will be open in popup window when button 'See list' will be clicked -->
 	      <!-- List-of-ingredients-part-of-code -->
-	      <div class='ingredients-popup'>
+	      <div class='ingredients-popup '>
 	        <div class='ingredients-popup-content'>
 		  <h2 id="ingrTitle">List of Ingredients - First Category</h2>
 		  <form name="FirstCategoryOfRecipes">
@@ -227,27 +227,27 @@
 			  </p> -->
 
 		    <ul id="ingredientsTitles">
-		      <li class="position">
+		      <li>
 		     <input type="checkbox">
 			<label>First ingredient</label>
-			<input class="box box-align" type="" name="quantity" value="" placeholder="Qty">
-			<input class="box box-align" type="text" name="unit" value="" placeholder="Unit">
+			<input class="box position" type="" name="quantity" value="" placeholder="Qty">
+			<input class="box" type="text" name="unit" value="" placeholder="Unit">
 		      </li>
-		      <li class="position">
-			<input class="box box-align" type="checkbox">
+		      <li>
+			<input type="checkbox">
 			<label>Second ingredient </label>
-			<input class="box box-align" type="" name="quantity" value="" placeholder="Qty">
-			<input class="box box-align" type="text" name="unit" value="" placeholder="Unit">
+			<input class="box position" type="" name="quantity" value="" placeholder="Qty">
+			<input class="box" type="text" name="unit" value="" placeholder="Unit">
 		       </li>
-		       <li class="position">
+		       <li>
 		         <input type="checkbox">
 			 <label>Third ingredient</label>
-			 <input class="box box-align" type="" name="quantity" value="" placeholder="Qty">
-			 <input class="box box-align" type="text" name="unit" value="" placeholder="Unit">
+			 <input class="box position" type="" name="quantity" value="" placeholder="Qty">
+			 <input class="box" type="text" name="unit" value="" placeholder="Unit">
 
 			</li>
 		      </ul>
-		      <div class="buttons">
+		      <div class="buttons popup-btn">
 		      <button class="menue-btn" type="button">Add choosen ingredients to recipe</button>
 		      <button id="delete-ingredients" class="menue-btn" type="button">Delete choosen ingredients</button>
 		      <!-- Close popup window (button) -->
