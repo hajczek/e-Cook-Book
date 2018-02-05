@@ -44,7 +44,7 @@
 ## Individual recipes:
 
  - Add title of recipe.
- - Add chosen category of recipe to recipe.
+ - Add chosen category of recipe.
  - Add selected ingredients needed for the recipe.
  - Add needed things to making the recipe.
  - Add method.
