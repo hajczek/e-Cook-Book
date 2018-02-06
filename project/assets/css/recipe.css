@@ -147,6 +147,12 @@ hr {
   color: #F47920;
 }
 
+/* **************** 'Saved recipe' modal  ****************** */
+
+.saved-modal {
+  background-color: #F06377;
+}
+
 /* ************* Icons ************* */
 
 .list-ing::before {

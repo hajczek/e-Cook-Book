@@ -474,6 +474,20 @@ input[name="quantity"]{
   margin-bottom: 30px;
 }
 
+.saved-modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  padding: 20px;
+  border: 1px solid rgb(102, 102, 102);
+  border-radius: 20px;
+  box-shadow: 2px 3px 3px 0 grey;
+  color: rgb(255, 255, 255);
+}
 
 @media (max-width: 1000px) {
 	input,
