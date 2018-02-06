@@ -24,7 +24,7 @@ if ($table == "recipe"){
 		$delete = "DELETE FROM recipe WHERE id='$rid'";
 		$db->exec($delete);
 	}else if($action == "update"){
-		$update = "UPDATE recipe SET 'title'='$title', 'ingredients'='$ingredients', 'recipe'='$recipe', 'category'='$category', 'time'='$timeMaking', 'portions'='$noPortions', 'img'='$recipeImage', 'things'='$thingsNeede' WHERE id='$rid'";
+		$update = "UPDATE recipe SET 'title'='$title', 'ingredients'='$ingredients', 'recipe'='$recipe', 'category'='$category', 'time'='$timeMaking', 'portions'='$noPortions', 'img'='$recipeImage', 'things'='$thingsNeeded' WHERE id='$rid'";
 		$db->exec($update);
 	};
 }else if($table == "ingredients"){

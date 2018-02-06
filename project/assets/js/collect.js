@@ -66,10 +66,12 @@ $(document).ready(function(){
       ser += "&ingredients="+ingredients;
       let needeThings = "";
       let neededThingList = $('#list-of-needed-things li');
-      neededThingList.each(function(idx){
+      neededThingList.each(function(){
         needeThings += this.childNodes[0].data+";";
       });
+      console.log(needeThings);
       ser += "&thingsNeeded="+needeThings;
+      console.log(ser);
       dbAction.execDB(action,id,'recipe', ser + "&recipeImage=" + pushToDb);
     });
   };
@@ -208,11 +210,11 @@ $(document).ready(function(){
           };
           let things = el['things'].split(';');
           for(let k=0;k<things.length-1;k++){
-            $('#list-of-needed-things').append('<li>'+things[k]+'<button class=\"menue-btn btn-position\" type=\"button\" name=\"button\">Delete</button></li>');
+            $('#list-of-needed-things').append('<li class="position">'+things[k]+'<button class="menue-btn btn-position" type="button" name="button">Delete</button></li>');
           };
           $('#description-of-recipe').val(el['recipe']);
-          let image = el['img'];
-          $("#uploadedImg").attr("src", image);
+          pushToDb = el['img'];
+          $("#uploadedImg").attr("src", pushToDb);
           $("#uploadedImg").css('width','150px');
           $('#sendImg').on('click', function(){
             if(pushToDb == undefined){
