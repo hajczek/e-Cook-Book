@@ -1,4 +1,4 @@
-# 'e-CookBook' - PROJECT IN PREPARATION
+# 'e-CookBook'
 
 ## Description
 
