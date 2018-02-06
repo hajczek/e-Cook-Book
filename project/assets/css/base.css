@@ -479,7 +479,8 @@ input[name="quantity"]{
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: (50%, 50%);
+  z-index: 1;
+  transform: translate(-50%, -50%);
   font-size: 1.5em;
   padding: 20px;
   border: 1px solid rgb(102, 102, 102);
