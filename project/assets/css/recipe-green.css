@@ -1,9 +1,17 @@
 body {
   margin: 0;
-  background: #FDF9EE url(../img/green/top-bg.jpg) top left repeat-x;
+  /* background: #FDF9EE url(../img/green/top-bg.jpg) top left repeat-x; */
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   width: 100%;
 }
+
+header{
+	background-color: white;
+	background-image: linear-gradient(90deg, rgba(191,222,175,.6) 50%, transparent 50%),
+	linear-gradient(rgba(191,222,175,.6) 50%, transparent 50%);
+	background-size: 60px 60px;
+}
+
 .add-rec {
   font-family: 'Dancing Script', cursive;
   position: absolute;
@@ -18,9 +26,10 @@ body {
   background: transparent url(../img/green/logo.png) top center no-repeat;
   width: 215px;
   height: 197px;
-  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  top: 10px;
 }
 
 .borders{
@@ -226,6 +235,7 @@ hr{
 		background: transparent url(../img/green/logoSmall.png) top center no-repeat;
 		width: 120px;
 		height: 110px;
-		margin-top: 30px;
+		position: relative;
+		top: 30px;
 	}
 }
