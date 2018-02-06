@@ -21,19 +21,19 @@ const handleResponse = function(msg) {
 
 function savePink(){
   	localStorage.setItem('link', 'assets/css/recipe.css');
-  	$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  	$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   };
   function saveBlue(){
   	localStorage.setItem('link', 'assets/css/recipe-blue.css');
-  	$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  	$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   };
   function saveGreen(){
   	localStorage.setItem('link', 'assets/css/recipe-green.css');
-  	$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  	$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   };
   function displayLink(){
   	if(localStorage.getItem('link') != null){
-  		$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  		$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   	}
   };
   displayLink();
@@ -290,7 +290,7 @@ $(document).ready(function() {
     let howMany = $("#how-many-person").val();
 
     e.preventDefault();
-    let content = ('<div id="close-see-popup-btn">Close x</div><div class="row borders"><div class="col-lg-5 picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things col-lg-7"><div class="row"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2></div><div class="row"><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3></div><div class="row"><div  class="col"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="col"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div></div><div class="row"><div class="col"><p class="font-bold time" id="timeOfMaking">Time to make: ' + timeToMake + ' </p></div><div class="col"><p class="people font-bold">No of serves: ' + howMany + '</p></div></div></div></div><div class="row main"><div class="col"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div></div>');
+    let content = ('<div class="row borders"><div class="col-lg-5 picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things col-lg-7"><div class="row"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2></div><div class="row"><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3></div><div class="row"><div  class="col"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="col"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div></div><div class="row"><div class="col"><p class="font-bold time" id="timeOfMaking">Time to make: ' + timeToMake + ' </p></div><div class="col"><p class="people font-bold">No of portions: ' + howMany + '</p></div></div></div></div><div class="row main"><div class="col"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div></div><div id="close-see-popup-btn">Close x</div>');
     $(".see-popup").css('display', 'block');
     $(".see-popup-content").append(content);
 
@@ -298,7 +298,7 @@ $(document).ready(function() {
     $('#close-see-popup-btn').on('click', function(e) {
 	e.preventDefault();
     $('.see-popup').css('display', 'none');
-	window.location.reload();
+	// window.location.reload();
   });
 
   });

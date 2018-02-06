@@ -1,0 +1,561 @@
+header {
+  width: 100%;
+  height: 195px;
+  text-align: center;
+  z-index: +1;
+}
+
+.row{
+  margin-right: 0 !important;
+  margin-left:0 !important;
+}
+
+.dish {
+  margin: 15px auto 10px auto;
+  display: block;
+}
+
+.container {
+  background-color: white;
+  width: auto;
+  margin: -45px auto;
+  z-index: +3;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 0;
+}
+
+.position{
+  margin-bottom: 5%;
+}
+
+h3{
+  font-size: 1.3em !important;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.recipe-items{
+  padding-top: 1%;
+}
+
+.navigation{
+  position: relative;
+  top: 5px;
+}
+
+button{
+	border: none;
+}
+
+#recipesDropForm .menue-btn,
+#ingredientsDropForm .menue-btn,
+#thingsDropForm .menue-btn{
+  margin-left: 0;
+  padding: 3px 5px;
+  min-width: 60px;
+}
+
+label[for="Add new category of recipes"],
+label[for="Add new category of ingredients"],
+label[for="Add new ingredient to chosen category"],
+label[for="Add things to list"]{
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+#categories,
+#categories li{
+  list-style-type: none;
+}
+
+#categories li a{
+  margin-right: 20px;
+}
+
+ol {
+  width: 100%;
+  list-style-type: decimal;
+}
+
+ol li{
+  margin-bottom: 2%;
+}
+
+#dataFrm{
+	margin-top: 20px;
+}
+
+#recipesDropForm select,
+#ingredientsDropForm select,
+#thingsDropForm select{
+	width: 200px;
+	padding: 1px 0;
+	color: #888;
+}
+
+#recips-category{
+  color: #888;
+}
+
+#recipesDropForm ul,
+#ingredientsDropForm ul,
+#thingsDropForm ul,
+#recipesDropForm ol,
+#ingredientsDropForm ol,
+#thingsDropForm ol{
+	margin-left: 0;
+	padding: 0;
+}
+
+#ingredientsDropForm ul{
+	position: relative;
+	left: 3%;
+}
+
+#inputImg{
+  border: none;
+  height: 30px;
+}
+
+.boxRight{
+  padding-left: 40px !important;
+}
+
+.choose-file{
+  text-align: center;
+  margin-left: 21px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0 15px;
+  height: auto;
+  display: inline-block;
+  line-height: auto;
+  background: none;
+  border-color: transparent;
+}
+
+.img-thumbnail{
+	border: none;
+	background: none;
+	position: relative;
+	top: 20px;
+}
+
+#deleteImg{
+	margin-bottom: 15px;
+}
+
+.display{
+  padding-right: 12px;
+}
+
+ul, ol{
+  -webkit-padding-start: 20px;
+  padding-bottom: 2%;
+}
+
+ul li {
+  /* width: 100%; */
+  display: inline !important;
+  margin-right: 20px;
+ }
+
+.add-time{
+  margin-top: 2%;
+  margin-bottom: 2%;
+ }
+
+.box{
+  height: 28px;
+ }
+ 
+.box-align {
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.toLeft{
+	padding-left: 0 !important;
+}
+
+nav {
+  font-size: 1.2em;
+  padding: 20px 0;
+}
+
+a{
+  color: black;
+}
+
+nav ul li a:link,
+nav ul li a:visited{
+  text-decoration: none;
+}
+
+#recipesDropForm{
+  display:none;
+  margin-top: 20px;
+}
+
+#ingredientsDropForm{
+  display:none;
+  margin-top: 20px;
+}
+
+#thingsDropForm{
+  display:none;
+  margin-top: 20px;
+}
+
+.styleSwitch{
+  display: block;
+  float: right;
+  background-color: #fff;
+}
+
+.styleSwitch a:link,
+.styleSwitch a:visited{
+  display: block;
+  width: 70px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.styleSwitch a:hover{
+  text-decoration: underline;
+}
+
+#picture img{
+  width: 100%
+}
+
+#imageload{
+  margin-bottom: 20px;
+}
+
+.category {
+  font-style: italic;
+  color: black;
+  font-weight: 500;
+}
+
+.list-name {
+  font-weight: 500;
+}
+
+.list {
+  /* font-size: 90%; */
+  /* font-family: Georgia, Times, "Times New Roman", serif; */
+  -webkit-padding-start: 0;
+  list-style-position: outside;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+h5{
+  margin: 20px 0;
+  font-weight: bold !important;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.recipe{
+  padding-top: 3%;
+}
+
+.recipe-description {
+  line-height: 1.6;
+  padding-bottom: 3%
+}
+
+.buttons {
+  justify-content: center;
+  text-align: center;
+}
+
+.info{
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.popup-btn{
+  position: absolute;
+  left: 0;
+  right: 0 ;
+  top: 80% ;
+  margin: auto;
+}
+
+.adjust{
+  /* margin-left: 35% !important;
+  margin-right: 35% !important; */
+  text-align: center;
+}
+
+.recipes-popup, .ingredients-popup, .needed-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+}
+
+.recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  overflow: hidden;
+  min-height: 400px;
+  position: relative;
+  top: 20px;
+  text-align: left;
+}
+
+.recipes-popup-content,
+.ingredients-popup-content,
+.needed-popup-content{
+  overflow: scroll;
+  display: block;
+  scroll-behavior: auto;
+  height: 600px;
+}
+
+.recipes-popup-content ul,
+.ingredients-popup-content ul
+.needed-popup-content ul{
+  display: block;
+  float: left;
+  list-style-type: none;
+  width: 97%;
+  position: relative;
+  left: 3%;
+}
+
+.recipes-popup-content ul li,
+.ingredients-popup-content ul li,
+.needed-popup-content ul li{
+  list-style-type: none;
+  width: 30%;
+  display: inline;
+  float: left;
+  background-color: #eee;
+  padding: 0.5em;
+}
+
+.recipes-popup-content ul li label{
+	width: 90%;
+	margin-left: 2em;
+}
+
+.recipes-popup-content ul li label a:link,
+.recipes-popup-content ul li label a:visited
+.recipes-popup-content ul li label a:active{
+	color: #666 !important;
+	text-decoration: underline;
+	border: none;
+	margin-left: 0.2em;
+}
+
+.recipes-popup-content ul li label a:hover{
+	text-decoration: none;
+	color: #666;
+}
+
+.ingredients-popup-content ul li label{
+	width: 65%;
+	margin-left: 30px;
+}
+
+input[type="checkbox"]{
+	border: 1px solid #bbb;
+	transform: scale(1.5);
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+	position: fixed;
+}
+
+input[name="quantity"],
+input[name="unit"]{
+	width: 35px;
+	font-size: 0.9em;
+}
+
+input[name="quantity"]{
+	margin-right: 0.3em;
+}
+
+.see-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.see-popup-content{
+	padding-top: 50px;
+	overflow: scroll;
+	display: block;
+	scroll-behavior: auto;
+	height: 600px;
+}
+
+.see-popup-content h3{
+	margin-top: 0;
+}
+
+.see-popup-content .borders{
+	/* padding: 0 !important; */
+}
+
+.see-popup-content img{
+  display: block;
+  float: left;
+}
+
+.see-popup-content .textBox{
+  position: relative;
+  top: 40px;
+}
+
+.see-popup-content .descBox{
+  display: block;
+  float: left;
+  width: 94%;
+  margin: 0 3%;
+}
+
+.see-popup-content ol li button{
+  display: none;
+}
+
+.see-popup-content h3,
+.see-popup-content h2{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.see-popup-content p{
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+#close-see-popup-btn{
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+
+@media (max-width: 1000px) {
+	input,
+	select{
+		width: 35% !important;
+	}
+	#sendImg{
+		margin-top: 15px;
+		width: 50% !important;
+	}
+	#deleteImg{
+		margin-top: 15px;
+		width: 50% !important;
+	}
+	.boxRight {
+       padding-left: 0 !important;
+	   margin-left: 20px;
+	}
+	h3{
+		margin-top: 0;
+		margin-bottom: 20px !important;
+	}
+	.position {
+       margin-bottom: 5px;
+    }
+	input[type="checkbox"] {
+      position: relative;
+	  width: 35px !important;
+	  margin: 0 !important;
+    }
+	.ingredients-popup-content ul li label {
+		width: 80%;
+		margin-left: 0;
+	}
+	.recipes-popup-content ul li, .ingredients-popup-content ul li, .needed-popup-content ul li {
+      width: 100%;
+    }
+	input[name="quantity"], input[name="unit"] {
+      width: 35px !important;
+	  display: block;
+	  float: right;
+	}
+	.recipes-popup-content ul li label {
+		width: 80%;
+		margin-left: 0 !important;
+	}
+	.popup-btn{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.popup-btn #delete-recipes,
+	.popup-btn #close-recipes-popup-btn{
+		width: 200px;
+	}
+	.styleSwitch {	
+      margin-top: -180px;
+	}
+	.col {
+	  flex-basis: 100%;
+	  max-width: 100%;
+	  display: block;
+	  float: left;
+	}
+	.list {
+      list-style-position: inside;
+    }
+	.button-recipe{
+	  margin: 2px auto;
+	  
+	}
+	#recips-category{
+		margin-bottom: 20px;
+	}	
+}
+
+@media (max-width: 500px) {
+	.styleSwitch {	
+		  margin-top: -100px;
+		}
+	textarea{
+		width: 100%;
+	}
+}
