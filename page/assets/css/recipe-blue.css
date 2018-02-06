@@ -5,13 +5,6 @@ body {
   width: 100%;
 }
 
-header {
-  width: 100%;
-  height: 195px;
-  text-align: center;
-  z-index: +1;
-}
-
 .add-rec {
   font-family: 'Dancing Script', cursive;
   position: absolute;
@@ -30,48 +23,12 @@ header {
   margin-right: auto;
 }
 
-h2{
-	padding-left: 0 !important;
-	margin-left: 0 !important;
-}
-
-.row{
-  margin-right: 0 !important;
-  margin-left:0 !important;
-}
-
-.dish {
-  margin: 15px auto 10px auto;
-  display: block;
-}
-
 .borders{
   border: 1px solid transparent;
   padding: 30px 0;
   -webkit-border-image: url(../img/blue/hr.png) 50 round; /* Safari 3.1-5 */
   -o-border-image: url(../img/blue/hr.png) 50 round; /* Opera 11-12.1 */
   border-image: url(../img/blue/hr.png) 50 round;
-}
-
-.container {
-  background-color: white;
-  width: auto;
-  margin: -45px auto;
-  z-index: +3;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-bottom: 10px;
-  position: relative;
-  z-index: 0;
-}
-
-.boxText{
-  margin-top: 40px;	
-  margin-bottom: 40px;
-}
-
-.position{
-  margin-bottom: 2%;
 }
 
 h2.smallSlogan{
@@ -82,31 +39,11 @@ h2.smallSlogan{
   font-weight: 100;
 }
 
-h3{
-	padding: 0 !important;
-}
-
-h4{
-  font-size: 1em !important;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
 p.slogan{
   font-size: 1.25em !important;
   margin-top: 20px;
   color: #4180a2;
   font-weight: 100;
-}
-
-.recipe-items{
-  padding-top: 1%;
-}
-
-.navigation{
-  position: relative;
-  top: 15px;
-  padding-left: 0;
 }
 
 .button-download{
@@ -130,47 +67,6 @@ p.slogan{
   text-shadow: 2px 2px 2px #fff;
 }
 
-.eCookBook{
-	font-size: 0.6em;
-	position: relative;
-	bottom: 10px;
-}
-
-#categories li a{
-	margin-right: 20px;
-}
-
-ol {
-  width: 100%;
-  list-style-type: decimal;
-  margin-top: 20px;
-}
-
-.position-select{
-  margin-right: 9%;
-  height: 1.8em;
-  width: 35%;
-}
-
-.display{
-  padding-right: 12px;
-}
-
-ul li {
-  /* width: 100%; */
-  display: inline !important;
-  margin-right: 10px;
- }
-
-nav {
-  font-size: 1.1em;
-  padding: 20px 0;
-}
-
-a{
-  color: black;
-}
-
 a.demo:link,
 a.demo:visited,
 a.active{
@@ -181,15 +77,6 @@ a.active{
 	margin-top: 2%;
 	text-decoration: underline;
 	border: none;
-}
-a.demo:hover{
-	text-decoration: none;
-}
-
-nav ul li a:link,
-nav ul li a:visited{
-  text-decoration: none;
-  color: black;
 }
 
 nav ul li a:hover{
@@ -211,26 +98,6 @@ hr {
 
 
 /* *********************** Switch for css files ************************** */
-
-.styleSwitch{
-  display: block;
-  float: right;
-  background-color: #fff;
-}
-
-.styleSwitch a:link,
-.styleSwitch a:visited{
-  display: block;
-  width: 70px;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-}
-
-.styleSwitch a:hover{
-  text-decoration: underline;
-}
 
 #css-pink{
   background-color: #F06377;
@@ -269,31 +136,13 @@ hr {
   font-weight: 500;
 }
 
-.list {
-  /* font-size: 90%;
-  font-family: Georgia, Times, "Times New Roman", serif; */
-  -webkit-padding-start: 0;
-  list-style-position: inside;
-  padding: 0;
-  margin-bottom: 30px;
-}
+/* *************** Responsive version ******************* */
 
-h5{
-  margin: 20px 0;
-  font-weight: bold !important;
-}
-
-.font-bold {
-  font-weight: 600;
-}
-
-.recipe{
-  padding-top: 3%;
-}
-
-.info{
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
+@media (max-width: 1200px) {
+	.logo {
+		background: transparent url(../img/blue/logoSmall.png) top center no-repeat;
+		width: 120px;
+		height: 110px;
+		margin-top: 30px;
+	}
 }

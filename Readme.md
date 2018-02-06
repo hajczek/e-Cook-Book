@@ -2,7 +2,13 @@
 
 ## Description
 
-'e-CookBook' is an aplication for installation on local server on your computer or in the internet wherein you can save your recipes, your specific ingredients and needed things to do your recipies. This is useful for professional and amateur chefs. It makes work on your recipies easier.
+e-CookBook stores your recipe and ingredient categories as well as recipe, ingredient and cooking gear lists to let you look up all you need in a flash.
+
+e-CookBook gives you customizable options to perfectly match your needs.
+For example, if you are into international cuisine, you can create any number of fitting recipe categories such as 'Italian cuisine', 'Wonders of wok', 'French & Fine', etc.
+
+Cooking is even more fun with e-CookBook!
+Make your own rules for your e-CookBook recipes
 
 ### THE ELEMENTS OF 'e-CookBook':
 
@@ -22,6 +28,7 @@
 ### INSTALLATION GUIDE
 
 - Download e-CookBook.
+- Unzip downloaded folder.
 - Put e-CookBook folder on local or remote server.
 - Open folder link in your browser.
 - That's it! You're all set to use e-CookBook – go ahead and add the first recipe!

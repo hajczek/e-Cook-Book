@@ -5,19 +5,19 @@
 
 function savePink(){
   	localStorage.setItem('link', 'assets/css/recipe.css');
-  	$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  	$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   };
   function saveBlue(){
   	localStorage.setItem('link', 'assets/css/recipe-blue.css');
-  	$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  	$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   };
   function saveGreen(){
   	localStorage.setItem('link', 'assets/css/recipe-green.css');
-  	$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  	$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   };
   function displayLink(){
   	if(localStorage.getItem('link') != null){
-  		$('link[media=screen]').attr({href: localStorage.getItem('link')});
+  		$('link[name=colorVersion]').attr({href: localStorage.getItem('link')});
   	}
   };
   displayLink();
