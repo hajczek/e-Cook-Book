@@ -304,7 +304,7 @@ h5{
   text-align: center;
 }
 
-.recipes-popup, .ingredients-popup, .needed-popup {
+.recipes-popup, .ingredients-popup{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -318,7 +318,7 @@ h5{
   background-color: rgba(0,0,0,0.4);
 }
 
-.recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content {
+.recipes-popup-content, .ingredients-popup-content, .see-popup-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -332,8 +332,7 @@ h5{
 }
 
 .recipes-popup-content,
-.ingredients-popup-content,
-.needed-popup-content{
+.ingredients-popup-content{
   overflow: scroll;
   display: block;
   scroll-behavior: auto;
@@ -341,8 +340,7 @@ h5{
 }
 
 .recipes-popup-content ul,
-.ingredients-popup-content ul
-.needed-popup-content ul{
+.ingredients-popup-content ul{
   display: block;
   float: left;
   list-style-type: none;
@@ -352,8 +350,7 @@ h5{
 }
 
 .recipes-popup-content ul li,
-.ingredients-popup-content ul li,
-.needed-popup-content ul li{
+.ingredients-popup-content ul li{
   list-style-type: none;
   width: 30%;
   display: inline;
@@ -510,7 +507,7 @@ input[name="quantity"]{
 		width: 80%;
 		margin-left: 0;
 	}
-	.recipes-popup-content ul li, .ingredients-popup-content ul li, .needed-popup-content ul li {
+	.recipes-popup-content ul li, .ingredients-popup-content ul li {
       width: 100%;
     }
 	input[name="quantity"], input[name="unit"] {
@@ -549,6 +546,19 @@ input[name="quantity"]{
 	#recips-category{
 		margin-bottom: 20px;
 	}	
+}
+
+@media (max-width: 800px) {
+	.recipes-popup-content h2, .ingredients-popup-content h2, .needed-popup-content h2 {
+    	margin-top: 20px;
+	}
+	.recipes-popup-content, .ingredients-popup-content, .needed-popup-content, .see-popup-content{
+		height: 250px;
+		min-height: 250px;
+	}
+	.recipes-popup, .ingredients-popup {
+		padding-top: 50px;
+	}
 }
 
 @media (max-width: 500px) {
