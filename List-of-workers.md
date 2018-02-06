@@ -48,11 +48,3 @@
 ## Github repository organization:
 1. dijack
 
-## Enthusiastics of project:
-1. irina.seppanen 
-2. krzysiek.grychu 
-3. kate.valachova4m7ki
-4. maevanap.contact 
-5. malajustine 
-6. katekarelova 
-7. sergio_kagiema
