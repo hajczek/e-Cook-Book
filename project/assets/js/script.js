@@ -1,7 +1,6 @@
 
 // Functionalities for 'e-Cook-Book'
 
-// TODO: switches files with style css
 
 const handleResponse = function(msg) {
   const dataArr = msg.split(";");
@@ -9,7 +8,7 @@ const handleResponse = function(msg) {
   if (dataArr[len-2] === "recipeInsert") {
     if (Number(dataArr[len-1]) >= 1) {
       console.log("success");
-      $('#saveContainer').append("<div id='recipeAlert' class='alert alert-success'>Recipe saved succesfully.</div>");
+      sessionStorage.setItem('recSave', 'success');
       location.assign(location);
     }
     else {
@@ -18,6 +17,9 @@ const handleResponse = function(msg) {
     }
   }
 };
+
+
+// TODO: switches files with style css
 
 function savePink(){
   	localStorage.setItem('link', 'assets/css/recipe.css');
@@ -41,6 +43,18 @@ function savePink(){
 // for JQuery
 
 $(document).ready(function() {
+
+  //display 'saved recipe' alert
+  (function() {
+    if (sessionStorage.getItem('recSave') === 'success') {
+      const saveModal = $(".saved-modal")[0];
+      $(saveModal).css("display", "block");
+      setTimeout(function() {
+        $(saveModal).css("display", "none");
+        sessionStorage.removeItem('recSave');
+      }, 2000)
+    }
+  })();
 
   // TODO: displays list of added ingredients with quantity and unit, and option 'delete'.
 
