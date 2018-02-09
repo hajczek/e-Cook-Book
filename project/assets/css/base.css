@@ -574,6 +574,17 @@ input[name="quantity"]{
 	.recipes-popup, .ingredients-popup {
 		padding-top: 50px;
 	}
+	.button-recipe{
+	  line-height: 30px;
+	  padding: 20px;
+	}
+	input, select {
+      width: 95% !important;
+	  margin: 4px 0;
+	}
+	nav{
+		font-size: 1.4em;
+	}
 }
 
 @media (max-width: 500px) {

@@ -113,7 +113,6 @@ nav ul li a:visited{
 .styleSwitch{
   display: block;
   float: right;
-  background-color: #fff;
   margin-top: 20px;
 }
 
@@ -162,6 +161,10 @@ h5{
   margin-top: 10px;
 }
 
+.fb-like{
+	margin-top: 20px;
+}
+
 /* *************** Responsive version ******************* */
 
 @media (max-width: 1200px) {
@@ -183,9 +186,25 @@ h5{
 	
 }
 
+@media (max-width: 800px) {
+	body{
+		font-size: 1.2rem;
+	}
+	p.slogan,
+	h2.smallSlogan{
+	  font-weight: bold;
+	}
+	iframe{
+		z-index: +2;
+	}
+	nav{
+		font-size: 1.4em !important;
+		width: 90%;
+	}
+}
+
 @media (max-width: 500px) {
 	.button-download {
 	  width: 80%;	
-	}
-	
+	}	
 }
