@@ -68,6 +68,11 @@ Make your own rules for your e-CookBook recipes
 
 Students of Google Challenge Scholarship: Front-End Web Dev
 
+### LINKS
+
+- http://e-cookbook.online/
+- https://www.facebook.com/eCookBookProject/
+
 ### LICENSE
 
 The MIT License - See [license.md](https://github.com/hajczek/e-Cook-Book/blob/master/license/license.md)
