@@ -2,7 +2,7 @@
 
 
 ## Project originator:
-1. i.kolamowska
+1. i.kolanowska
 
 ## Mockups maker:
 1. i.hajczewska
