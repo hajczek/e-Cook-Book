@@ -2,7 +2,7 @@
 
 
 ## Project originator:
-1. i.hajczewska
+1. i.kolamowska
 
 ## Mockups maker:
 1. i.hajczewska
@@ -21,7 +21,7 @@
 4. chris_zin 
 5. joaomgfonsecad_upx 
 6. emanuel.mares
-7. i.hajczewska
+7. i.kolanowska
 
 ## JS coders:
 1. emanuel.mares
@@ -32,7 +32,7 @@
 6. ioanazzz 
 7. A.Borneck 
 8. iga_pl 
-9. i.hajczewska
+9. i.kolanowska
 
 ## Database makers:
 1. emanuel.mares
