@@ -5,7 +5,7 @@
 1. i.kolanowska
 
 ## Mockups maker:
-1. i.hajczewska
+1. i.kolanowska
 
 ## HTML coders:
 1. evigiannakou!
