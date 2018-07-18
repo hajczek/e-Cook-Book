@@ -67,6 +67,7 @@ Make your own rules for your e-CookBook recipes
 ### THE AUTHORS
 
 Students of Google Challenge Scholarship: Front-End Web Dev
+[See list of workers](https://github.com/hajczek/e-Cook-Book/blob/master/List-of-workers.md)
 
 ### LINKS
 
