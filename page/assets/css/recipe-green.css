@@ -41,15 +41,17 @@ header{
 }
 
 h2.smallSlogan{
-  font-size: 0.9em !important;
+  font-size: 1em !important;
   margin-top: 20px;
   color: darkred;
   color: #5aab5a;
   font-weight: 100;
+  width:40%;
+  text-align: center;
 }
 
 p.slogan{
-  font-size: 1.25em !important;
+  font-size: 1.15em !important;
   margin-top: 20px;
   color: #5aab5a;
   font-weight: 100;
@@ -62,7 +64,7 @@ p.slogan{
   color: #fff;
   font-size: 30px;
   font-weight: normal;
-  padding: 30px 30px;
+  padding: 20px 30px 10px 20px;
   text-align: center;
   background: #5aab5a;
   color: #fff !important;
@@ -70,22 +72,27 @@ p.slogan{
   top: 75px;
 }
 
+a.demo,
+a.demo:link,
+a.demo:visited,
+a.demo:active{    
+    color: #fff;
+    font-size: 1.8em;
+    float: right;
+    margin-right: 1%;
+    margin-top: 2%;
+    text-decoration: none;
+    border: none;
+    background-color: #5aab5a;
+    padding: 20px 40px;
+    opacity: 1;
+}
+
+a.demo:hover,
 .button-download:hover{
   background-color: #d2e9c5;
   color: #464242 !important;
   text-shadow: 2px 2px 2px #fff;
-}
-
-a.demo:link,
-a.demo:visited,
-a.active{
-	color: #83a176;
-	font-size: 2em;
-	float: right;
-	margin-right: 1%;
-	margin-top: 2%;
-	text-decoration: underline;
-	border: none;
 }
 
 nav ul li a:hover{
