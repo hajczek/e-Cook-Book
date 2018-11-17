@@ -8,7 +8,7 @@ e-CookBook gives you customizable options to perfectly match your needs.
 For example, if you are into international cuisine, you can create any number of fitting recipe categories such as 'Italian cuisine', 'Wonders of wok', 'French & Fine', etc.
 
 Cooking is even more fun with e-CookBook!
-Make your own rules for your e-CookBook recipes
+Make your own rules for your e-CookBook recipes.
 
 ### THE ELEMENTS OF 'e-CookBook':
 
