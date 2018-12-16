@@ -62,7 +62,7 @@ Make your own rules for your e-CookBook recipes.
 
 ### VERSION
 
-1.0
+[1.0](https://github.com/hajczek/e-Cook-Book/blob/master/e-CookBook-v.1.0.zip)
 
 ### THE AUTHORS
 
