@@ -59,10 +59,17 @@ Make your own rules for your e-CookBook recipes.
  - Add cooking time.
  - Add the number of servings the recipe yields.
  - Your recipe is ready to save now!
+ 
+### VERSIONS
 
-### VERSION
+1.1 - new look, better calculator for quantity ingredients when change quantity of portion, one recipe added.
 
-[1.0](https://github.com/hajczek/e-Cook-Book/blob/master/e-CookBook-v.1.0.zip)
+1.0 - first simple version.
+
+### DOWNLOAD VERSIONS
+
+[Download version 1.0](https://github.com/hajczek/e-Cook-Book/blob/master/e-CookBook-v.1.0.zip)
+[Download version 1.1](https://github.com/hajczek/e-Cook-Book/blob/master/e-CookBook-v.1.1.zip)
 
 ### THE AUTHORS
 
