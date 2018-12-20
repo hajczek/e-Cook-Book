@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding :0;
     border: none;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 header,
 nav ul li a,
@@ -17,7 +17,7 @@ nav ul li a,
 }
 
 h2{
-	font-size: 20pt;
+	font-size: 16pt;
 	margin-bottom: 0.5cm;
 	font-weight: bold;
 }
@@ -33,7 +33,7 @@ h3{
 }
 
 .info{
-	font-size: 12pt;
+	font-size: 10pt;
 	text-align: center;
 }
 
