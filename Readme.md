@@ -62,9 +62,9 @@ Make your own rules for your e-CookBook recipes.
  
 ### VERSIONS
 
-1.1 - new look, better calculator for quantity ingredients when change quantity of portion, one recipe added.
+v.1.1 - new look, better calculator for quantity ingredients when change quantity of portions, one recipe added.
 
-1.0 - first simple version.
+v.1.0 - first simple version.
 
 ### DOWNLOAD VERSIONS
 
