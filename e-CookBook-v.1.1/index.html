@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129337277-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129337277-1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add recipe - e-CookBook</title>
+  <meta name="description" content="Add next recipe to your e-CookBook" />
+  <meta name="keywords" content="cookbook, add recipe, storage of recipes, tool for cooks" />
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lora|Roboto|Sriracha" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/base.css" media="screen">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+</head>
+
+<body>
+  <div class="grid">
+    <header>
+      <div class="logo">
+        <h1>e-CookBook</h1>
+      </div>
+    </header>
+
+    <div class="boxLeft">
+      <h2>Add Recipe</h2>
+      <form id="dataFrm">
+        <label for="title-recipe">
+          Add title to recipe
+          <i class="fas fa-question-circle displayInfoBox"></i>
+        </label>
+        <div class="infoBox">Use text field next to.</div>
+        <input type="text" name="title" value="" placeholder="Title of recipe" id="title-recipe">
+
+        <label for="recips-category">
+          Choose the category of recipe
+          <i class="fas fa-question-circle displayInfoBox"></i>
+        </label>
+        <div class="infoBox">Use select field next to.</div>
+        <select id="recips-category"></select>
+
+        <div class="list">
+          <label>
+            List of ingredients
+            <i class="fas fa-question-circle displayInfoBox"></i>
+          </label>
+          <div class="infoBox">Use option <b>'Ingredients from choosen category'</b> on the black part.</div>
+          <ol id="list-of-ingredients"></ol>
+        </div>
+
+        <div class="list">
+          <label>
+            List of needed things
+            <i class="fas fa-question-circle displayInfoBox"></i>
+          </label>
+          <div class="infoBox">Use <b>'Add needed things to recipe'</b> on the black part.</div>
+          <ol id="list-of-needed-things"></ol>
+        </div>
+
+        <h3>Recipe <i class="fas fa-question-circle displayInfoBox"></i></h3>
+        <div class="infoBox">Write recipe in the text area below.</div>
+        <textarea name="recipe" id="description-of-recipe" rows="5"></textarea>
+
+        <label for="inputImg">
+          Add image
+          <i class="fas fa-question-circle displayInfoBox"></i>
+        </label>
+        <div class="infoBox">Choose file with photo from your computer by using button below. Then upload choosen file.
+          Max width of image is 900px.</div>
+        <input name="image" type="file" accept="image/*" id="inputImg" class="inpLong">
+        <!-- <input type="button" name="Upload" value="Upload" id="sendImg"/> -->
+        <div class="buttons">
+          <button type="button" name="Upload" id="sendImg">Upload file</button>
+          <button type="button" name="button" id="deleteImg">Delete file</button>
+        </div>
+        <input type="text" name="timeMaking" id="time-to-make" class="inpLong" placeholder="Add time needed to prepare this dish in this format: 00:00"
+          value="">
+        <input type="text" name="noPortions" id="how-many-person" class="inpLong" placeholder="Add the number of portions for this recipe"
+          value="">
+        <div>
+          <img src="" alt="Uploaded Image" id="uploadedImg">
+        </div>
+        <div id="saveContainer">
+          <div class="buttons">
+            <button type="button" name="button" id="see-recipe">See recipe</button>
+            <div class="see-popup">
+              <div class="see-popup-content"></div>
+            </div>
+            <button id="pushData" type="button" name="button">Save recipe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="boxRight">
+      <div id="date"></div>
+      <h2>Manage your own e-CookBook</h2>
+      <div id="recipesDropForm">
+        <label for="addCatInput">
+          Add new category of recipes
+          <i class="fas fa-question-circle displayInfoBox"></i>
+        </label>
+        <div class="infoBox">Use text field next to. Click '+' button on the right to save new category.</div>
+        <input id="addCatInput" type="text" value="" placeholder="New category of recipes">
+        <button id="addCatSubmit" type="button" name="button" class="add">+</button>
+        <label for="seeCategory">
+          Choose category of recipes
+          <i class="fas fa-question-circle displayInfoBox"></i>
+        </label>
+        <div class="infoBox">Use select field next to. Display list of recipes or delete category by using buttons
+          below.</div>
+        <select id="seeCategory"></select>
+
+        <div class="buttons">
+          <button id="show-recipes-btn" type="button" name="button">See</button>
+          <button id="delete-recipes-btn" type="button" name="button" class="deleteBtn">Delete</button>
+        </div>
+        <div class='recipes-popup'>
+          <div class='recipes-popup-content'>
+            <button id='close-recipes-popup-btn' class="close-btn" type="button">X</button>
+            <h2 id="categoryTitle"></h2>
+            <form name="FirstCategoryOfRecipes">
+              <em>Click on choosen recipe title to display all recipe or select recipes to delete.</em>
+              <ul id="categoryRecipeTitles"></ul>
+            </form>
+            <div class="popup-btn">
+              <button id="delete-recipes" type="button" name="button">Delete chosen recipes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ingredientsDropForm">
+        <label for="addIngrCatInput">
+          Add new category of ingredients
+          <i class="fas fa-question-circle displayInfoBox"></i>
+        </label>
+        <div class="infoBox">Use text fild next to. Click '+' button on the right to save new category.</div>
+        <input id="addIngrCatInput" type="text" value="" placeholder="New category of ingredients">
+        <button id="addIngrCatSubmit" type="button" name="button" class="add">+</button>
+
+        <label for="addIngrValues">
+          Add a new ingredient
+          <i class="fas fa-question-circle displayInfoBox"></i><br />
+        </label>
+        <div class="infoBox">Select category. Put name of new ingredient in text field. Click '+' button on the right
+          to save new ingredient.</div>
+        <select id="ingrCategory" class="shortField" name="ingrCat"></select>
+        <input id="addIngrValues" class="shortField" placeholder="New ingredient" value="">
+        <button id="addIngrSubmit" type="button" name="button" class="add">+</button>
+        <div id="categories">
+          <label for="seeIngrCategory">
+            Choose category of ingredients
+            <i class="fas fa-question-circle displayInfoBox"></i>
+          </label>
+          <div class="infoBox">Use select field next to. Display list of ingredients or delete category by using
+            buttons below.</div>
+          <select id="seeIngrCategory"></select>
+
+          <div class="buttons">
+            <button id='show-ingredients-popup-btn' type="button" name="button">See</button>
+            <button id="delete-ingrCat-btn" type="button" name="button" class="deleteBtn">Delete</button>
+          </div>
+          <div class="ingredients-popup">
+            <div class='ingredients-popup-content'>
+              <button type="button" id='close-ingredients-popup-btn' class="close-btn" name="button">X</button>
+              <h2 id="ingrTitle"></h2>
+              <form name="FirstCategoryOfRecipes">
+                <em>Select ingredients to add to recipe or to delete. Remeber to add quantity and unit (Qty, Unit)</em><br>
+                <ul id="ingredientsTitles"></ul>
+                <div class="popup-btn">
+                  <button class="menue-btn" id="addIngr" type="button">Add chosen ingredients to recipe</button>
+                  <button id="delete-ingredients" name="button" type="button">Delete chosen ingredients</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id='thingsDropForm'>
+          <label for="addThingsInput">
+            Add needed things to recipe
+            <i class="fas fa-question-circle displayInfoBox"></i>
+          </label>
+          <div class="infoBox">Use text field next to. You can add each thing separetly or all things in one time
+            separate with comma. Click '+' button on the right to add neede things to recipe.</div> <input id="addThingsInput"
+            type="text" value="" placeholder="Needed things">
+          <button id="addThings" type="button" name="button" class="add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="info">The Project made with the help of <b>Udacity FEWD Challenge community</b></p>
+      <div class="saved-modal">Recipe Saved!</div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+    </script>
+  <script src="assets/js/dbAction.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/collect.js"></script>
+  
+</body>
+</html>

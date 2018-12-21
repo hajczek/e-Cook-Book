@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129337277-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129337277-1');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe - e-CookBook</title>
+  <meta name="description" content="e-CookBook - tool for cooks" />
+  <meta name="keywords" content="e-cookbook, keep your recipes, tool for cooks" />
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lora|Roboto|Sriracha" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css" media="screen">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+</head>
+
+<body>
+  <div class="grid-recipe">
+    <!-- logo + background image -->
+    <header>
+      <div class="logo">
+        <h1>e-CookBook</h1>
+      </div>
+      <nav>
+        <a href="index.html">Add recipe &raquo;</a>
+      </nav>
+    </header>
+
+    <div class="boxLeft">
+      <!-- photo + ingredients description part -->
+      <div id="picture">
+        <img src="#" class="dish" width="420" height="250" alt="Photo of dish">
+      </div>
+    </div>
+
+    <div class="boxRight">
+      <h2 id="title" class="recipe-title">Title of recipe</h2>
+      <h3 id="category" class="category-name"><span class="category">Recipe category:</span></h3>
+      <div class="recipe-list">
+        <h5 class="list-name">List of ingredients:</h5>
+        <ol id="ingredients-list"></ol>
+      </div>
+
+      <div class="recipe-list">
+        <h5 class="list-name">List of needed things:</h5>
+        <ol id="things"></ol>
+      </div>
+
+      <div class="recipe-details">
+        <h5 class="details">Details:</h5>
+        <p id="timeOfMaking" class="time">Time to make: <span></span> hrs</p>
+        <p class="people">No of portions:
+          <span id="servings-span">
+            <button id="servings-btn" type="button" name="button">
+              <span id="servings">4</span>
+            </button>
+          </span>
+        </p>
+      </div>
+      <!-- recipe description -->
+      <div class="recipe-desc">
+        <h3 class="recipe">Recipe:</h3>
+        <p id="recipeText" class="recipe-description"></p>
+      </div>
+      <!-- buttons -->
+      <div class="recipe-buttons">
+        <button class="button-recipe" type="button" id="input_print">Print recipe</button>
+        <button id="edit-recipe" class="button-recipe" type="button">Edit recipe</button>
+        <button id="delete-recipe" class="button-recipe" type="button">Delete recipe</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="info">The Project made with the help of <b>Udacity FEWD Challenge community</b></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+    </script>
+  <script src="assets/js/dbAction.js"></script>
+  <script src="assets/js/display.js"></script>
+  <script src="assets/js/script.js"></script>
+  
+</body>
+</html>
