@@ -264,16 +264,21 @@ $(document).ready(function () {
       let timeToMake = $("#time-to-make").val();
       let howMany = $("#how-many-person").val();
 
-      e.preventDefault();
-      let content = ('<div id="close-see-popup-btn">X</div><div class="picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3><div class="listBox"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="listBox"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div><div class="detailsBox"><p class="time" id="timeOfMaking"><strong>Time to make:</strong> ' + timeToMake + ' </p><p class="people font-bold"><strong>No of portions:</strong> ' + howMany + '</p></div><div class="main"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div>');
       $(".see-popup").css('display', 'block');
+      let seePopupContent = document.createElement('div');
+        
+      let content = ('<div id="close-see-popup-btn">X</div><div class="picture" id="picture"><img src="' + imageUpload + '" width="450px"></div><div class="recipe-things"><h2 id="title" class="col title-cook-book">' + titleRecipe + '</h2><h3 id="category" class="col category-name"><span class="category">Category: </span>' + recipesCategory + '</h3><div class="listBox"><h5 class="list-name list-ing">List of ingredients:</h5><ol class="list" id="ingredients-list">' + ingredientsList + '</ol></div><div class="listBox"><h5 class="list-name list-things">List of needed things:</h5><ol class="list" id="things">' + neededThings + '</ol></div><div class="detailsBox"><p class="time" id="timeOfMaking"><strong>Time to make:</strong> ' + timeToMake + ' </p><p class="people font-bold"><strong>No of portions:</strong> ' + howMany + '</p></div><div class="main"><h3 class="recipe font-bold">Recipe:</h3><p id="recipeText" class="recipe-description">' + recipeDescription + '</p></div>');
+      
+      seePopupContent.classList = 'see-popup-content';
+      $(".see-popup").append(seePopupContent);
       $(".see-popup-content").append(content);
 
       // Close popup
       $('#close-see-popup-btn').on('click', function (e) {
-        e.preventDefault();
         $('.see-popup').css('display', 'none');
         // window.location.reload();
+        $(".see-popup-content").remove();
+        e.preventDefault();
       });
 
     });

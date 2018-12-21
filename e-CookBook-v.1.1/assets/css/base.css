@@ -616,7 +616,9 @@ input[name="quantity"]{
 }
 
 .see-popup-content .listBox ol {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  width: 80%;
+  padding-left: 10%;
 }
 
 .see-popup-content .detailsBox {
