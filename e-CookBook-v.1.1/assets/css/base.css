@@ -14,9 +14,10 @@ body {
 ul, ol {
   display: block;
   float: left;
-  width: 100%;
+  width: 90%;
   margin-top: 20px;
   margin-bottom: 10px;
+  margin-left: 10%;
 }
 
 ul li {
@@ -94,7 +95,8 @@ h5.details {
 
 .boxRight h2 {
   margin-top: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #a42436;
+  color: #a42436;
 }
 
 .logo h1 {
@@ -229,7 +231,7 @@ textarea {
   width: 100%;
   display: grid;
   justify-items: end;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: 1fr 100px 100px;
   grid-template-rows: 1fr;
 }
 
@@ -264,10 +266,17 @@ input::-moz-focus-inner {
   margin-left: 10px;
 }
 
-.boxLeft button {
+.boxLeft button,
+.boxLeft a.cancel {
   background-color: #fff;
   color: #e00d2b;
   border-bottom: 1px solid #e00d2b;
+}
+
+.boxLeft a.cancel {
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Sriracha', cursive;
 }
 
 .boxRight button {
@@ -289,9 +298,10 @@ input::-moz-focus-inner {
 }
 
 .boxLeft button:hover,
+.boxLeft a.cancel:hover,
 .boxRight button:hover {
   color: #444;
-  border-bottom: none;
+  border-color: transparent;
 }
 
 #date {
